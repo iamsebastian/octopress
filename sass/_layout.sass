@@ -1,0 +1,24 @@
+$max-width: 1000px
+
+body
+	max-width: $max-width
+	background-color: $bg-color
+	
+div#content
+	margin: 0 16px
+	padding: 0 32px 0 0
+	width: 641px
+	border-right: 1px solid $light-color
+	
+article
+	text-align: justify
+	// border-bottom: 1px dotted $light-color
+	padding: 0 1rem 1rem
+	svg
+		margin: 8px 0
+	.entry-content
+		@include a
+		
+nav.pagenavi
+	div.center
+		@include a

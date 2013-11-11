@@ -1,0 +1,98 @@
+@mixin font-hand-h1
+	font: normal 2.4rem/3.0rem $font-hand
+@mixin font-hand-h2
+	font: normal 1.9rem/3.0rem $font-hand
+@mixin font-hand-normal
+	font: normal 2rem/1.6rem $font-hand
+@mixin font-hand-small
+	font: normal 1.4rem/1rem $font-hand
+@mixin font-def-normal
+	font: normal 1.3rem/2.4rem $font-def
+@mixin font-size-normal
+	font-size: .9rem
+@mixin a
+	a
+		@include font-hand-normal
+		color: $light-color
+		text-decoration: none
+		transition: 0.3s
+		&:hover
+			-webkit-animation: 10s ease 0s normal none 1 red-hover
+			-moz-animation: 10s ease 0s normal none 1 red-hover
+			-o-animation: 10s ease 0s normal none 1 red-hover
+			animation: 10s ease 0s normal none 1 red-hover
+		&:after
+			// content: " →"
+			
+@-webkit-keyframes red-hover
+	0%
+		/* style */
+	1%
+		color: $red
+	5%
+		color: $hover-color
+		/* style */
+@-moz-keyframes red-hover
+	0%
+		/* style */
+		transform: rotate(0deg)
+	1%
+		color: $red
+		transform: rotate(10deg)
+		margin-left: 4px
+	5%
+		color: $hover-color
+		transform: rotate(0deg)
+		/* style */
+@-o-keyframes red-hover
+	0%
+		/* style */
+	1%
+		color: $red
+	5%
+		color: $hover-color
+		/* style */
+@keyframes red-hover
+	0%
+		/* style */
+		transform: rotate(0deg)
+	1%
+		color: $red
+		transform: rotate(10deg)
+		margin-left: 4px
+	5%
+		color: $hover-color
+		transform: rotate(0deg)
+		/* style */
+
+	
+nav
+	@include a
+
+p
+	@include font-def-normal
+	
+div.highlight
+	@include font-size-normal
+	
+h1
+	@include font-hand-h1
+	&.site-title
+		font: normal 4.4rem/0 $font-hand
+
+h2
+	@include font-hand-h2
+	&.title
+		font: normal 2.6rem/3.5rem $font-hand
+		float: left
+		margin: 0 32px 0 0
+
+.no-deco
+	text-decoration: none
+
+div.date
+	@include font-hand-small
+	
+footer
+	@include font-hand-h2
+	text-align: center 

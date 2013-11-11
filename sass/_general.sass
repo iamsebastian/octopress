@@ -1,0 +1,18 @@
+@mixin ghost
+	opacity: 0.17
+
+hr
+	// @include ghost
+	border-color: $light-color
+
+svg	g path
+	stroke-width: 1px
+	stroke: $stroke-color
+	fill: none
+	
+svg.line
+	// @include ghost
+	height: 25px
+	width: 100%
+	transform: scaleY(.5)
+	-webkit-transform: scaleY(.5)
