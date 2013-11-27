@@ -1,0 +1,1676 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Adjust",
+				"AdjustSlider"
+			],
+			[
+				"angu",
+				"angular.copy	AngularJS"
+			],
+			[
+				"count",
+				"countries"
+			],
+			[
+				"rel",
+				"model.generation.releaseDate"
+			],
+			[
+				"$route",
+				"$routeProvider"
+			],
+			[
+				"$routeP",
+				"angular: $routeParams"
+			],
+			[
+				"similiar",
+				"similiarCars:chosenModel"
+			],
+			[
+				"simi",
+				"similiarCars"
+			],
+			[
+				"body",
+				"bodyId"
+			],
+			[
+				"ad",
+				"adjustSliderIndex"
+			],
+			[
+				"get",
+				"getCompetitionCars"
+			],
+			[
+				"bod",
+				"$scope.bodyTypes"
+			],
+			[
+				"$root",
+				"$rootScope"
+			],
+			[
+				"slect",
+				"selectedManufacturer"
+			],
+			[
+				"LoadApp",
+				"LoadAppRequirements.run"
+			],
+			[
+				"call",
+				"callbackCount"
+			],
+			[
+				"h",
+				"$http	AngularJS"
+			],
+			[
+				"ui",
+				"ui.values"
+			],
+			[
+				"slider",
+				"sliderVals"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"$log",
+				"$log.log	AngularJS"
+			],
+			[
+				"s",
+				"sliderVals"
+			],
+			[
+				"set",
+				"setFilter"
+			],
+			[
+				"$lo",
+				"$log.log	AngularJS"
+			],
+			[
+				"$l",
+				"$log.log	AngularJS"
+			],
+			[
+				"border-",
+				"border-collapse"
+			],
+			[
+				"fac",
+				"factoryContent"
+			],
+			[
+				"$roo",
+				"$rootScope"
+			],
+			[
+				"retu",
+				"return"
+			],
+			[
+				"pro",
+				"productLineId"
+			],
+			[
+				"com",
+				"comm-html	Comment - HTML comment"
+			],
+			[
+				"$e",
+				"$digest	AngularJS"
+			],
+			[
+				"ng",
+				"ng-model	AngularJS"
+			],
+			[
+				"pa",
+				"phantomjs"
+			],
+			[
+				"key",
+				"key	CSS - @keyframes {}"
+			],
+			[
+				"exibitors",
+				"exhibitorsName"
+			],
+			[
+				"exhib",
+				"exhibitorsEntry"
+			],
+			[
+				"exhi",
+				"exhibitor_id"
+			],
+			[
+				"und",
+				"unbind	.unbind()"
+			],
+			[
+				"attr",
+				"attr	.attr() - single"
+			],
+			[
+				"de",
+				"delay	.delay()"
+			],
+			[
+				"lo",
+				"log	JS - Log to console"
+			],
+			[
+				"res",
+				"resize	.resize"
+			],
+			[
+				"cl",
+				"click	click"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"galleryD",
+				"galleryDetailDivClickRight"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"if",
+				"if	JS - if"
+			],
+			[
+				"urlNew",
+				"urlNewPhotoLeft"
+			],
+			[
+				"urlNewO",
+				"urlNewPhotoLeft"
+			],
+			[
+				"urlNewPhotoLeft",
+				"urlNewPhotoLeft"
+			],
+			[
+				"urlNewPhoto",
+				"urlNewPhotoOrigURL"
+			],
+			[
+				"urlNewP",
+				"urlNewPhotoOnHost"
+			],
+			[
+				"gallery",
+				"galleryZoomedImage"
+			],
+			[
+				"i",
+				"if	JS - if"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"re",
+				"ready	$(document).ready"
+			],
+			[
+				"th",
+				"this	$(this)"
+			],
+			[
+				"backgro",
+				"background-size"
+			],
+			[
+				"add",
+				"addClass	addClass"
+			],
+			[
+				"css",
+				"css	.css() - single"
+			],
+			[
+				"to",
+				"top"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"background",
+				"background-image"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"it",
+				"italic"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"t",
+				"text-indent"
+			],
+			[
+				"text",
+				"text-indent"
+			],
+			[
+				"f",
+				"fon	CSS - font: 1em/1.5 sans-serif;"
+			],
+			[
+				"box",
+				"box-shadow"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": ".themes/sile/sass/_typo.sass",
+			"settings":
+			{
+				"buffer_size": 2250,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".themes/sile/sass/_general.sass",
+			"settings":
+			{
+				"buffer_size": 274,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "source/_posts/2013-11-22-custom-angular-filter.markdown",
+			"settings":
+			{
+				"buffer_size": 2244,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"gfm",
+				"Set Syntax: Markdown GFM"
+			],
+			[
+				"markdown",
+				"Set Syntax: Markdown GFM"
+			],
+			[
+				"markdo",
+				"Set Syntax: Markdown"
+			],
+			[
+				"src",
+				"Snippet: Google AJAX Libraries: Ext Core"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"comment",
+				"Snippet: Comment - Single-line block comment"
+			],
+			[
+				"label",
+				"Snippet: <label> with <input>"
+			],
+			[
+				"radio",
+				"Snippet: input - radio"
+			],
+			[
+				"diff",
+				"Modific: Show diff"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
+			[
+				"user ",
+				"Preferences: Settings - User"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"indentation",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"spac",
+				"Indentation: Convert to Spaces"
+			],
+			[
+				"place",
+				"Snippet: Image - Placeholder"
+			],
+			[
+				"pack ionst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack isnt",
+				"Package Control: Install Package"
+			],
+			[
+				"merge",
+				"Git: Merge"
+			],
+			[
+				"git",
+				"Set Syntax: SublimeGit Diff"
+			],
+			[
+				"modi",
+				"Modific: Show diff"
+			],
+			[
+				"inst pack",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"pack inst",
+				"Package Control: Install Package"
+			],
+			[
+				"inst pac",
+				"Package Control: Install Package"
+			],
+			[
+				"upda",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"table",
+				"Snippet: <table>"
+			],
+			[
+				"box-",
+				"Snippet: box-shadow:0 0 0 #000"
+			],
+			[
+				"comm",
+				"Snippet: Comment - Section header comment"
+			],
+			[
+				"lorem",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"gith",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"github",
+				"Markdown Preview: Github Flavored Markdown: Preview in Browser"
+			],
+			[
+				"boder-style",
+				"Snippet: border-style:dot-dot-dash"
+			],
+			[
+				"border-style",
+				"Snippet: border-style:groove"
+			],
+			[
+				"dashed",
+				"Snippet: border-style:dashed"
+			],
+			[
+				"linear",
+				"Snippet: CSS - background-image: linear-gradient();"
+			],
+			[
+				"html comm",
+				"Snippet: Comment - HTML comment"
+			],
+			[
+				"pointer",
+				"Snippet: cursor:pointer"
+			],
+			[
+				"data",
+				"Emmet: Encode\\Decode Image to data:URL"
+			],
+			[
+				"rgb",
+				"Snippet: rgb()"
+			],
+			[
+				"Lorem",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"mark html",
+				"Markdown Preview: Github Flavored Markdown: Export HTML in Sublime Text"
+			],
+			[
+				"markd",
+				"Markdown Preview: Python Markdown: Preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Preview: Github Flavored Markdown: Export HTML in Sublime Text"
+			],
+			[
+				"markdo ex",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"githu",
+				"Markdown Preview: Github Flavored Markdown: Export HTML in Sublime Text"
+			],
+			[
+				"multi",
+				"Set Syntax: MultiMarkdown"
+			],
+			[
+				"pack in",
+				"Package Control: Install Package"
+			],
+			[
+				"html5",
+				"Set Syntax: HTML5"
+			],
+			[
+				"markdow",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"tetx",
+				"Snippet: text-justify"
+			],
+			[
+				"text",
+				"Snippet: text-align"
+			],
+			[
+				"opac",
+				"Snippet: opacity"
+			],
+			[
+				"opaci",
+				"Snippet: -ms-filter:opacity"
+			],
+			[
+				"anim",
+				"Snippet: CSS - animation: ;"
+			],
+			[
+				"ani",
+				"Snippet: animation"
+			],
+			[
+				"hmtl5",
+				"Set Syntax: HTML5"
+			],
+			[
+				"margin",
+				"Snippet: CSS - margin: 0;"
+			],
+			[
+				"pack ins",
+				"Package Control: Install Package"
+			],
+			[
+				"backgr",
+				"Snippet: background-size:contain"
+			],
+			[
+				"com",
+				"Snippet: Comment - To-do list"
+			],
+			[
+				"commen",
+				"Snippet: Comment - Block style comment"
+			],
+			[
+				"css com",
+				"Snippet: Comment - Subsection comment"
+			],
+			[
+				"fon	",
+				"Snippet: CSS - font: 1em/1.5 sans-serif;"
+			],
+			[
+				"htm",
+				"Snippet: Comment - Section header comment"
+			],
+			[
+				"media",
+				"Snippet: CSS - @media {}"
+			],
+			[
+				"comme",
+				"Snippet: Comment - HTML comment"
+			],
+			[
+				"show",
+				"Snippet: show"
+			],
+			[
+				"jquery",
+				"Snippet: jQuery.extend"
+			],
+			[
+				"key",
+				"Snippet: CSS - @keyframes {}"
+			],
+			[
+				"css",
+				"Snippet: CSS - font-family: sans-serif;"
+			],
+			[
+				"font",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"lint er",
+				"SublimeLint: Show All Errors"
+			],
+			[
+				"lint ",
+				"SublimeLint: Report (Open Files)"
+			],
+			[
+				"lint err",
+				"SublimeLint: Show All Errors"
+			],
+			[
+				"encod",
+				"HTML: Encode Special Characters"
+			],
+			[
+				"lint",
+				"SublimeLint: Report (Open Files)"
+			],
+			[
+				"erro",
+				"SublimeLint: Show All Errors"
+			],
+			[
+				"error",
+				"SublimeLint: Next Error"
+			],
+			[
+				"comm-html",
+				"Snippet: Comment - HTML comment"
+			],
+			[
+				"git stat",
+				"Git: Status"
+			]
+		],
+		"width": 647.0
+	},
+	"console":
+	{
+		"height": 443.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())",
+			" import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/sblei/Projects/octopress/source/_posts/2013-11-22-custom-angular-filter.markdown",
+		"/Users/sblei/GIT/bmwtax-web/app/styles/carCompetition.css",
+		"/Users/sblei/GIT/bmwtax-web/app/views/carCompetition.html",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/controllers/carCompetition.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/filters/similiarCars.js",
+		"/Users/sblei/GIT/bmwtax-web/app/styles/directiveStyles/numberCarousel.css",
+		"/Users/sblei/GIT/bmwtax-web/app/styles/vehicleChoice.css",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/controllers/carInfo.js",
+		"/Users/sblei/GIT/bmwtax-web/app/views/carInfo.html",
+		"/Users/sblei/GIT/bmwtax-web/app/styles/carInfo.css",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/controllers/taxCalculation.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/services/GetCompetitionCars.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/filters/ReturnThree.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/config.js",
+		"/Users/sblei/GIT/bmwtax-web/app/views/taxCalculation.html",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/services/AdjustSliderIndex.js",
+		"/Users/sblei/GIT/bmwtax-web/app/styles/taxCalculation.css",
+		"/Users/sblei/GIT/bmwtax-web/app/styles/main.css",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/controllers/countryOverview.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/controllers/brandChoice.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/directives/numberCarousel.js",
+		"/Users/sblei/GIT/bmwtax-web/app/styles/login.css",
+		"/Users/sblei/GIT/bmwtax-web/app/index.html",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/filters/co2filter.js",
+		"/Users/sblei/GIT/bmwtax-web/app/views/vehicleChoice.html",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/controllers/vehicleChoice.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/services/DecodeEcoLabelFormula.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/services/decodeEcoLabelFormula.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/services/adjustSliderIndex.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/services/getCompetitionCars.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/filters/returnThree.js",
+		"/Users/sblei/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/sblei/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/sblei/Library/Application Support/Sublime Text 3/Packages/User/JSON.sublime-settings",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/services/fctry.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/services/loadAppRequirements.js",
+		"/Users/sblei/GIT/bmwtax-web/app/styles/brandChoice.css",
+		"/Users/sblei/GIT/bmwtax-web/app/views/brandChoice.html",
+		"/Users/sblei/GIT/bmwtax-web/.tmp/styles/brandChoice.css",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/controllers/modelLineChoice.js",
+		"/Users/sblei/GIT/bmwtax-web/app/views/vehicleChoice.html.orig",
+		"/Users/sblei/GIT/bmwtax-web/Gruntfile.js",
+		"/Users/sblei/GIT/bmwtax-web/app/views/login.html",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/filters/highlightFilter2.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/filters/highlightFilter.js",
+		"/Users/sblei/GIT/bmwtax-web/.tmp/styles/main.css",
+		"/Users/sblei/GIT/bmwtax-web/.tmp/styles/vehicleChoice.css",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/controllers/login.js",
+		"/Users/sblei/GIT/bmwtax-web/bower.json",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/app.js",
+		"/Users/sblei/GIT/bmwtax-web/app/styles/modelLineChoice.css",
+		"/Users/sblei/GIT/bmwtax-web/app/views/modelLineChoice.html",
+		"/Users/sblei/GIT/bmwtax-web/test/spec/filters/co2filter.js",
+		"/Users/sblei/GIT/bmwtax-web/.tmp/styles/login.css",
+		"/Users/sblei/GIT/bmwtax-web/app/bower_components/angular-ui-utils/modules/highlight/highlight.js",
+		"/Users/sblei/GIT/bmwtax-web/node_modules/grunt-autoprefixer/node_modules/autoprefixer/lib/autoprefixer/hacks/filter.js",
+		"/Users/sblei/GIT/bmwtax-web/app/bower_components/angular-ui-utils/modules/utils.js",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/angularui/slider.js",
+		"/Users/sblei/GIT/bmwtax-web/.jshintrc",
+		"/Users/sblei/GIT/bmwtax-web/.jshintignore",
+		"/Users/sblei/GIT/bmwtax-web/.gitignore",
+		"/Users/sblei/GIT/bmwtax-web/test/robots/001.txt",
+		"/Users/sblei/GIT/bmwtax-web/test/robots/002.txt",
+		"/Users/sblei/GIT/bmwtax-web/app/scripts/controllers/main.js",
+		"/Users/sblei/GIT/bmwtax-web/.tmp/styles/modelLineChoice.css",
+		"/Users/sblei/GIT/bmwtax-web/app/bower_components/angular/angular.js",
+		"/Users/sblei/GIT/bmwtax-lib/.tmp/styles/main.css",
+		"/Users/sblei/GIT/bmwtax-web/js/config.js",
+		"/Users/sblei/GIT/bmwtax-web/index.html",
+		"/Users/sblei/GIT/bmwtax-web/doc/SESSION.md",
+		"/Users/sblei/GIT/bmwtax-web/css/style.css",
+		"/Users/sblei/Projects/angularapp/app/index.html",
+		"/Users/sblei/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown.sublime-settings",
+		"/Users/sblei/Projects/github/techday-doc2/readme.MD",
+		"/Users/sblei/Projects/github/techday-doc2/README.md",
+		"/Users/sblei/Library/Application Support/Sublime Text 3/Packages/User/SideBarGit.sublime-settings",
+		"/Users/sblei/Library/Application Support/Sublime Text 3/Packages/SideBarGit/SideBarGit.sublime-settings",
+		"/Users/sblei/Library/Application Support/Sublime Text 3/Packages/User/Git.sublime-settings",
+		"/Users/sblei/Library/Application Support/Sublime Text 3/Packages/Git/Git.sublime-settings",
+		"/Users/sblei/Projects/webapp/app/index.html",
+		"/Users/sblei/Projects/webapp/casperjs/cow.js",
+		"/Users/sblei/Projects/webapp/casperjs/googletesting.js",
+		"/Users/sblei/Projects/webapp/casperjs/test-test.js",
+		"/Users/sblei/Projects/webapp/casperjs/test.js",
+		"/Users/sblei/Projects/webapp/Dalekfile.json",
+		"/Users/sblei/Projects/webapp/mytest3.js",
+		"/Users/sblei/Projects/webapp/mytest2.js",
+		"/Users/sblei/Projects/webapp/mytest.js",
+		"/Users/sblei/Projects/angularapp/mytest3.js",
+		"/Users/sblei/Projects/angularapp/mytest2.js",
+		"/Users/sblei/Projects/angularapp/mytest.js",
+		"/Users/sblei/GIT/mea-master/mea.sublime-project",
+		"/Users/sblei/GIT/mea-master/voting4.html",
+		"/Users/sblei/GIT/mea-master/css/voting.css",
+		"/Users/sblei/GIT/mea-master/voting1.html",
+		"/Users/sblei/GIT/mea-master/exhibitorsDetail.html",
+		"/Users/sblei/GIT/mea-master/script/api-speakerdetail.js",
+		"/Users/sblei/GIT/mea-master/refereeDetail.html",
+		"/Users/sblei/GIT/mea-master/css/customizable.css",
+		"/Users/sblei/GIT/mea-master/css/pages.css",
+		"/Users/sblei/GIT/mea-master/css/exhibitors.css",
+		"/Users/sblei/GIT/mea-master/script/api_exhibitors.js",
+		"/Users/sblei/GIT/mea-master/script/api_exhibitorsDetail.js",
+		"/Users/sblei/GIT/mea-master/voting3.html",
+		"/Users/sblei/GIT/mea-master/voting2.html",
+		"/Users/sblei/GIT/mea-master/script/api-schedule.js",
+		"/Users/sblei/GIT/mea-master/script/orientation.js",
+		"/Users/sblei/GIT/mea-master/script/api-eventdetail.js",
+		"/Users/sblei/GIT/mea-master/panel.html",
+		"/Users/sblei/GIT/mea-master/script/api_voting.js",
+		"/Users/sblei/GIT/mea-master/eventDetail.html",
+		"/Users/sblei/GIT/mea-master/exhibitors.html",
+		"/Users/sblei/GIT/mea-master/index.html",
+		"/Users/sblei/GIT/mea-master/script/api_twitter.js",
+		"/Users/sblei/GIT/mea-master/script/main.js",
+		"/Users/sblei/GIT/mea/node_modules/grunt-contrib-cssmin/README.md",
+		"/Users/sblei/GIT/mea/node_modules/grunt-contrib-compress/README.md",
+		"/Users/sblei/GIT/mea/Gruntfile.js",
+		"/Users/sblei/GIT/mea/voting4.html",
+		"/Users/sblei/GIT/mea/voting3.html",
+		"/Users/sblei/GIT/mea/voting2.html",
+		"/Users/sblei/GIT/mea/voting1.html",
+		"/Users/sblei/GIT/mea/index.html",
+		"/Users/sblei/GIT/mea/script/orientation.js",
+		"/Users/sblei/GIT/mea/css/customizable.css",
+		"/Users/sblei/GIT/mea/script/api-eventdetail.js",
+		"/Users/sblei/GIT/mea/node_modules/grunt/docs/README.md",
+		"/Users/sblei/GIT/mea/script/api_voting.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Length",
+			"just_five",
+			"server_port",
+			"copy",
+			"8",
+			"right",
+			"scope",
+			"219px",
+			"ioDiv ",
+			"Div ",
+			"v ",
+			"css",
+			"countrySliderFiller",
+			"$scope",
+			"radio1",
+			"radio3",
+			"radio2",
+			"checked",
+			"style",
+			"ng-show=\"countryObj.low===0\"",
+			"margin",
+			"low",
+			"{}",
+			"){}",
+			"+ 3",
+			"obj.sel",
+			"label",
+			"Bold",
+			"label",
+			"24",
+			"modelDescription",
+			"gen[n]",
+			"];\n",
+			"Model",
+			"div",
+			"right",
+			":",
+			"Brand",
+			"<br>",
+			"br",
+			"marvel",
+			"carroisgothic",
+			"marvel",
+			"ma",
+			" ",
+			"span",
+			"sub",
+			"side24p",
+			"decodeAndBuildAlgorithm",
+			"labelId",
+			"config",
+			"type",
+			"j",
+			"comp.arr",
+			"bodyTypes",
+			"obj",
+			"boolean",
+			"adjustSliderIndex",
+			"$scope",
+			"$rootScope",
+			"Getcompetitioncars",
+			"type",
+			"$scope.models",
+			"$scope",
+			"$rootScope",
+			"model",
+			"description",
+			"boolean",
+			"type",
+			"calculateEcoLabel",
+			"description",
+			"type",
+			"decodeEcoLabelFo",
+			"decodeEcoLabelForm",
+			"return $http.get(sessionUrl);",
+			"templateUrl",
+			"this",
+			"$this",
+			"type",
+			"Integer",
+			"i",
+			"LastId",
+			"MaxId",
+			"MinId",
+			"$scope.country",
+			"type",
+			"Adjustsliderindex",
+			"type",
+			"number",
+			"type",
+			"\",",
+			"false",
+			"obj",
+			"Object",
+			"Number",
+			"$scope",
+			"gen",
+			" =",
+			"$scope",
+			" :",
+			" ",
+			"comp",
+			"bdoy",
+			"$scope.b",
+			"$scope.g",
+			"scope.b",
+			"$scope.bodyId",
+			"$scope.c",
+			"$scope.genId",
+			"$scope.m",
+			"$scope.b.",
+			"$scope.b",
+			"$scope.g.",
+			"$scope.g",
+			"$scope.g ",
+			"g",
+			"$scope.g",
+			"competitors",
+			"models",
+			"generations",
+			"bodyTypes",
+			"$scope.bodyTypes",
+			"bodyTypes",
+			"$scope",
+			"$scope.bodyTypes",
+			"pe.generations",
+			"generations",
+			"$scope.generations"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"currentEvents"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": ".themes/sile/sass/_typo.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2250,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2085,
+								2085
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close"
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1241.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".themes/sile/sass/_general.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								46,
+								46
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close"
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "source/_posts/2013-11-22-custom-angular-filter.markdown",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2244,
+								2244
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close"
+							],
+							"syntax": "Packages/MarkdownEditing/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 1367.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 37.0
+	},
+	"input":
+	{
+		"height": 37.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 124.0
+	},
+	"output.git":
+	{
+		"height": 124.0
+	},
+	"output.git-push":
+	{
+		"height": 124.0
+	},
+	"project": "octopress.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"getcom",
+				"app/scripts/services/GetCompetitionCars.js"
+			],
+			[
+				"simi",
+				"app/scripts/filters/similiarCars.js"
+			],
+			[
+				"evhic",
+				"app/scripts/controllers/vehicleChoice.js"
+			],
+			[
+				"vehic",
+				"app/views/vehicleChoice.html"
+			],
+			[
+				"taxc",
+				"app/views/taxCalculation.html"
+			],
+			[
+				"numberca",
+				"app/styles/directiveStyles/numberCarousel.css"
+			],
+			[
+				"veh",
+				"app/styles/vehicleChoice.css"
+			],
+			[
+				"brand",
+				"app/views/brandChoice.html"
+			],
+			[
+				"carom",
+				"app/styles/carCompetition.css"
+			],
+			[
+				"carcomp",
+				"app/scripts/controllers/carCompetition.js"
+			],
+			[
+				"caromp",
+				"app/views/carCompetition.html"
+			],
+			[
+				"taxcacss",
+				"app/styles/taxCalculation.css"
+			],
+			[
+				"cari",
+				"app/scripts/controllers/carInfo.js"
+			],
+			[
+				"carinfo",
+				"app/styles/carInfo.css"
+			],
+			[
+				"main",
+				"app/styles/main.css"
+			],
+			[
+				"number",
+				"app/styles/directiveStyles/numberCarousel.css"
+			],
+			[
+				"vehicl",
+				"app/styles/vehicleChoice.css"
+			],
+			[
+				"axc",
+				"app/scripts/controllers/taxCalculation.js"
+			],
+			[
+				"getc",
+				"app/scripts/services/GetCompetitionCars.js"
+			],
+			[
+				"config",
+				"app/scripts/config.js"
+			],
+			[
+				"taxcalc",
+				"app/views/taxCalculation.html"
+			],
+			[
+				"login.",
+				"app/styles/login.css"
+			],
+			[
+				"taxcal",
+				"app/styles/taxCalculation.css"
+			],
+			[
+				"app",
+				"app/scripts/app.js"
+			],
+			[
+				"main.css",
+				"app/styles/main.css"
+			],
+			[
+				"brandc",
+				"app/scripts/controllers/brandChoice.js"
+			],
+			[
+				"countryo",
+				"app/scripts/controllers/countryOverview.js"
+			],
+			[
+				"inde",
+				"app/index.html"
+			],
+			[
+				"conifg",
+				"app/scripts/config.js"
+			],
+			[
+				"co2filter",
+				"app/scripts/filters/co2filter.js"
+			],
+			[
+				"vehicle",
+				"app/views/vehicleChoice.html"
+			],
+			[
+				"decode",
+				"app/scripts/services/decodeEcoLabelFormula.js"
+			],
+			[
+				"return",
+				"app/scripts/filters/returnThree.js"
+			],
+			[
+				"index",
+				"app/index.html"
+			],
+			[
+				"adjust",
+				"app/scripts/services/adjustSliderIndex.js"
+			],
+			[
+				"getcompet",
+				"app/scripts/services/getCompetitionCars.js"
+			],
+			[
+				"carinfocss",
+				"app/styles/carInfo.css"
+			],
+			[
+				"con",
+				"app/scripts/config.js"
+			],
+			[
+				"brandh",
+				"app/styles/brandChoice.css"
+			],
+			[
+				"brandch",
+				"app/views/brandChoice.html"
+			],
+			[
+				"fct",
+				"app/scripts/services/fctry.js"
+			],
+			[
+				"conf",
+				"app/scripts/config.js"
+			],
+			[
+				"co2f",
+				"app/scripts/filters/co2filter.js"
+			],
+			[
+				"simili",
+				"app/scripts/filters/similiarCars.js"
+			],
+			[
+				"co2fi",
+				"app/scripts/filters/co2filter.js"
+			],
+			[
+				"vehi",
+				"app/views/vehicleChoice.html"
+			],
+			[
+				"model",
+				"app/scripts/controllers/modelLineChoice.js"
+			],
+			[
+				"taxjs",
+				"app/scripts/controllers/taxCalculation.js"
+			],
+			[
+				"carcom",
+				"app/styles/carCompetition.css"
+			],
+			[
+				"co2",
+				"app/scripts/filters/co2filter.js"
+			],
+			[
+				"login",
+				"app/views/login.html"
+			],
+			[
+				"highl",
+				"app/scripts/filters/highlightFilter.js"
+			],
+			[
+				"main.",
+				".tmp/styles/main.css"
+			],
+			[
+				"bower",
+				"bower.json"
+			],
+			[
+				"tax",
+				"app/scripts/controllers/taxCalculation.js"
+			],
+			[
+				"modell",
+				"app/styles/modelLineChoice.css"
+			],
+			[
+				"confi",
+				"app/scripts/config.js"
+			],
+			[
+				"login.c",
+				"app/styles/login.css"
+			],
+			[
+				"filter",
+				"node_modules/grunt-autoprefixer/node_modules/autoprefixer/lib/autoprefixer/hacks/filter.js"
+			],
+			[
+				"app.",
+				"app/scripts/app.js"
+			],
+			[
+				"jsignore",
+				".jshintignore"
+			],
+			[
+				"css",
+				".tmp/styles/main.css"
+			],
+			[
+				"mode",
+				"app/scripts/controllers/modelLineChoice.js"
+			],
+			[
+				"mo",
+				"app/styles/modelLineChoice.css"
+			],
+			[
+				"lo",
+				"app/scripts/controllers/login.js"
+			],
+			[
+				"002",
+				"test/robots/002.txt"
+			],
+			[
+				"ang",
+				"app/bower_components/angular/angular.js"
+			],
+			[
+				"bra",
+				"app/scripts/controllers/brandChoice.js"
+			],
+			[
+				"api.html",
+				"app/views/api.html"
+			],
+			[
+				"api",
+				".tmp/styles/api.css"
+			],
+			[
+				"custom",
+				"css/customizable.css"
+			],
+			[
+				"start",
+				"css/start.css"
+			],
+			[
+				"eve",
+				"eventDetail.html"
+			],
+			[
+				"votin",
+				"css/voting.css"
+			],
+			[
+				"vo",
+				"voting1.html"
+			],
+			[
+				"refe",
+				"refereeDetail.html"
+			],
+			[
+				"page",
+				"css/pages.css"
+			],
+			[
+				"sch",
+				"script/api-schedule.js"
+			],
+			[
+				"ex",
+				"css/exhibitors.css"
+			],
+			[
+				"exhibi",
+				"exhibitorsDetail.html"
+			],
+			[
+				"pages.cs",
+				"css/pages.css"
+			],
+			[
+				"orei",
+				"script/orientation.js"
+			],
+			[
+				"exjs",
+				"script/api_exhibitors.js"
+			],
+			[
+				"inht",
+				"index.html"
+			],
+			[
+				"e",
+				"exhibitors.html"
+			],
+			[
+				"excss",
+				"css/exhibitors.css"
+			],
+			[
+				"apiex",
+				"script/api_exhibitorsDetail.js"
+			],
+			[
+				"fo",
+				"css/font_roboto.css"
+			],
+			[
+				"in",
+				"index.html"
+			],
+			[
+				"ro",
+				"css/font_roboto.css"
+			],
+			[
+				"fon",
+				"css/font_roboto.css"
+			],
+			[
+				"font",
+				"css/font_roboto.css"
+			],
+			[
+				"note",
+				"note.html"
+			],
+			[
+				"curren",
+				"script/api_currentevents.js"
+			],
+			[
+				"cu",
+				"css/currentevents.css"
+			],
+			[
+				"current",
+				"css/currentevents.css"
+			],
+			[
+				"voting",
+				"voting.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/GIT/__SUBLIME/bmwtax-fat.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 180.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}

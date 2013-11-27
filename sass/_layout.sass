@@ -6,9 +6,15 @@ body
 	
 div#content
 	margin: 0 16px
-	padding: 0 32px 0 0
+	padding: 0 12px 0 0
 	width: 641px
-	border-right: 1px solid $light-color
+	border-right-width: 8px
+	border-right-style: solid
+	-webkit-border-image: url("../images/vertical_stroke.svg") repeat repeat
+	-moz-border-image: url("../images/vertical_stroke.svg") repeat repeat
+	-o-border-image: url("../images/vertical_stroke.svg") repeat repeat
+	border-image: url("../images/vertical_stroke.svg") repeat repeat
+	border-image-slice: 16
 	
 article
 	text-align: justify
@@ -16,8 +22,6 @@ article
 	padding: 0 1rem 1rem
 	svg
 		margin: 8px 0
-	.entry-content
-		@include a
 		
 nav.pagenavi
 	div.center

@@ -1,9 +1,0 @@
----
-layout: post
-title: "It's up and runnin'"
-date: 2013-10-22 16:42
-comments: true
-categories: 
----
-
-Sauberst einen weggepopelt.

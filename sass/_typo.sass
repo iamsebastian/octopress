@@ -7,7 +7,7 @@
 @mixin font-hand-small
 	font: normal 1.4rem/1rem $font-hand
 @mixin font-def-normal
-	font: normal 1.3rem/2.4rem $font-def
+	font: normal 1.1rem/1.9rem $font-def
 @mixin font-size-normal
 	font-size: .9rem
 @mixin a
@@ -29,8 +29,10 @@
 		color: $red
 	2%
 		background-size: 100% 110%
+		-webkit-background-size: 100% 110%
 	4%
 		background-size: 100% 100%
+		-webkit-background-size: 100% 100%
 	5%
 		color: $hover-color
 @-moz-keyframes red-hover
@@ -38,8 +40,10 @@
 		color: $red
 	2%
 		background-size: 100% 110%
+		-webkit-background-size: 100% 110%
 	4%
 		background-size: 100% 100%
+		-webkit-background-size: 100% 100%
 	5%
 		color: $hover-color
 @-o-keyframes red-hover
@@ -47,8 +51,10 @@
 		color: $red
 	2%
 		background-size: 100% 110%
+		-webkit-background-size: 100% 110%
 	4%
 		background-size: 100% 100%
+		-webkit-background-size: 100% 100%
 	5%
 		color: $hover-color
 @keyframes red-hover
@@ -56,21 +62,35 @@
 		color: $red
 	2%
 		background-size: 100% 110%
+		-webkit-background-size: 100% 110%
 	4%
 		background-size: 100% 100%
+		-webkit-background-size: 100% 100%
 	5%
 		color: $hover-color
 
 article
-	.tags
+	.entry-content
 		@include a
-		
-	
+		a
+			@include font-def-normal
+	.tags
+		@include font-hand-normal
+		@include a
+
 nav
 	@include a
 
 p
 	@include font-def-normal
+	> code
+		padding: 0 2px
+		// background-color: #E0E0E0
+		font-size: 1.0rem
+		line-height: 1.7remtruhöo5wot7 
+		// border-left: 3px solid #CCC
+		border: 1px solid $light-color
+
 	
 div.highlight
 	@include font-size-normal
@@ -84,7 +104,7 @@ h2
 	@include font-hand-h2
 	&.title
 		font: normal 2.6rem/3.5rem $font-hand
-		float: left
+		// float: left
 		margin: 0 32px 0 0
 
 .no-deco
@@ -95,4 +115,5 @@ div.date
 	
 footer
 	@include font-hand-h2
-	text-align: center 
+	text-align: center
+	@include a
