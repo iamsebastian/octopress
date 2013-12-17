@@ -6,7 +6,7 @@ comments: false
 categories: angular
 ---
 
-If you want to setup your very first custom angular filter, there are some steps to follow. 
+If you want to setup your very first custom angular filter, there are some steps to follow. Create a new filter, inject'em and use it in your view or $scope. It's on yor own, what you do with it. But you should give it a try.
 
 <!-- more -->
 

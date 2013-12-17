@@ -7,3 +7,8 @@ categories: angular
 ---
 
 The first days you work with angular, it's enough to work with integrated filter solutions. But after these days, you will expand and try to build your own solution. So here we go. 
+
+<!-- more -->
+
+The first days you work with angular, it's enough to work with integrated filter solutions. But after these days, you will expand and try to build your own solution. So here we go. 
+

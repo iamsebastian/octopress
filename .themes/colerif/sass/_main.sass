@@ -1,0 +1,135 @@
+html  
+  overflow-x: hidden
+#main
+  margin: 36px 0 0 0
+  @include max-screen(720px)
+    margin: 1rem 0 0 0
+  #content
+    // preview from index
+    .blog-index
+      article
+        padding: 0 0 48px 0
+        margin: 0 0 48px 0
+        @include max-screen(720px)
+          padding: 0
+          margin: 0
+        header
+          p.meta
+            @include meta
+          h1.entry-title
+            a
+              text-decoration: none
+              color: $colour1
+        .entry-content
+          float: left
+          width: 720px
+          margin: 0 30px 0 0
+          columns: 3
+          -moz-columns: 3
+          -webkit-columns: 3
+          column-gap: 30px
+          -moz-column-gap: 30px
+          -webkit-column-gap: 30px
+          @include max-screen(720px)
+            width: 100%
+            margin: 0
+            columns: 1
+            -moz-columns: 1
+            -webkit-columns: 1
+            column-gap: 0px
+            -moz-column-gap: 0px
+            -webkit-column-gap: 0px
+            
+          text-align: justify
+
+          code, span.line-number
+            padding: 0rem 0.1rem
+            border-radius: 4px
+            // font-weight: bold
+            border-bottom: 1px solid #ccc
+            
+          figure.code
+            background-color: $colour-code-b
+            margin: 1rem
+            span.line-number
+              color: darken($colour-code-b, 30%)
+        footer
+          clear: both
+          a
+            text-decoration: none
+            color: $colour1
+            text-transform: uppercase
+            line-height: 4rem
+            @include max-screen(720px)
+              line-height: auto
+            font-style: italic
+            border-bottom: 1px dotted $colour-border-miner
+            @include hover
+      article:nth-of-type(n)
+        div.hline
+          background-color: lighten($colour-border, 30%)
+          height: 96px
+          width: 10000px
+          margin: 96px 0 0 -4000px
+          @include max-screen(720px)
+            height: 1rem
+            width: 10000px
+            margin: 4px 0 1rem -4000px
+          
+    // real content
+    .pre-article
+      article
+        padding: 0 0 48px 0
+        margin: 0 0 48px 0
+        header
+          p.meta
+            @include meta
+          h1.entry-title
+            a
+              text-decoration: none
+              color: $colour1
+        .entry-content
+          float: left
+          width: 720px
+          margin: 0 30px 0 0
+          @include max-screen(720px)
+            float: none
+            width: auto
+            margin: auto
+          
+          text-align: justify
+
+          p > code
+            font-size: 14px
+            padding: 0rem 0.1rem
+            border-radius: 4px
+            border-bottom: 1px solid #ccc            
+          figure.code
+            background-color: $colour-code-b
+            margin: 1rem
+            @include max-screen(720px)
+              font-size: 10px
+              margin: auto
+            span.line-number
+              color: darken($colour-code-b, 30%)
+              font-size: 14px
+              @include max-screen(720px)
+                font-size: 10px
+        footer
+          font-size: .7rem
+          p.meta
+            @include meta
+          clear: both
+          a
+            text-decoration: none
+            color: $colour1
+            text-transform: uppercase
+            line-height: 4rem
+            @include max-screen(720px)
+              line-height: 1rem
+            font-style: italic
+            border-bottom: 1px dotted $colour-border-miner
+            @include hover
+      article:nth-of-type(n)
+        border-bottom: 4px solid $colour-border
+    .sidebar
