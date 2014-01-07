@@ -2,31 +2,33 @@
   font-family: Georgia
   
 @mixin meta
-  font-size: 0.7rem
+  font-size: .8rem
   text-transform: uppercase
   
 @mixin hover
   transition: .3s
   &:hover
     color: $colour-hover
-    border-bottom-style: solid
 
-h1
-  @include min-screen(720px)
-    font-size: 2.8rem
-    line-height: 7.3rem
-    font-weight: normal
+@mixin h1
+  font-size: 2.0rem
+  margin: 0 0 1.21348rem
+  text-align: center
+  font-weight: normal
+  font-style: italic
 h2
 h3
 h4
 h5
-p
-  font-size: 16px
-  line-height: 26px
+p, a
+  font-size: 20px
+  line-height: 31px
 b
 i
 a
 
 h1, h2, h3, h4, h5, p, b, i, a
   @include font
-  margin: 0
+  
+code
+  color: $darktint

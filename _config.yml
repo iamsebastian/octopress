@@ -3,7 +3,7 @@
 # ----------------------- #
 
 url: http://blei.in/
-title: blei.in > where Sebastian keeps snippets
+title: B. Sebastian keeps snippets.
 subtitle: Sebastian Blei
 author: Sebastian Blei
 simple_search: http://google.com/search
@@ -13,7 +13,7 @@ description:
 # You can customize the format as defined in
 # http://www.ruby-doc.org/core-1.9.2/Time.html#method-i-strftime
 # Additionally, %o will give you the ordinal representation of the day
-date_format: "ordinal"
+date_format: "%B %e, %Y"
 
 # RSS / Email (optional) subscription links (change if using something like Feedburner)
 subscribe_rss: /atom.xml
@@ -70,7 +70,7 @@ github_skip_forks: true
 
 # Twitter
 twitter_user: shellwerk
-twitter_tweet_button: true
+twitter_tweet_button: false
 
 # Google +1
 google_plus_one: false

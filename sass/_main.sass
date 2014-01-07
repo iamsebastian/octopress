@@ -1,80 +1,80 @@
-html  
+$head-height: 6rem
+
+$article-space: 6rem
+
+html
   overflow-x: hidden
+header
+  .head
+    position: absolute
+    background-color: $lighttint
+    left: 0
+    top: 0
+    width: 100%
+    height: $head-height
+    line-height: $head-height
+    color: $darktint
+    // font-weight: bold 
+    font-size: 1.5rem
+    text-align: center
+    // font-style: italic
+    @include font
+    border-bottom: 1px solid $lightertint
+
 #main
-  margin: 36px 0 0 0
+  margin: $head-height+6rem 0 0 0
   @include max-screen(720px)
-    margin: 1rem 0 0 0
+    margin: $head-height+2rem 0 0 0
   #content
+    position: relative
+    margin: auto
+    left: 0
+    right: 0 
+    width: 900px
+    @include max-screen(720px)
+      width: 90%
     // preview from index
     .blog-index
+      // width: 662px
+      @include max-screen(720px)
+        width: 100%
       article
-        padding: 0 0 48px 0
-        margin: 0 0 48px 0
         @include max-screen(720px)
           padding: 0
           margin: 0
         header
           p.meta
             @include meta
+            margin: 0 0 0.71rem
+            text-align: right
           h1.entry-title
+            text-align: center
+            @include h1
             a
+              @include h1
               text-decoration: none
               color: $colour1
+              @include hover
         .entry-content
-          float: left
-          width: 720px
-          margin: 0 30px 0 0
-          columns: 3
-          -moz-columns: 3
-          -webkit-columns: 3
-          column-gap: 30px
-          -moz-column-gap: 30px
-          -webkit-column-gap: 30px
-          @include max-screen(720px)
-            width: 100%
-            margin: 0
-            columns: 1
-            -moz-columns: 1
-            -webkit-columns: 1
-            column-gap: 0px
-            -moz-column-gap: 0px
-            -webkit-column-gap: 0px
-            
-          text-align: justify
-
-          code, span.line-number
-            padding: 0rem 0.1rem
-            border-radius: 4px
-            // font-weight: bold
-            border-bottom: 1px solid #ccc
-            
           figure.code
             background-color: $colour-code-b
             margin: 1rem
             span.line-number
               color: darken($colour-code-b, 30%)
-        footer
-          clear: both
           a
-            text-decoration: none
             color: $colour1
-            text-transform: uppercase
-            line-height: 4rem
+            // text-transform: uppercase
+            font-style: italic
+            @include hover
             @include max-screen(720px)
               line-height: auto
-            font-style: italic
-            border-bottom: 1px dotted $colour-border-miner
-            @include hover
-      article:nth-of-type(n)
-        div.hline
-          background-color: lighten($colour-border, 30%)
-          height: 96px
-          width: 10000px
-          margin: 96px 0 0 -4000px
-          @include max-screen(720px)
-            height: 1rem
-            width: 10000px
-            margin: 4px 0 1rem -4000px
+        footer
+          clear: both
+          div.hline
+            margin: $article-space 0 $article-space*.7
+            width: 100%
+            border-bottom: 1px solid $lighttint
+            // @include max-screen(720px)
           
     // real content
     .pre-article
@@ -85,32 +85,20 @@ html
           p.meta
             @include meta
           h1.entry-title
+            @include h1
             a
-              text-decoration: none
+              @include h1
+              @include hover
               color: $colour1
         .entry-content
-          float: left
-          width: 720px
-          margin: 0 30px 0 0
-          @include max-screen(720px)
-            float: none
-            width: auto
-            margin: auto
-          
-          text-align: justify
-
-          p > code
-            font-size: 14px
-            padding: 0rem 0.1rem
-            border-radius: 4px
-            border-bottom: 1px solid #ccc            
           figure.code
-            background-color: $colour-code-b
+            // background-color: $colour-code-b
             margin: 1rem
             @include max-screen(720px)
               font-size: 10px
+              margin: auto
             span.line-number
-              color: darken($colour-code-b, 30%)
+              color: $colour1
               font-size: 14px
               @include max-screen(720px)
                 font-size: 10px
@@ -120,15 +108,8 @@ html
             @include meta
           clear: both
           a
-            text-decoration: none
             color: $colour1
             text-transform: uppercase
-            line-height: 4rem
-            @include max-screen(720px)
-              line-height: 1rem
             font-style: italic
-            border-bottom: 1px dotted $colour-border-miner
             @include hover
-      article:nth-of-type(n)
-        border-bottom: 4px solid $colour-border
     .sidebar
