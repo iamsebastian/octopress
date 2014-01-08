@@ -19,7 +19,7 @@ header
     text-align: center
     // font-style: italic
     @include font
-    border-bottom: 1px solid $lightertint
+    // border-bottom: 1px solid $lightertint
 
 #main
   margin: $head-height+6rem 0 0 0
@@ -112,4 +112,17 @@ header
             text-transform: uppercase
             font-style: italic
             @include hover
-    .sidebar
+    div.pagination
+      a
+        color: $colour1
+        font-style: italic
+        text-decoration: underline
+    aside.sidebar
+      section
+        h1
+          text-decoration: underline
+        ul
+          li
+            font-style: italic
+        a
+          color: $colour1
