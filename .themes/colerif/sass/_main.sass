@@ -1,5 +1,7 @@
 $head-height: 8rem
+$mobile-head-height: $head-height/2
 $logo-size: 4rem
+$mobile-logo-size: $logo-size/2
 
 $article-space: 6rem
 
@@ -14,6 +16,9 @@ header
     width: 100%
     height: $head-height
     line-height: $head-height
+    @include max-screen(720px)
+      height: $mobile-head-height
+      line-height: $mobile-head-height
     color: $darktint
     // font-weight: bold 
     font-size: 1.5rem
@@ -21,25 +26,33 @@ header
     // font-style: italic
     @include font
     // border-bottom: 1px solid $lightertint
+    a
+      text-decoration: none
+      color: $darktint
     .round
       border-radius: 50%
-      margin: ($head-height - $logo-size) auto
+      margin: $head-height*.28 auto
       line-height: $head-height*.71
       height: $head-height*.71
       width: $head-height*.71
+      @include max-screen(720px)
+        margin: $mobile-head-height*.71 auto
+        line-height: $mobile-head-height*.71
+        height: $mobile-head-height*.71
+        width: $mobile-head-height*.71
       background-color: #eee
-      transition: .3s
-      text-decoration: none
-      color: $darktint
+      transition: .7s linear
+      overflow: hidden
       &:hover
         background-color: $darktint
-        transform: rotate(180deg)
+        // transform: rotate(180deg)
+        font-size: 50rem
         cursor: pointer
 
 #main
-  margin: $head-height+6rem 0 0 0
+  margin: $head-height*1.75 0 0 0
   @include max-screen(720px)
-    margin: $head-height+2rem 0 0 0
+    margin: $mobile-head-height*2 0 0 0
   #content
     position: relative
     margin: auto
