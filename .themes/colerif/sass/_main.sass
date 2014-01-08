@@ -152,6 +152,9 @@ header
       margin: 50px 0 0 0
       border-top: 2px solid $colour-border-miner
       section
+        @include min-screen(720px)
+          width: 50%
+          float: left
         h1
           @include h1
           margin: 1.21348rem 0
@@ -162,6 +165,10 @@ header
             font-style: italic
             list-style: none
         a
+          text-decoration: none
+          border-bottom: 1px dotted $lightertint
           color: $colour1
           &:after
             content: " \2192"
+      .clear
+        clear: both
