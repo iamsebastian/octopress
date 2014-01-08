@@ -115,15 +115,21 @@ header
     div.pagination
       a
         color: $colour1
-        font-style: italic
         text-decoration: underline
+        &:after
+          content: " \2192"
     aside.sidebar
+      border-top: 2px solid $colour1
       section
         h1
           @include h1
+          margin: 1.21348rem 0
+          font-style: none
+          text-align: left
         ul
           li
             font-style: italic
+            list-style: none
         a
           color: $colour1
           &:after
