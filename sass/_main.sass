@@ -1,4 +1,4 @@
-$head-height: 6rem
+$head-height: 8rem
 $logo-size: 4rem
 
 $article-space: 6rem
@@ -23,11 +23,16 @@ header
     // border-bottom: 1px solid $lightertint
     .round
       border-radius: 50%
-      margin: ($head-height - $logo-size)/2 auto
-      line-height: $logo-size
-      height: $logo-size
-      width: $logo-size
+      margin: ($head-height - $logo-size) auto
+      line-height: $head-height*.71
+      height: $head-height*.71
+      width: $head-height*.71
       background-color: #eee
+      transition: .3s
+      &:hover
+        background-color: $darktint
+        transform: rotate(180deg)
+        cursor: pointer
       a
         text-decoration: none
         color: $darktint
