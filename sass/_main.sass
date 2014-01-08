@@ -23,10 +23,14 @@ header
     // border-bottom: 1px solid $lightertint
     .round
       border-radius: 50%
-      margin: ($head-height-$logo-size)/2 auto
+      margin: ($head-height - $logo-size)/2 auto
+      line-height: $logo-size
       height: $logo-size
       width: $logo-size
       background-color: #eee
+      a
+        text-decoration: none
+        color: $darktint
 
 #main
   margin: $head-height+6rem 0 0 0
