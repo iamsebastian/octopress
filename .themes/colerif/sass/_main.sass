@@ -62,7 +62,7 @@ header
     @include max-screen(720px)
       width: 90%
     // preview from index
-    .blog-index
+    div.blog-index
       // width: 662px
       @include max-screen(720px)
         width: 100%
@@ -103,6 +103,36 @@ header
             width: 100%
             border-bottom: 1px solid $lighttint
             // @include max-screen(720px)
+      
+    div
+      h1
+        @include font
+        @include h1
+      div#blog-archives
+        h2
+          text-align: right
+          font-weight: normal
+          border-bottom: 1px dotted $lightertint
+        article
+          margin: 25px 0
+          min-height: 50px 
+          & *
+            line-height: 41px
+          @include font
+          h1
+            text-align: left
+            float: left
+            a
+              color: $darktint
+              text-decoration: none
+              border-bottom: 1px dotted $lightertint
+              &:after
+                content: " \2192"
+          time
+            float: right
+          footer
+            margin: 0
+            span
           
     // real content
     .pre-article
@@ -170,5 +200,3 @@ header
           color: $colour1
           &:after
             content: " \2192"
-      .clear
-        clear: both
