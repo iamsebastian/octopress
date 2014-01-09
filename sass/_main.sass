@@ -31,6 +31,11 @@ header
       text-decoration: none
       color: $darktint
     .round
+      -webkit-transform: translate3d(0,0,1px)
+      -moz-transform: translate3d(0,0,1px)
+      -ms-transform: translate3d(0,0,1px)
+      -o-transform: translate3d(0,0,1px)
+      transform: translate3d(0,0,1px)
       border-radius: 50%
       margin: $head-height*.28 auto
       line-height: $head-height*.71
@@ -42,13 +47,12 @@ header
         height: $mobile-head-height*.71
         width: $mobile-head-height*.71
       background-color: #eee
-      transition: .7s linear
+      transition: .284s linear
       overflow: hidden
       &:hover
         background-color: $darktint
         // transform: rotate(180deg)
         font-size: 50rem
-        cursor: pointer
 
 #main
   margin: $head-height*1.75 0 0 0
@@ -78,12 +82,10 @@ header
             text-align: right
           h1.entry-title
             text-align: center
-            @include h1
+            @include hovershake
+            @include a
             a
               @include h1
-              text-decoration: none
-              color: $colour1
-              @include hover
         .entry-content
           figure.code
             background-color: $colour-code-b
@@ -211,13 +213,16 @@ header
             font-style: italic
             @include hover
     div.pagination
+      @include animation(skewshake, 1s, infinite)
       text-align: center
       a
+        @include hover
         color: $colour1
         text-decoration: underline
         &:after
           content: " \2192"
     aside.sidebar
+      @include animation(animation1, 2.71s, infinite)
       margin: 50px 0 0 0
       border-top: 2px solid $colour-border-miner
       section
@@ -237,5 +242,6 @@ header
           text-decoration: none
           border-bottom: 1px dotted $lightertint
           color: $colour1
+          @include hover
           &:after
             content: " \2192"

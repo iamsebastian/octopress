@@ -6,18 +6,20 @@
   text-transform: uppercase
   
 @mixin hover
-  transition: .3s
+  transition: .284s linear
   &:hover
     color: $lightertint
-    
+  
+@mixin hovershake
+  &:hover
+    @include animation(skewshake, 1s, 1)
+
 @mixin a
+  @include hovershake
   a
     text-decoration: none
     color: $darktint
-    transition: .3s
-    &:hover
-      color: $lightertint
-
+    @include hover
 
 @mixin h1
   font-size: 2.0rem
