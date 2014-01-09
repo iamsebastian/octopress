@@ -104,6 +104,7 @@ header
             border-bottom: 1px solid $lighttint
             // @include max-screen(720px)
       
+    // blog archive
     div
       h1
         @include font
@@ -114,14 +115,21 @@ header
           font-weight: normal
           border-bottom: 1px dotted $lightertint
         article
-          margin: 25px 0
-          min-height: 50px 
+          margin: 0 0 0
+          min-height: 100px 
           & *
-            line-height: 41px
+            line-height: 100px
+            @include max-screen(720px)
+              line-height: 1rem
           @include font
           h1
+            margin: 0
             text-align: left
             float: left
+            @include max-screen(720px)
+              float: none
+              line-height: 0
+              margin: 1rem 0
             a
               color: $darktint
               text-decoration: none
@@ -129,10 +137,39 @@ header
               &:after
                 content: " \2192"
           time
-            text-align: right
-          footer
-            margin: 0
-            span
+            @include meta
+            margin: 0 0 0 1rem
+            float: right
+            color: $lightertint
+            @include max-screen(720px)
+              margin: 0
+              width: 100%
+              text-align: center
+          time ~ span
+            @include meta
+            float: right
+            color: $lightertint
+            @include max-screen(720px)
+              float: none
+              margin: 0 0 1rem 0
+            a
+              @include meta
+              text-decoration: none
+              border-bottom: 1px dotted $lightertint
+              color: $darktint
+          div.clear
+            border-bottom: 2px solid $lighttint
+            @include max-screen(720px)
+              margin: 1rem 0
+              border-bottom: 1px solid $lighttint
+        &:last-of-type
+          div.clear
+            border-bottom: none
+            @include max-screen(720px)
+              border-bottom: 1px solid $lighttint
+
+              
+
           
     // real content
     .pre-article
