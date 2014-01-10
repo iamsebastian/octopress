@@ -1,3 +1,9 @@
+@mixin transition
+  transition: .284s linear
+
+@mixin speedtransition
+  transition: .141s linear
+
 @mixin font
   font-family: Georgia, serif
   
@@ -6,13 +12,13 @@
   text-transform: uppercase
   
 @mixin hover
-  transition: .284s linear
+  @include transition
   &:hover
     color: $lightertint
   
 @mixin hovershake
   &:hover
-    @include animation(skewshake, 1s, 1)
+    @include animation(skewshake, .714s, 1)
 
 @mixin a
   @include hovershake
@@ -45,3 +51,6 @@ h1, h2, h3, h4, h5, p, b, i, a
   
 code
   color: $darktint
+  
+table
+  font-size: 18px

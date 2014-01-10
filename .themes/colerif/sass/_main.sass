@@ -99,6 +99,8 @@ header
             @include hover
             @include max-screen(720px)
               line-height: auto
+            p
+              @include hovershake
         footer
           clear: both
           div.hline
@@ -134,10 +136,11 @@ header
               float: none
               line-height: 2rem
               margin: 1rem 0
+            @include hovershake
             a
-              color: $darktint
-              text-decoration: none
               border-bottom: 1px dotted $lightertint
+              color: $darktint
+              text-decoration: none 
               &:after
                 content: " \2192"
           time
@@ -213,7 +216,6 @@ header
             font-style: italic
             @include hover
     div.pagination
-      @include animation(skewshake, 1s, infinite)
       text-align: center
       a
         @include hover
@@ -222,7 +224,6 @@ header
         &:after
           content: " \2192"
     aside.sidebar
-      @include animation(animation1, 2.71s, infinite)
       margin: 50px 0 0 0
       border-top: 2px solid $colour-border-miner
       section
@@ -238,6 +239,16 @@ header
           li
             font-style: italic
             list-style: none
+            span.githubrepo
+              @include hovershake
+          li.post
+            @include hovershake
+        ul#gh_repos
+          li
+            @include hovershake
+
+          
+
         a
           text-decoration: none
           border-bottom: 1px dotted $lightertint
