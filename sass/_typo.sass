@@ -32,6 +32,10 @@
     text-decoration: none
     border-bottom: 1px dotted $lightertint
     color: $colour1
+    letter-spacing: -.5px
+    font-variant: small-caps
+    padding: 0 .2rem
+    margin: 0 .2rem
     @include hover
     &:after
       content: " \2192"
@@ -42,6 +46,10 @@
   text-align: center
   font-weight: normal
   font-style: italic
+@mixin h1-normal
+  @include h1
+  font-style: normal
+  margin: 0 0 3.42698rem
 h2
 h3
 h4
