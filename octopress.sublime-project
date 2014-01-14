@@ -4,6 +4,10 @@
 		{
 			"follow_symlinks": true,
 			"path": "/Users/sblei/Projects/octopress"
+		},
+		{
+			"follow_symlinks": true,
+			"path": "."
 		}
 	]
 }

@@ -86,7 +86,7 @@ header
             @include hovershake
             @include a
             a
-              @include h1
+              @include h1-normal
         .entry-content
           figure.code
             background-color: $colour-code-b
@@ -114,7 +114,7 @@ header
     div
       h1
         @include font
-        @include h1
+        @include h1-normal
       div#blog-archives
         h2
           text-align: right
@@ -178,6 +178,11 @@ header
           
     // real content
     .pre-article
+      img
+        width: 900px
+        margin: 2rem 0
+        @include max-screen(720px)
+          width: 90%
       article
         padding: 0 0 48px 0
         margin: 0 0 48px 0
