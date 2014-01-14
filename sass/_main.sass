@@ -191,14 +191,18 @@ header
               @include hover
               color: $colour1
         .entry-content
+          p
+            @include a-clean
+          code
+            color: mix($p, $colour-mix, 50%)
           figure.code
             // background-color: $colour-code-b
-            margin: 1rem
+            margin: 8px 8px 3.71rem
             @include max-screen(720px)
               font-size: 10px
               margin: auto
             span.line-number
-              color: $colour1
+              // color: $colour1
               font-size: 14px
               @include max-screen(720px)
                 font-size: 10px
@@ -248,12 +252,5 @@ header
           li
             @include hovershake
 
-          
 
-        a
-          text-decoration: none
-          border-bottom: 1px dotted $lightertint
-          color: $colour1
-          @include hover
-          &:after
-            content: " \2192"
+        @include a-clean

@@ -1,3 +1,4 @@
+'use strict';
 var github = (function(){
   // function escapeHtml(str) {
     // return str;
@@ -5,7 +6,6 @@ var github = (function(){
   // }
   function render(target, repos){
     var i = 0, fragment = '', t = document.querySelector(target);
-
     console.log('repos',repos);
     for(i = 0; i < repos.length; i++) {
       fragment += '<li><span class="githubrepo"><a href="'+repos[i].html_url+'">'+repos[i].name+'</a></span><p>'+repos[i].description||''+'</p></li>';
