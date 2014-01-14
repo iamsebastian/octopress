@@ -16,10 +16,10 @@ I will attach two screenshots here, but I won't explain timings and memory usage
 
 Before I've used bindonce:
 
-![Pre](http://i.imgur.com/Y0vX69u.png)
+[![Pre](http://i.imgur.com/Y0vX69u.png)](http://i.imgur.com/Y0vX69u.png)
 
 After the change:
 
-![Post](http://i.imgur.com/J3jm7ND.png)
+[![Post](http://i.imgur.com/J3jm7ND.png)](http://i.imgur.com/J3jm7ND.png)
 
 Nothing more to say than: much of non-interactive data? *bindonce* is your solution - maybe.
