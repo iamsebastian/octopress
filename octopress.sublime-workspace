@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"transform",
+				"transform"
+			],
+			[
 				"max",
 				"max-screen"
 			],
@@ -311,7 +315,71 @@
 			"file": ".themes/colerif/sass/_typo.sass",
 			"settings":
 			{
-				"buffer_size": 421,
+				"buffer_size": 1088,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".themes/colerif/sass/_animations.sass",
+			"settings":
+			{
+				"buffer_size": 3867,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".themes/colerif/sass/_main.sass",
+			"settings":
+			{
+				"buffer_size": 6839,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".themes/colerif/sass/screen.sass",
+			"settings":
+			{
+				"buffer_size": 198,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".themes/colerif/source/_includes/asides/github.html",
+			"settings":
+			{
+				"buffer_size": 1032,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".themes/colerif/sass/_colours.sass",
+			"settings":
+			{
+				"buffer_size": 336,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".themes/colerif/sass/_code.sass",
+			"settings":
+			{
+				"buffer_size": 1086,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".themes/colerif/source/javascripts/github.js",
+			"settings":
+			{
+				"buffer_size": 1070,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".git/config",
+			"settings":
+			{
+				"buffer_size": 549,
 				"line_ending": "Unix"
 			}
 		},
@@ -324,66 +392,18 @@
 			}
 		},
 		{
-			"file": ".themes/colerif/sass/_main.sass",
+			"file": ".themes/colerif/source/_includes/archive_post.html",
 			"settings":
 			{
-				"buffer_size": 2787,
+				"buffer_size": 469,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": ".themes/colerif/sass/_general.sass",
+			"file": ".themes/colerif/source/_includes/head.html",
 			"settings":
 			{
-				"buffer_size": 213,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "source/_posts/2013-11-11-big-data-with-angular.markdown",
-			"settings":
-			{
-				"buffer_size": 1411,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".themes/colerif/source/_includes/article.html",
-			"settings":
-			{
-				"buffer_size": 1315,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".themes/colerif/source/index.html",
-			"settings":
-			{
-				"buffer_size": 743,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".themes/colerif/source/_layouts/default.html",
-			"settings":
-			{
-				"buffer_size": 685,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".themes/colerif/source/_includes/header.html",
-			"settings":
-			{
-				"buffer_size": 58,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": ".themes/colerif/sass/_colours.sass",
-			"settings":
-			{
-				"buffer_size": 312,
+				"buffer_size": 1623,
 				"line_ending": "Unix"
 			}
 		}
@@ -395,8 +415,24 @@
 		"selected_items":
 		[
 			[
+				"mix",
+				"Snippet: mix()"
+			],
+			[
 				"sass",
 				"Set Syntax: Sass"
+			],
+			[
+				"keyfr",
+				"Snippet: @keyframes"
+			],
+			[
+				"animation",
+				"Snippet: animation"
+			],
+			[
+				"transfo",
+				"Snippet: transform"
 			],
 			[
 				"inclu",
@@ -753,20 +789,63 @@
 	},
 	"file_history":
 	[
+		"/Users/sblei/Projects/octopress/sass/screen.sass",
+		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_general.sass",
+		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/post/date.html",
+		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_colours.sass",
+		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/custom/footer.html",
+		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/header.html",
+		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/post/categories.html",
+		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/article.html",
+		"/Users/sblei/Projects/octopress/.themes/colerif/source/_layouts/post.html",
+		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/post/author.html",
+		"/Users/sblei/Projects/octopress/.themes/colerif/source/_layouts/default.html",
+		"/Users/sblei/Projects/octopress/.themes/colerif/source/index.html",
+		"/Users/sblei/Projects/octopress/source/_posts/2013-11-11-big-data-with-angular.markdown",
+		"/Users/sblei/Projects/octopress/.themes/colerif/sass/screen.sass",
+		"/Users/sblei/Projects/octopress/source/_posts/2014-01-10-github-plugin-without-dependencies.markdown",
+		"/Users/sblei/Projects/octopress/.sass-cache/bc24f6fa1934434565d4db1cef85f5806b866d30/screen.sassc",
+		"/Users/sblei/Projects/octopress/.sass-cache/8f6fde990998d76035b9a2d9dacc27644b00962a/screen.sassc",
+		"/Users/sblei/Projects/octopress/.sass-cache/8387b2e5099803f291b90b68bea12a24f8914d33/screen.sassc",
+		"/Users/sblei/Projects/octopress/.sass-cache/23a7b444c926f58fba35feaa2ea720ad8409698f/screen.sassc",
+		"/Users/sblei/Projects/octopress/.sass-cache/20ac8485dca7f6cec26fbcffdc9a6d2bf3399e7f/screen.sassc",
+		"/Users/sblei/Projects/octopress/sass.old/screen.sass",
+		"/Users/sblei/Projects/octopress/_deploy/sitemap.xml",
+		"/Users/sblei/Projects/octopress/.themes/colerif/source/javascripts/libs/jXHR.js",
+		"/Users/sblei/Projects/octopress/_deploy/assets/jwplayer/glow/glow.xml",
+		"/Users/sblei/Projects/octopress/.themes/classic/source/javascripts/libs/jXHR.js",
+		"/Users/sblei/Projects/octopress/source.old/javascripts/libs/jXHR.js",
+		"/Users/sblei/Projects/octopress/source/javascripts/libs/jXHR.js",
+		"/Users/sblei/Projects/octopress/public/javascripts/libs/jXHR.js",
+		"/Users/sblei/Projects/octopress/_deploy/javascripts/libs/jXHR.js",
+		"/Users/sblei/Projects/octopress/plugins/jsfiddle.rb",
+		"/Users/sblei/Projects/octopress/source/_posts/2013-11-08-own-angular-filter.markdown",
+		"/Users/sblei/Projects/octopress/source.old/about/index.markdown",
+		"/Users/sblei/Projects/octopress/source/about/index.markdown",
+		"/Users/sblei/Projects/octopress/README.markdown",
+		"/Users/sblei/Projects/octopress/CHANGELOG.markdown",
+		"/Users/sblei/Projects/octopress/.themes/classic/source/_includes/asides/github.html",
+		"/Users/sblei/Projects/octopress/.themes/classic/source/javascripts/github.js",
+		"/Users/sblei/Projects/octopress/source.old/javascripts/github.js",
+		"/Users/sblei/Projects/octopress/source/javascripts/github.js",
+		"/Users/sblei/Projects/octopress/public/javascripts/github.js",
+		"/Users/sblei/Projects/octopress/_deploy/javascripts/github.js",
+		"/Users/sblei/Projects/octopress/.sass-cache/b7d4163b22d0316d8e0feec61dfbd628d9b98e76/github.sassc",
+		"/Users/sblei/Projects/octopress/plugins/gist_tag.rb",
+		"/Users/sblei/Projects/octopress/Gemfile",
+		"/Users/sblei/Projects/octopress/.themes/colerif/sass/plugins/github.sass",
 		"/Users/sblei/Projects/octopress/plugins/sitemap_generator.rb",
 		"/Users/sblei/Projects/octopress/plugins/category_generator.rb",
 		"/Users/sblei/Projects/octopress/.sass-cache/8387b2e5099803f291b90b68bea12a24f8914d33/_general.sassc",
 		"/Users/sblei/Projects/octopress/.sass-cache/6ad5d4f980e13d309ee8a96f2cffab874c585dd0/_general.scssc",
 		"/Users/sblei/Projects/octopress/sass.old/_general.sass",
 		"/Users/sblei/Projects/octopress/sass/_general.sass",
-		"/Users/sblei/Projects/octopress/Gemfile",
 		"/Users/sblei/Projects/octopress/_draft/bindonce.md",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/custom/head.html",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/head.html",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/google_analytics.html",
 		"/Users/sblei/Projects/octopress/config.ru",
 		"/Users/sblei/Projects/octopress/config.rb",
-		"/Users/sblei/Projects/octopress/CHANGELOG.markdown",
 		"/Users/sblei/Projects/octopress/.sass-cache/8f6fde990998d76035b9a2d9dacc27644b00962a/_main.sassc",
 		"/Users/sblei/Projects/octopress/.sass-cache/8387b2e5099803f291b90b68bea12a24f8914d33/_main.sassc",
 		"/Users/sblei/Projects/octopress/sass.old/_main.sass",
@@ -779,20 +858,13 @@
 		"/Users/sblei/Projects/octopress/sass.old/_typo.sass",
 		"/Users/sblei/Projects/octopress/sass/_typo.sass",
 		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_typo.sass",
-		"/Users/sblei/Projects/octopress/.themes/colerif/sass/screen.sass",
 		"/Users/sblei/Projects/octopress/_config.yml",
-		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_general.sass",
-		"/Users/sblei/Projects/octopress/.themes/colerif/source/_layouts/default.html",
-		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/article.html",
 		"/Users/sblei/Projects/octopress/.themes/colerif/sass/utilities/_media-queries.scss",
 		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_main.sass",
-		"/Users/sblei/Projects/octopress/.themes/colerif/source/_layouts/post.html",
 		"/Users/sblei/Projects/octopress/source/_posts/2013-11-13-load-all-data-first.markdown",
-		"/Users/sblei/Projects/octopress/source/_posts/2013-11-08-own-angular-filter.markdown",
 		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_header.sass",
 		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_nav.sass",
 		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_footer.sass",
-		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_colours.sass",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/custom/svg/arrow.svg",
 		"/Users/sblei/Projects/octopress/source/_posts/2013-11-22-custom-angular-filter.markdown",
 		"/Users/sblei/Projects/octopress/source.old/_posts/2013-11-22-custom-angular-filter.markdown",
@@ -844,43 +916,7 @@
 		"/Users/sblei/GIT/bmwtax-web/.tmp/styles/brandChoice.css",
 		"/Users/sblei/GIT/bmwtax-web/app/scripts/controllers/modelLineChoice.js",
 		"/Users/sblei/GIT/bmwtax-web/app/views/vehicleChoice.html.orig",
-		"/Users/sblei/GIT/bmwtax-web/Gruntfile.js",
-		"/Users/sblei/GIT/bmwtax-web/app/views/login.html",
-		"/Users/sblei/GIT/bmwtax-web/app/scripts/filters/highlightFilter2.js",
-		"/Users/sblei/GIT/bmwtax-web/app/scripts/filters/highlightFilter.js",
-		"/Users/sblei/GIT/bmwtax-web/.tmp/styles/main.css",
-		"/Users/sblei/GIT/bmwtax-web/.tmp/styles/vehicleChoice.css",
-		"/Users/sblei/GIT/bmwtax-web/app/scripts/controllers/login.js",
-		"/Users/sblei/GIT/bmwtax-web/bower.json",
-		"/Users/sblei/GIT/bmwtax-web/app/scripts/app.js",
-		"/Users/sblei/GIT/bmwtax-web/app/styles/modelLineChoice.css",
-		"/Users/sblei/GIT/bmwtax-web/app/views/modelLineChoice.html",
-		"/Users/sblei/GIT/bmwtax-web/test/spec/filters/co2filter.js",
-		"/Users/sblei/GIT/bmwtax-web/.tmp/styles/login.css",
-		"/Users/sblei/GIT/bmwtax-web/app/bower_components/angular-ui-utils/modules/highlight/highlight.js",
-		"/Users/sblei/GIT/bmwtax-web/node_modules/grunt-autoprefixer/node_modules/autoprefixer/lib/autoprefixer/hacks/filter.js",
-		"/Users/sblei/GIT/bmwtax-web/app/bower_components/angular-ui-utils/modules/utils.js",
-		"/Users/sblei/GIT/bmwtax-web/app/scripts/angularui/slider.js",
-		"/Users/sblei/GIT/bmwtax-web/.jshintrc",
-		"/Users/sblei/GIT/bmwtax-web/.jshintignore",
-		"/Users/sblei/GIT/bmwtax-web/.gitignore",
-		"/Users/sblei/GIT/bmwtax-web/test/robots/001.txt",
-		"/Users/sblei/GIT/bmwtax-web/test/robots/002.txt",
-		"/Users/sblei/GIT/bmwtax-web/app/scripts/controllers/main.js",
-		"/Users/sblei/GIT/bmwtax-web/.tmp/styles/modelLineChoice.css",
-		"/Users/sblei/GIT/bmwtax-web/app/bower_components/angular/angular.js",
-		"/Users/sblei/GIT/bmwtax-lib/.tmp/styles/main.css",
-		"/Users/sblei/GIT/bmwtax-web/js/config.js",
-		"/Users/sblei/GIT/bmwtax-web/index.html",
-		"/Users/sblei/GIT/bmwtax-web/doc/SESSION.md",
-		"/Users/sblei/GIT/bmwtax-web/css/style.css",
-		"/Users/sblei/Projects/angularapp/app/index.html",
-		"/Users/sblei/Library/Application Support/Sublime Text 3/Packages/MarkdownEditing/Markdown.sublime-settings",
-		"/Users/sblei/Projects/github/techday-doc2/readme.MD",
-		"/Users/sblei/Projects/github/techday-doc2/README.md",
-		"/Users/sblei/Library/Application Support/Sublime Text 3/Packages/User/SideBarGit.sublime-settings",
-		"/Users/sblei/Library/Application Support/Sublime Text 3/Packages/SideBarGit/SideBarGit.sublime-settings",
-		"/Users/sblei/Library/Application Support/Sublime Text 3/Packages/User/Git.sublime-settings"
+		"/Users/sblei/GIT/bmwtax-web/Gruntfile.js"
 	],
 	"find":
 	{
@@ -891,6 +927,8 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"/Users/sblei/Projects/octopress/.themes/colerif/",
+			"/Users/sblei/Projects/octopress/.themes/colerif/sass",
 			""
 		]
 	},
@@ -899,6 +937,62 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"clean",
+			"padding",
+			"darktint",
+			"blue",
+			"brick",
+			"mustard",
+			"sea",
+			"mustard",
+			"color: ",
+			"$",
+			"    $",
+			"one",
+			"$size/5",
+			" 0%",
+			"0%",
+			"%\n",
+			"0",
+			"opacity: 1",
+			" + ",
+			"*2",
+			"$intensity/5",
+			"skewshake",
+			"$intensity",
+			"$intensity/11",
+			"7",
+			"$intensity/",
+			"0.28",
+			"skewshake",
+			" 14,",
+			"14,",
+			"%",
+			"   {",
+			";",
+			"webkit",
+			"skewshake",
+			"skewX",
+			"transform",
+			"this.response",
+			"get",
+			"animation1",
+			"linear",
+			"infinite",
+			"keyframeset",
+			"animation1",
+			"50% ",
+			"/* style */",
+			"name",
+			"article",
+			"margin",
+			"$archive-margin",
+			"head",
+			"screen",
+			"head",
+			"$logo-size",
+			"meta",
+			"pagination",
 			"`",
 			";",
 			"script",
@@ -970,63 +1064,7 @@
 			"obj.sel",
 			"label",
 			"Bold",
-			"label",
-			"24",
-			"modelDescription",
-			"gen[n]",
-			"];\n",
-			"Model",
-			"div",
-			"right",
-			":",
-			"Brand",
-			"<br>",
-			"br",
-			"marvel",
-			"carroisgothic",
-			"marvel",
-			"ma",
-			" ",
-			"span",
-			"sub",
-			"side24p",
-			"decodeAndBuildAlgorithm",
-			"labelId",
-			"config",
-			"type",
-			"j",
-			"comp.arr",
-			"bodyTypes",
-			"obj",
-			"boolean",
-			"adjustSliderIndex",
-			"$scope",
-			"$rootScope",
-			"Getcompetitioncars",
-			"type",
-			"$scope.models",
-			"$scope",
-			"$rootScope",
-			"model",
-			"description",
-			"boolean",
-			"type",
-			"calculateEcoLabel",
-			"description",
-			"type",
-			"decodeEcoLabelFo",
-			"decodeEcoLabelForm",
-			"return $http.get(sessionUrl);",
-			"templateUrl",
-			"this",
-			"$this",
-			"type",
-			"Integer",
-			"i",
-			"LastId",
-			"MaxId",
-			"MinId",
-			"$scope.country"
+			"label"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1054,15 +1092,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 421,
+						"buffer_size": 1088,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								176,
-								176
+								849,
+								849
 							]
 						],
 						"settings":
@@ -1071,6 +1109,10 @@
 							"auto_indent": true,
 							"bh_regions":
 							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -1079,14 +1121,10 @@
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1095,6 +1133,10 @@
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -1103,10 +1145,6 @@
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -1117,6 +1155,393 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
+						"translation.y": 439.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".themes/colerif/sass/_animations.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3867,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1439,
+								1439
+							],
+							[
+								1916,
+								1916
+							],
+							[
+								2377,
+								2377
+							],
+							[
+								2839,
+								2839
+							],
+							[
+								3283,
+								3283
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close"
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": ".themes/colerif/sass/_main.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6839,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5025,
+								5025
+							],
+							[
+								5072,
+								5072
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close"
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3370.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": ".themes/colerif/sass/screen.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 198,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								142,
+								142
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close"
+							],
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": ".themes/colerif/source/_includes/asides/github.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1032,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								902,
+								902
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close"
+							],
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_separators": "./\\\\()\\\"\\'-:,.;<>~!@#%^&*|+=[]{}`~?"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": ".themes/colerif/sass/_colours.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 336,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								259,
+								259
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close"
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1124,7 +1549,228 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 6,
+					"file": ".themes/colerif/sass/_code.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1086,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								322,
+								322
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close"
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 97.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": ".themes/colerif/source/javascripts/github.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1070,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								516,
+								516
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close"
+							],
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_separators": "./\\\\()\\\"\\'-:,.;<>~!@#%^&*|+=[]{}`~?"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": ".git/config",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 549,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								326,
+								326
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close"
+							],
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"file": "_config.yml",
 					"semi_transient": false,
 					"settings":
@@ -1136,8 +1782,8 @@
 						"selection":
 						[
 							[
-								119,
-								119
+								1424,
+								1430
 							]
 						],
 						"settings":
@@ -1145,6 +1791,10 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -1153,14 +1803,10 @@
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1169,6 +1815,10 @@
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -1177,10 +1827,6 @@
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -1192,32 +1838,35 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": ".themes/colerif/sass/_main.sass",
+					"buffer": 10,
+					"file": ".themes/colerif/source/_includes/archive_post.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2787,
+						"buffer_size": 469,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								409,
-								409
+								443,
+								443
 							]
 						],
 						"settings":
 						{
 							"BracketHighlighterBusy": false,
-							"auto_indent": true,
 							"bh_regions":
 							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -1226,14 +1875,10 @@
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1242,80 +1887,10 @@
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close"
-							],
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 288.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": ".themes/colerif/sass/_general.sass",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 213,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								213,
-								213
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
 								"bh_square",
 								"bh_square_center",
 								"bh_square_open",
 								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -1324,105 +1899,27 @@
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
 								"bh_double_quote_close"
 							],
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "source/_posts/2013-11-11-big-data-with-angular.markdown",
+					"buffer": 11,
+					"file": ".themes/colerif/source/_includes/head.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1411,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1060,
-								1060
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close"
-							],
-							"syntax": "Packages/Markdown Extended/Syntaxes/Markdown Extended.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": ".themes/colerif/source/_includes/article.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1315,
+						"buffer_size": 1623,
 						"regions":
 						{
 						},
@@ -1438,6 +1935,10 @@
 							"BracketHighlighterBusy": false,
 							"bh_regions":
 							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
 								"bh_single_quote",
 								"bh_single_quote_center",
 								"bh_single_quote_open",
@@ -1446,14 +1947,10 @@
 								"bh_unmatched_center",
 								"bh_unmatched_open",
 								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
 								"bh_angle",
 								"bh_angle_center",
 								"bh_angle_open",
@@ -1462,6 +1959,10 @@
 								"bh_curly_center",
 								"bh_curly_open",
 								"bh_curly_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
 								"bh_regex",
 								"bh_regex_center",
 								"bh_regex_open",
@@ -1470,10 +1971,6 @@
 								"bh_tag_center",
 								"bh_tag_open",
 								"bh_tag_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
 								"bh_double_quote",
 								"bh_double_quote_center",
 								"bh_double_quote_open",
@@ -1482,303 +1979,12 @@
 							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": ".themes/colerif/source/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 743,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								24,
-								24
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close"
-							],
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": ".themes/colerif/source/_layouts/default.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 685,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								377,
-								377
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close"
-							],
-							"syntax": "Packages/HTML/HTML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 9,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": ".themes/colerif/source/_includes/header.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 58,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								52,
-								52
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close"
-							],
-							"syntax": "Packages/HTML/HTML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": ".themes/colerif/sass/_colours.sass",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 312,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								172,
-								172
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"auto_indent": true,
-							"bh_regions":
-							[
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close"
-							],
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -1843,6 +2049,30 @@
 		"selected_items":
 		[
 			[
+				"screen.sass",
+				".themes/colerif/sass/screen.sass"
+			],
+			[
+				"scre",
+				"sass/screen.sass"
+			],
+			[
+				"jx",
+				".themes/colerif/source/javascripts/libs/jXHR.js"
+			],
+			[
+				"github",
+				"source/_posts/2014-01-10-github-plugin-without-dependencies.markdown"
+			],
+			[
+				"github.js",
+				".themes/colerif/source/javascripts/github.js"
+			],
+			[
+				"mainsass",
+				".themes/colerif/sass/_main.sass"
+			],
+			[
 				"gener",
 				".themes/colerif/sass/_general.sass"
 			],
@@ -1853,10 +2083,6 @@
 			[
 				"config",
 				"_config.yml"
-			],
-			[
-				"mainsass",
-				".themes/colerif/sass/_main.sass"
 			],
 			[
 				"colours",
