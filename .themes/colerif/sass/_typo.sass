@@ -1,3 +1,5 @@
+$font-size: 19.0px
+
 @mixin transition
   transition: .284s linear
 
@@ -84,11 +86,11 @@ h3
 h4
 h5
 p, a
-  font-size: 18.5px
-  line-height: 32.83px
+  font-size: $font-size
+  line-height: $font-size*1.61
   @include max-screen(720px)
-    font-size: 18.5px
-    line-height: 28.21px  
+    font-size: $font-size
+    line-height: $font-size*1.41
 b
 i
 a
