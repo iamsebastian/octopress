@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "shell: list big nodes"
+title: "shell: list directory sizes"
 date: 2014-02-04 17:02
 comments: false
 categories: zsh, shell
@@ -39,31 +39,26 @@ Yeah. Nice comparison! Saves much time. But how to do this? We start with *du*:
 ```sh
 du -sk ./*
 ```
-`du`  
-        -- displays disk usage statistics
-
-`-s`  
-        -- an entry for each specified file.
-
-`-k`  
-        -- block counts in 2^10 bytes === 1 KByte  
-  
+**du** displays disk usage statistics, **-s** an entry for each specified file and **-k** sets block counts in 2^10 bytes (=== 1 KByte).  
 On next, we pipe the stdout of *du* to *sort*:
 
 ```sh
 sort -n
 ```
 
-`sort`  
-        -- sorts lines of text
-
-`-n`  
-        -- is the shorthand for **--numeric-sort**, which let *sort* compare according to string numerical values.
+**sort** sorts lines of text and **-n** is the shorthand for **--numeric-sort**, which let *sort* compare according to string numerical values.  
 
 At last, we take the output of *$ du -sk ./ | sort -n* and pipe the stdout to *awk*. *awk* will prettify the output for us, with some specific algorithms (like *modulo*) for human readable size output. The last line will be a comparison as size of the whole directory.
 
 ```awk
-awk 'BEGIN{ pref[1]="K"; pref[2]="M"; pref[3]="G";} { total = total + $1; x = $1; y = 1; while( x > 1024 ) { x = (x + 1023)/1024; y++; } printf("%g%s\t%s\n",int(x*10)/10,pref[y],$2); } END { y = 1; while( total > 1024 ) { total = (total + 1023)/1024; y++; } printf("Total: %g%s\n",int(total*10)/10,pref[y]); }'
+awk 'BEGIN{ pref[1]="K"; pref[2]="M"; pref[3]="G";} 
+{ total = total + $1; x = $1; y = 1; 
+  while( x > 1024 ) 
+  { x = (x + 1023)/1024; y++; } 
+  printf("%g%s\t%s\n",int(x*10)/10,pref[y],$2); } 
+  END { y = 1; while( total > 1024 )
+    { total = (total + 1023)/1024; y++; }
+    printf("Total: %g%s\n",int(total*10)/10,pref[y]); }'
 ```
 
 The final script:
