@@ -8,14 +8,16 @@ $fox: #C87600
 
 // iceworld
 $name: #00AACE
-$var: #404C6B
-$p: $name
+$var: #111
+$p: #111
 $call: #00BDB0
 $o: #FB006D
 $number: #8FAE00
 $bool: #9C0045
 $builtin: #00AAD0
-$str: #47522D
+$str: #007090
+$na: #FB006D
+$nt: #304C4B
 
 @mixin cc($color)
   color: mix($color, $colour-mix, 97%)
@@ -39,23 +41,37 @@ figure.code
     @include cc($o)
   // process » "()"
   .p
-    @include cc(mix($p,#fff,37%))
+    @include cc($p)
   // string with one point » " 'foo' "
   .s1
     @include cc($str)
-    // font-weight: bold
+    font-style: italic
   // string with two points » " "foo" "
   .s2 
     @include cc($str)
-    // font-weight: bold
+    font-style: italic
   // bool
   .kc
     @include cc($bool)
     font-style: italic
-  // number
+  // integer
   .mi
+    @include cc($number)
+    font-weight: bold
+  // float
+  .mf
     @include cc($number)
     font-weight: bold
   // builtin objects » "document"
   .nb
     @include cc($builtin)
+  // string in HTML
+  .s
+    @include cc($str)
+    font-style: italic
+  // tag in HTML
+  .nt
+    @include cc($p)
+  // attribute in HTML
+  .na
+    @include cc($na)
