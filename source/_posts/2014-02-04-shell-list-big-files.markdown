@@ -34,31 +34,31 @@ $ fatfiles
 Total: 27,3G
 ```
 
-Yeah. Nice comparison! Saves much time.
-
-But how could we did it? I call the script *fatfiles.sh*.
-
-We start with *du*.
+Yeah. Nice comparison! Saves much time. But how to do this? We start with *du*:
 
 ```sh
 du -sk ./*
 ```
+`du`  
+        -- displays disk usage statistics
 
-du -- display disk usage statistics
+`-s`  
+        -- an entry for each specified file.
 
-*-s* displays an entry for each specified file.
-
-*-k* displays block counts in 2^10 bytes === 1 KByte
-
-We pipe the stdout of *du* to *sort*:
+`-k`  
+        -- block counts in 2^10 bytes === 1 KByte  
+  
+On next, we pipe the stdout of *du* to *sort*:
 
 ```sh
 sort -n
 ```
 
-sort -- sorts lines of text
+`sort`  
+        -- sorts lines of text
 
-*-n* is the shorthand for **--numeric-sort**, which let *sort* compare according to string numerical values.
+`-n`  
+        -- is the shorthand for **--numeric-sort**, which let *sort* compare according to string numerical values.
 
 At last, we take the output of *$ du -sk ./ | sort -n* and pipe the stdout to *awk*. *awk* will prettify the output for us, with some specific algorithms (like *modulo*) for human readable size output. The last line will be a comparison as size of the whole directory.
 
