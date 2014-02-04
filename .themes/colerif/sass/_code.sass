@@ -15,7 +15,7 @@ $o: #FB006D
 $number: #8FAE00
 $bool: #9C0045
 $builtin: #00AAD0
-$str: #27929D
+$str: #47522D
 
 @mixin cc($color)
   color: mix($color, $colour-mix, 97%)
@@ -43,11 +43,11 @@ figure.code
   // string with one point » " 'foo' "
   .s1
     @include cc($str)
-    font-weight: bold
+    // font-weight: bold
   // string with two points » " "foo" "
   .s2 
     @include cc($str)
-    font-weight: bold
+    // font-weight: bold
   // bool
   .kc
     @include cc($bool)
