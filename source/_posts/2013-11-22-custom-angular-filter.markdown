@@ -12,13 +12,13 @@ If you want to setup your very first custom angular filter, there are some steps
 
 At first, you need to scaffold out your filter with yeoman: 
 
-```
+```sh
 $ yo angular:filter animalfilter
 ```
 
 This will output something like this:
 
-```
+```sh
 $ create app/scripts/filters/animalfilter.js
 $ create test/spec/filters/animalfilter.js
 ```
