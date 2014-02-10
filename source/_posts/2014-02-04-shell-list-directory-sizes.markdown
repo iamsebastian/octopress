@@ -4,6 +4,7 @@ title: "shell: list directory sizes"
 date: 2014-02-04 17:02
 comments: false
 categories: zsh, shell
+published: false
 ---
 
 Friday in the morning. Robot tests are passed. The project is going to get deployed. You start *grunt* and ... there's no space left on your shiny new SSD. Damn it! It seems the space is gone. But we can localize it. Fast. With scripting.

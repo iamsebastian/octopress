@@ -4,6 +4,7 @@ title: "custom angular filter"
 date: 2013-11-22 17:41
 comments: false
 categories: angular
+published: false
 ---
 
 If you want to setup your very first custom angular filter, there are some steps to follow. Create a new filter, inject'em and use it in your view or $scope. It's on yor own, what you do with it. But you should give it a try.

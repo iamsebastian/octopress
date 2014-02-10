@@ -4,6 +4,7 @@ title: "big data with angular"
 date: 2013-11-11 12:20
 comments: false
 categories: angular
+published: false
 ---
 
 If your app gets slow, it's maybe in cause of *big data* or *big data with ng-repeat*. The reason why your app gets slow: ng-repeat attaches *$watch*es to your *SPA*. This will break the performance. The solution: *binding* without *$watch*es.

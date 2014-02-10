@@ -4,6 +4,7 @@ title: "github plugin without dependencies"
 date: 2014-01-10 08:21
 comments: true
 categories: github, octopress
+published: false
 ---
 
 The included github plug-in, which comes with octopress to list your public github repositories isn't bad overall. But it has a dependency I don't want to include on an initial pageload: `jQuery`. I will show, how you could talk with the github API without jQuery.
