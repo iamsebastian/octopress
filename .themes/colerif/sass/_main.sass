@@ -89,8 +89,11 @@ header
               @include h1-normal
         .entry-content
           figure.code
+            overflow: auto
             margin: 1rem
+            border: 1px solid $lighttint
             span.line-number
+              visibility: hidden
               color: darken($colour-code-b, 30%)
           code
             padding: 0 .7rem 0 .3rem
@@ -202,13 +205,15 @@ header
           code
             color: mix($p, $colour-mix, 50%)
           figure.code
-            // background-color: $colour-code-b
+            padding: .314rem 0
+            border: 1px solid $lighttint
+            overflow: auto
             margin: 8px 8px 32px
             @include max-screen(720px)
               font-size: 10px
-              margin: auto
+              margin: 0.718rem 0
             span.line-number
-              // color: $colour1
+              visibility: hidden
               font-size: 14px
               @include max-screen(720px)
                 font-size: 10px
