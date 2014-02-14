@@ -12,7 +12,7 @@ In einem aktuellen Projekt häuften sich die Lauf- und Ladezeiten im *IE8* auf e
 
 Die Idee, die einzelnen, scrollbaren Spalten dynamisch in der Anzahl der Einträge zu machen, entstand dabei aber nicht erst an dieser Stelle. Bereits an einer vorherigen Stelle, wo man sich durch alle Modelle suchen kann und gleichzeitig alle Treffer in der Suchliste hervorgehoben werden, habe ich eine Direkte verwendet, die mitwächst.
 
-Zu Anfang stehen in den drei Spalten je etwa zehn Einträge -- wobei dies abhängig von den Filterkriteren ist. Zehn Einträge sind also die initiale Obergrenze, die möglich ist. Scrollt man nun in dem Container nach unten, erscheint mit jedem gefeuerten Scroll-Event, ein zusätzlicher Eintrag. Gleich, ob das mit dem Mausrad, per Trackpad oder per Klick am Scrollbalken des Containers geschieht.
+Zu Anfang stehen in den drei Spalten je etwa zehn Einträge -- wobei dies abhängig von den Filterkriterien ist. Zehn Einträge sind also die initiale Obergrenze, die möglich ist. Scrollt man nun in dem Container nach unten, erscheint mit jedem gefeuerten Scroll-Event, ein zusätzlicher Eintrag. Gleich, ob das mit dem Mausrad, per Trackpad oder per Klick am Scrollbalken des Containers geschieht.
 
 Die Scope wird mit der dynamischen Obergrenze initialisiert:
 

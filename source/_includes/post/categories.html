@@ -3,9 +3,9 @@
 <p>
   <span class="categories">
     {% if post %}
-      {{ post.categories | category_links }}
+      in {{ post.categories | category_links }}
     {% else %}
-      {{ page.categories | category_links }}
+      in {{ page.categories | category_links }}
     {% endif %}
   </span>
 </p>
