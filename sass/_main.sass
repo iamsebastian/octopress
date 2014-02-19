@@ -84,9 +84,33 @@ header
           margin: 0
         header
           p.meta
+            margin: 0 0 2.71rem
+            text-align: center
+            color: $lightertint
+            font-style: italic
+            svg
+              position: relative
+              &#hline_mobile
+                top: 30px
+                max-height: 15px
+              &#hline_normal
+                max-height: 25px
+                top: 40px
+              #hline > path[id*=Linie]
+                stroke: $lighttint
+            @include min-screen(721px)
+              svg#hline_mobile
+                display: none
+            @include max-screen(720px)
+              svg#hline_normal
+                display: none
             @include meta
-            margin: 0 0 0.71rem
-            text-align: right
+            time
+              position: relative
+              top: 0
+              right: 0
+              left: 0
+              margin: auto
           h1.entry-title
             text-align: center
             @include hovershake
@@ -115,6 +139,7 @@ header
         footer
           clear: both
           div.hline
+            display: none
             margin: $article-space 0 $article-space*.7
             width: 100%
             border-bottom: 1px solid $lighttint
