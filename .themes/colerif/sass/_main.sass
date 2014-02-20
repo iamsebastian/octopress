@@ -94,6 +94,9 @@ header
           @include svg
         h1
           @include h1-page
+          @include max-screen(720px)
+            @include h1-page-mobile
+
     // preview from index
     .blog-index
       // width: 662px

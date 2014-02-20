@@ -44,9 +44,7 @@
     &:after
       content: " \2192"
 
-@mixin h1-page
-  font-size: 0.75rem
-  margin: 9px 0 3.21348rem
+  
 @mixin h1
   font-size: 1.5000rem
   text-align: center
@@ -60,6 +58,13 @@
   @include h1
   font-style: italic
   margin: 0 0 2.9375rem
+@mixin h1-page
+  font-size: 0.75rem
+  margin: 9px 0 3.21348rem
+  text-transform: uppercase
+@mixin h1-page-mobile
+  margin: 12px 0 3.21348rem
+  
 h2
 h3
 h4
