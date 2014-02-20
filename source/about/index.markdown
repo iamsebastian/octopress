@@ -12,6 +12,8 @@ Ich bin Sebastian, stehe hinter diesem *Konvolut* an Schnipseln und beschäftige
 [github](http://www.github.com/iamsebastian)  
 [Twitter](http://www.twitter.com/iamblei)  
 
+![Twitter](/images/twitter.svg)
+
 Diese Seite ist statisch und wird mit Zuhilfenahme von [Octopress](http://www.octopress.com), [Markdown](http://daringfireball.net/projects/markdown/), [SASS](http://www.sass-lang.org), *...*, entwickelt.
 
 Tagsüber baue ich in Erfurt bei der [plazz Entertainment AG](http://www.plazz-entertainment.com) als Frontend Engineer.

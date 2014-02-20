@@ -89,13 +89,20 @@ header
       width: 90%
     // about, subpages, etc.
     .page
-      header
-        p.meta
-          @include svg
-        h1
-          @include h1-page
+      article[role=article]
+        header
+          p.meta
+            @include svg
+          h1
+            @include h1-page
+            @include max-screen(720px)
+              @include h1-page-mobile
+        img
           @include max-screen(720px)
-            @include h1-page-mobile
+            width: 50%
+            left: 25%
+            position: relative
+
 
     // preview from index
     .blog-index
