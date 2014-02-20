@@ -1,12 +1,17 @@
 ---
 layout: page
-title: "about sebastian"
-date: 2013-10-31 12:49
+title: "Über mich"
 comments: false
 sharing: false
-footer: true
 ---
 
-Hello,  
+Hallo,
 
-I'm the frontend engineer Sebastian and the person behind this development notes. There are some reasons, why I fired up this place: to get other developers informed about solutions I made and to have a playground, where I can push my skills straight forward. I'm also an frontend enginner at [plazz Entertainment AG](http://www.plazz-entertainment.com).
+Ich bin Sebastian, stehe hinter diesem *Konvolut* an Schnipseln und beschäftige mich ganztägig mit Web-Technologien. Dabei setze ich mich hauptsächlich mit Frontend-Lösungen auseinander. Man findet mich auf folgenden Plattformen:  
+
+[github](http://www.github.com/iamsebastian)  
+[Twitter](http://www.twitter.com/iamblei)  
+
+Diese Seite ist statisch und wird mit Zuhilfenahme von [Octopress](http://www.octopress.com), [Markdown](http://daringfireball.net/projects/markdown/), [SASS](http://www.sass-lang.org), *...*, entwickelt.
+
+Tagsüber baue ich in Erfurt bei der [plazz Entertainment AG](http://www.plazz-entertainment.com) als Frontend Engineer.

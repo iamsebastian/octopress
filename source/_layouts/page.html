@@ -2,10 +2,14 @@
 layout: default
 ---
 
-<div>
+<div class="page">
 <article role="article">
   {% if page.title %}
   <header>
+    <p class="meta">
+      {% include custom/svg/hline.svg %}
+      {% include custom/svg/hline_m.svg %}
+    </p>
     <h1 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
     {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
   </header>

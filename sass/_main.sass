@@ -87,8 +87,15 @@ header
     width: 700px
     @include max-screen(720px)
       width: 90%
+    // about, subpages, etc.
+    .page
+      header
+        p.meta
+          @include svg
+        h1
+          @include h1-page
     // preview from index
-    div.blog-index
+    .blog-index
       // width: 662px
       @include max-screen(720px)
         width: 100%
@@ -102,24 +109,7 @@ header
             text-align: center
             color: $lightertint
             font-style: italic
-            svg
-              position: relative
-              &#hline_mobile
-                top: 30px
-                max-height: 15px
-                #hline > path[id*=Linie]
-                  stroke: $lightertint
-              &#hline_normal
-                max-height: 25px
-                top: 40px
-                #hline > path[id*=Linie]
-                  stroke: $lighttint
-            @include min-screen(721px)
-              svg#hline_mobile
-                display: none
-            @include max-screen(720px)
-              svg#hline_normal
-                display: none
+            @include svg
             @include meta
             time
               position: relative

@@ -332,6 +332,14 @@
 			}
 		},
 		{
+			"file": ".themes/colerif/sass/_code.sass",
+			"settings":
+			{
+				"buffer_size": 1321,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": ".themes/colerif/source/_layouts/page.html",
 			"settings":
 			{
@@ -393,7 +401,15 @@
 			"file": ".themes/colerif/source/_includes/custom/header.html",
 			"settings":
 			{
-				"buffer_size": 10824,
+				"buffer_size": 10914,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": ".themes/colerif/sass/_colours.sass",
+			"settings":
+			{
+				"buffer_size": 474,
 				"line_ending": "Unix"
 			}
 		},
@@ -401,15 +417,21 @@
 			"file": ".themes/colerif/sass/_main.sass",
 			"settings":
 			{
-				"buffer_size": 7964,
+				"buffer_size": 8285,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "@mixin transition\n  transition: .284s linear\n\n@mixin speedtransition\n  transition: .141s linear\n\n@mixin font\n  font-family: gandhi, Georgia, serif\n  text-rendering: geometricPrecision\n  \n@mixin footer\n  font-size: 0.8217rem\n  \n@mixin meta\n  font-size: .8rem\n  text-transform: uppercase\n  \n@mixin hover\n  @include transition\n  &:hover\n    color: $lightertint\n  \n@mixin hovershake\n  &:hover\n    @include animation($shakename, .714s, 1)\n\n@mixin a\n  @include hovershake\n  a\n    text-decoration: none\n    color: $darktint\n    @include hover\n\n@mixin a-clean  \n  a\n    text-decoration: none\n    border-bottom: 1px dotted $lightertint\n    color: $colour1\n    letter-spacing: -.5px\n    // font-variant: small-caps\n    padding: 0 .2rem\n    margin: 0 .2rem\n    @include hover\n    &:after\n      content: \" \\2192\"\n\n@mixin h1\n  font-size: 1.5000rem\n  margin: 0 0 1.21348rem\n  text-align: center\n  font-weight: normal\n  font-style: italic\n@mixin h1-normal\n  @include h1\n  font-style: normal\n  margin: 0 0 2.9375rem\n@mixin h1-italic\n  @include h1\n  font-style: italic\n  margin: 0 0 2.9375rem\nh2\nh3\nh4\nh5\np, a\n  font-size: 21px\n  line-height: 32px\n  @include max-screen(720px)\n    font-size: 18.5px\n    line-height: 28.21px  \nb\ni\na\nul\n  padding: 0\n\nh1, h2, h3, h4, h5, p, b, i, a\n  @include font\n  \ncode\n  color: $darktint\n  font-size: 16px\n  \ntable\n  // font-size: 14px",
+			"file": "_draft/fingerprint.svg",
+			"settings":
+			{
+				"buffer_size": 8140,
+				"line_ending": "Unix",
+				"name": "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/s"
+			}
+		},
+		{
 			"file": ".themes/colerif/sass/_typo.sass",
-			"file_size": 1353,
-			"file_write_time": 130372693280000000,
 			"settings":
 			{
 				"buffer_size": 1353,
@@ -420,7 +442,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 147.0,
+		"height": 392.0,
 		"selected_items":
 		[
 			[
@@ -798,6 +820,31 @@
 	},
 	"file_history":
 	[
+		"/Users/sblei/Projects/octopress/_draft/person.svg",
+		"/Users/sblei/Projects/octopress/_draft/fingerprint2.svg",
+		"/Users/sblei/Projects/octopress/sass/_code.sass",
+		"/Users/sblei/Projects/octopress/.sass-cache/8387b2e5099803f291b90b68bea12a24f8914d33/_colours.sassc",
+		"/Users/sblei/Projects/octopress/.sass-cache/8387b2e5099803f291b90b68bea12a24f8914d33/_colour.sassc",
+		"/Users/sblei/Projects/octopress/.sass-cache/23a7b444c926f58fba35feaa2ea720ad8409698f/_colours.sassc",
+		"/Users/sblei/Projects/octopress/sass.old/_colours.sass",
+		"/Users/sblei/Projects/octopress/sass/_colours.sass",
+		"/Users/sblei/Projects/octopress/.sass-cache/aec829751fec5292f27e20e5b357b4ff7849664f/_color.scssc",
+		"/Users/sblei/Projects/octopress/sass/custom/_color.scss",
+		"/Users/sblei/Projects/octopress/sass/custom/_colors.scss",
+		"/Users/sblei/Projects/octopress/.sass-cache/4c338df7b5142ca7dcd27903a128e1a6287d0178/_colors.scssc",
+		"/Users/sblei/Projects/octopress/sass.old/custom/_color.scss",
+		"/Users/sblei/Projects/octopress/.sass-cache/6ad5d4f980e13d309ee8a96f2cffab874c585dd0/_color.scssc",
+		"/Users/sblei/Projects/octopress/.sass-cache/4c338df7b5142ca7dcd27903a128e1a6287d0178/_color.scssc",
+		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_colours.sass",
+		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/custom/head.html",
+		"/Users/sblei/Projects/octopress/.sass-cache/01ae0c151794c7fd898794817f65adcf1db34a25/_header.scssc",
+		"/Users/sblei/Projects/octopress/source.old/_includes/custom/header.html",
+		"/Users/sblei/Projects/octopress/source/_includes/custom/header.html",
+		"/Users/sblei/Projects/octopress/source.old/_includes/custom/head.html",
+		"/Users/sblei/Projects/octopress/source/_includes/custom/head.html",
+		"/Users/sblei/Projects/octopress/source/_posts/2013-11-22-custom-angular-filter.markdown",
+		"/Users/sblei/Projects/octopress/.sass-cache/11e1367fa953747fed48ba7c2aa479d9902161a0/_utilities.scssc",
+		"/Users/sblei/Projects/octopress/_config.yml",
 		"/Users/sblei/Projects/octopress/_draft/hline.svg",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/javascripts/libs/jXHR.js",
 		"/Users/sblei/Projects/octopress/.sass-cache/76c789ac3fd2f16d7773a67521202d6301da0a29/_horizontal-list.scssc",
@@ -813,16 +860,11 @@
 		"/Users/sblei/Projects/octopress/source/_posts/2013-11-08-own-angular-filter.markdown",
 		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_main.sass",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/header.html",
-		"/Users/sblei/Projects/octopress/source/_includes/custom/header.html",
 		"/Users/sblei/Projects/octopress/source.old/_includes/header.html",
 		"/Users/sblei/Projects/octopress/source/_includes/header.html",
 		"/Users/sblei/Projects/octopress/source/_includes/head.html",
 		"/Users/sblei/Projects/octopress/plugins/haml.rb",
-		"/Users/sblei/Projects/octopress/source/_includes/custom/head.html",
-		"/Users/sblei/Projects/octopress/source/_posts/2013-11-22-custom-angular-filter.markdown",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/javascripts/octopress.js",
-		"/Users/sblei/Projects/octopress/.sass-cache/11e1367fa953747fed48ba7c2aa479d9902161a0/_utilities.scssc",
-		"/Users/sblei/Projects/octopress/_config.yml",
 		"/Users/sblei/Projects/octopress/.sass-cache/d3d24a245584d9aca9efd807c7b57d0d1adcc7e5/_background-size.scssc",
 		"/Users/sblei/Projects/octopress/_draft/b.svg",
 		"/Users/sblei/Projects/octopress/.themes/colerif/sass/screen.sass",
@@ -830,7 +872,6 @@
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/blog/archives/index.html",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/archive_post.html",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/head.html",
-		"/Users/sblei/Projects/octopress/sass/_colours.sass",
 		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_code.sass",
 		"/Users/sblei/Projects/shop/.gitignore",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/_layouts/category_index.html",
@@ -849,12 +890,8 @@
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/javascripts/github.js",
 		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_header.sass",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/custom/footer.html",
-		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/custom/head.html",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/custom/after_footer.html",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/custom/navigation.html",
-		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_colours.sass",
-		"/Users/sblei/Projects/octopress/.sass-cache/4c338df7b5142ca7dcd27903a128e1a6287d0178/_colors.scssc",
-		"/Users/sblei/Projects/octopress/.sass-cache/4c338df7b5142ca7dcd27903a128e1a6287d0178/_color.scssc",
 		"/Users/sblei/Projects/octopress/.themes/colerif/source/_includes/post/date.html",
 		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_typo.sass",
 		"/Users/sblei/Projects/octopress/.themes/colerif/sass/_footer.sass",
@@ -890,7 +927,6 @@
 		"/Users/sblei/Projects/octopress/.themes/sile/sass/_code.sass",
 		"/Users/sblei/Projects/octopress/.sass-cache/8387b2e5099803f291b90b68bea12a24f8914d33/_code.sassc",
 		"/Users/sblei/Projects/octopress/sass.old/_code.sass",
-		"/Users/sblei/Projects/octopress/sass/_code.sass",
 		"/Users/sblei/Projects/octopress/plugins/code_block.rb",
 		"/Users/sblei/Projects/octopress/source/about/index.markdown",
 		"/Users/sblei/Projects/octopress/README.markdown",
@@ -911,21 +947,7 @@
 		"/Users/sblei/Projects/octopress/source/_includes/archive_post.html",
 		"/Users/sblei/Projects/octopress/.sass-cache/c5d08b53141dc14040e100cfc40696a11731458a/_alternating-rows-and-columns.scssc",
 		"/Users/sblei/Projects/octopress/.themes/sile/sass/index/_article.sass",
-		"/Users/sblei/Projects/octopress/_deploy/atom.xml",
-		"/Users/sblei/Projects/octopress/sass/screen.sass",
-		"/Users/sblei/Projects/octopress/_deploy/font/GandhiSerif-Regular-webfont.svg",
-		"/Users/sblei/Projects/octopress/.themes/sile/source/font/fontawesome-webfont.svg",
-		"/Users/sblei/Projects/octopress/.pygments-cache/sh-e68c9720d70bb6a9968154a961705886.html",
-		"/Users/sblei/Projects/octopress/.pygments-cache/sh-109faa0d3af468439c8966d496020840.html",
-		"/Users/sblei/Projects/octopress/.sass-cache/8387b2e5099803f291b90b68bea12a24f8914d33/_footer.sassc",
-		"/Users/sblei/Projects/octopress/.sass-cache/23a7b444c926f58fba35feaa2ea720ad8409698f/_footer.sassc",
-		"/Users/sblei/Projects/octopress/sass.old/_footer.sass",
-		"/Users/sblei/Projects/octopress/sass/_footer.sass",
-		"/Users/sblei/Projects/octopress/source/_includes/footer.html",
-		"/Users/sblei/Projects/octopress/.themes/sile/_sassbak/plugins/_fancybox.scss",
-		"/Users/sblei/Projects/octopress/plugins/post_filters.rb",
-		"/Users/sblei/Projects/octopress/public/stylesheets/screen.css",
-		"/Users/sblei/Projects/octopress/.themes/sile/sass/_fonts.sass"
+		"/Users/sblei/Projects/octopress/_deploy/atom.xml"
 	],
 	"find":
 	{
@@ -950,6 +972,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"FAE309",
+			";",
+			"2A3140",
+			"357CA6",
+			"31DCB5",
+			"AD2938",
+			"357CA6",
+			"F89614",
+			"AD2938",
+			"FAE309",
+			"F89614",
 			"hline",
 			"auto",
 			"right",
@@ -1066,18 +1099,7 @@
 			"%\n",
 			"0",
 			"opacity: 1",
-			" + ",
-			"*2",
-			"$intensity/5",
-			"skewshake",
-			"$intensity",
-			"$intensity/11",
-			"7",
-			"$intensity/",
-			"0.28",
-			"skewshake",
-			" 14,",
-			"14,"
+			" + "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1096,7 +1118,7 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 12,
 			"sheets":
 			[
 				{
@@ -1112,8 +1134,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								1519,
+								1525
 							]
 						],
 						"settings":
@@ -1170,11 +1192,85 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 10,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": ".themes/colerif/sass/_code.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								273,
+								273
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close"
+							],
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": ".themes/colerif/source/_layouts/page.html",
 					"semi_transient": false,
 					"settings":
@@ -1244,11 +1340,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 11,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": ".themes/colerif/source/_includes/post/date.html",
 					"semi_transient": false,
 					"settings":
@@ -1316,11 +1412,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 4,
 					"semi_transient": false,
 					"settings":
 					{
@@ -1720,14 +1816,14 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1446.0,
+						"translation.y": 838.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 13,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 5,
 					"file": ".themes/colerif/source/index.html",
 					"semi_transient": false,
 					"settings":
@@ -1797,11 +1893,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 12,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 6,
 					"file": ".themes/colerif/source/_includes/article.html",
 					"semi_transient": false,
 					"settings":
@@ -1871,11 +1967,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 7,
 					"file": ".themes/colerif/source/_includes/custom/svg/hline_m.svg",
 					"semi_transient": false,
 					"settings":
@@ -1937,17 +2033,19 @@
 								"bh_curly_open",
 								"bh_curly_close"
 							],
-							"syntax": "Packages/XML/XML.tmLanguage"
+							"syntax": "Packages/XML/XML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 8,
 					"file": ".themes/colerif/source/_includes/custom/svg/hline.svg",
 					"semi_transient": false,
 					"settings":
@@ -2017,40 +2115,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 8,
+					"buffer": 9,
 					"file": ".themes/colerif/source/_includes/custom/header.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10824,
+						"buffer_size": 10914,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1984,
-								1984
-							],
-							[
-								3841,
-								3841
-							],
-							[
-								5698,
-								5698
-							],
-							[
-								7552,
-								7552
-							],
-							[
-								9415,
-								9415
+								1550,
+								1556
 							]
 						],
 						"settings":
@@ -2104,27 +2186,100 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": ".themes/colerif/sass/_main.sass",
+					"buffer": 10,
+					"file": ".themes/colerif/sass/_colours.sass",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7964,
+						"buffer_size": 474,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2465,
-								2465
+								138,
+								149
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_indent": true,
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close"
+							],
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": ".themes/colerif/sass/_main.sass",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8285,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								499,
+								499
 							]
 						],
 						"settings":
@@ -2179,14 +2334,87 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1267.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "_draft/fingerprint.svg",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8140,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								111,
+								111
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_name": "<svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/s",
+							"bh_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close"
+							],
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 13,
 					"file": ".themes/colerif/sass/_typo.sass",
 					"semi_transient": false,
 					"settings":
@@ -2254,10 +2482,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 317.0,
+						"translation.y": 56.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -2321,6 +2549,30 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"codesass",
+				".themes/colerif/sass/_code.sass"
+			],
+			[
+				"mainsass",
+				".themes/colerif/sass/_main.sass"
+			],
+			[
+				"",
+				".themes/colerif/source/_includes/custom/header.html"
+			],
+			[
+				"colosass",
+				".themes/colerif/sass/_colours.sass"
+			],
+			[
+				"head",
+				".themes/colerif/source/_includes/custom/header.html"
+			],
+			[
+				"codes",
+				"sass/_code.sass"
+			],
 			[
 				"typosass",
 				".themes/colerif/sass/_typo.sass"
@@ -2412,10 +2664,6 @@
 			[
 				"2014",
 				"source/_posts/2014-02-12-dynamische-scrollcontainer.markdown"
-			],
-			[
-				"codesass",
-				".themes/colerif/sass/_code.sass"
 			],
 			[
 				"codesas",
@@ -2516,10 +2764,6 @@
 			[
 				"github.js",
 				".themes/colerif/source/javascripts/github.js"
-			],
-			[
-				"mainsass",
-				".themes/colerif/sass/_main.sass"
 			],
 			[
 				"gener",
@@ -2816,22 +3060,6 @@
 			[
 				"lo",
 				"app/scripts/controllers/login.js"
-			],
-			[
-				"002",
-				"test/robots/002.txt"
-			],
-			[
-				"ang",
-				"app/bower_components/angular/angular.js"
-			],
-			[
-				"bra",
-				"app/scripts/controllers/brandChoice.js"
-			],
-			[
-				"api.html",
-				"app/views/api.html"
 			]
 		],
 		"width": 0.0
