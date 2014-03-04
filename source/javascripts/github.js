@@ -1,7 +1,8 @@
 'use strict';
+
+/* globals console*/
+
 var github = (function(){
-    // return document.querySelector('<div/>').innerHTML;
-  // }
   function render(target, repos){
     var i = 0, fragment = '', t = document.querySelector(target);
     console.log('repos',repos);
