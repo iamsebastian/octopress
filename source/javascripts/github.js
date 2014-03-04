@@ -1,7 +1,5 @@
 'use strict';
 var github = (function(){
-  // function escapeHtml(str) {
-    // return str;
     // return document.querySelector('<div/>').innerHTML;
   // }
   function render(target, repos){
