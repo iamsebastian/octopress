@@ -17,8 +17,8 @@
       width: 50%
       margin: 2.19433rem 25% 0.68919rem
       @include max-screen(720px)
-        width: 30%
-        margin: 2.19433rem 35% 0.3731rem
+        width: 50%
+        margin: 2.19433rem 25% 0.3731rem
     // link, next to image
     blockquote
       p
@@ -29,8 +29,5 @@
       
     // content
     p
-      a
-        border-bottom: 1px dotted $lightertint
-        color: $darktint
-        text-decoration: none
+      @include a-clean-nocontent
         

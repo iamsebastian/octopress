@@ -15,7 +15,11 @@ Ich bin Sebastian, stehe hinter diesem *Konvolut* an Schnipseln und beschäftige
 
 ![GitHub](/images/github.svg "GitHub")
 
-> [iamsebastian](http://www.github.com/iamsebastian)  
+> [iamsebastian](http://www.github.com/iamsebastian)
+
+![Xing](/images/xing.svg "Xing")
+
+> [Sebastian Blei](https://www.xing.com/profile/Sebastian_Blei)  
 
 Diese Seite ist statisch und wird mit Zuhilfenahme von [Octopress](http://www.octopress.com), [Markdown](http://daringfireball.net/projects/markdown/), [SASS](http://www.sass-lang.org), *...*, entwickelt.
 
