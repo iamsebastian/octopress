@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "git log Ausgaben"
-date: 2014-03-06 07:38
+date: 2014-03-06 07:18
 comments: false
 categories: git
 ---
