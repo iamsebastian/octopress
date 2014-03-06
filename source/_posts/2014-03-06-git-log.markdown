@@ -1,0 +1,28 @@
+---
+layout: post
+title: "git log"
+date: 2014-03-06 07:38
+comments: false
+categories: git
+---
+
+Ob für den Daily Standup, zum Auffinden eines Versionierungs-Tags oder zum Suchen einer Commit-Message, **git log** erweist sich in vielen Situationen als nützliches Tool um den GIT Repository Informationen zu entnehmen, ohne eine GUI starten zu müssen. Per Default, wird die Log in invertiert chronologisch ausgegeben.
+
+<!-- more -->
+
+```sh
+git log
+```
+
+Diese, oft zu informationsreiche Ansicht, lässt sich kürzen mit **--oneline**:
+
+```sh
+git log --oneline
+git log --fuller
+```
+
+Mit Tags und 
+
+--abbrev-commit Hash kürzen
+--relative-date Relative Datumsangabe
+--graph Graph
