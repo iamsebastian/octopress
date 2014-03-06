@@ -6,7 +6,7 @@ comments: false
 categories: git
 ---
 
-Ob für den Daily Standup, zum Auffinden eines Versionierungs-Tags oder zum Suchen einer Commit-Message, **git log** erweist sich in vielen Situationen als nützliches Tool, um dem GIT Repository Informationen zu entnehmen, ohne eine GUI starten zu müssen. Per Default, wird die Log invertiert chronologisch ausgegeben -- also mit dem neuesten Eintrag zuerst.
+Ob für den Daily Standup, zum Auffinden eines Versionierungs-Tags oder zum Suchen einer Commit-Message, **git log** erweist sich in vielen Situationen als nützliches Tool, um dem GIT Repository Informationen zu entnehmen, ohne eine GUI starten zu müssen. Per default, wird die Log invertiert chronologisch ausgegeben -- also mit dem neuesten Eintrag zuerst.
 
 <!-- more -->
 
