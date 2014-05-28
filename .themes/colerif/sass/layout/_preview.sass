@@ -1,0 +1,56 @@
+// preview from index
+.blog-index
+  // width: 662px
+  @include max-screen(720px)
+    width: 100%
+  article
+    @include max-screen(720px)
+      padding: 0
+      margin: 0
+    header
+      p.meta
+        margin: 0 0 2.71rem
+        text-align: center
+        color: $lightertint
+        font-style: italic
+        @include svg
+        @include meta
+        time
+          position: relative
+          top: 0
+          right: 0
+          left: 0
+          margin: auto
+      h1.entry-title
+        text-align: center
+        @include hovershake
+        @include a
+        @include h1-normal
+        a
+          @include h1-normal
+    .entry-content
+      figure.code
+        overflow: auto
+        margin: 1rem
+        border: 1px solid $lighttint
+        span.line-number
+          visibility: hidden
+          color: darken($colour-code-b, 30%)
+      code
+        padding: 0 .7rem 0 .3rem
+      a
+        color: $colour1
+        font-style: italic
+        @include hover
+        @include max-screen(720px)
+          line-height: auto
+        p
+          @include hovershake
+    footer
+      clear: both
+      div.hline
+        display: none
+        margin: $article-space 0 $article-space*.7
+        width: 100%
+        border-bottom: 1px solid $lighttint
+        // @include max-screen(720px)

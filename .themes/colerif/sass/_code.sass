@@ -1,0 +1,77 @@
+$brick: #C45424
+$mustard: #C9BF15
+$sea: #00C676
+$blue: #647AA3
+$sky: #2D8384
+$pinkish: #A5447C
+$fox: #C87600
+
+// iceworld
+$name: #009080
+$var: #111
+$p: #111
+$call: #00BDB0
+$o: #FB006D
+$number: #8FAE00
+$bool: #9C0045
+$builtin: #00AAD0
+$str: #007090
+$na: #FB006D
+$nt: #304C4B
+
+@mixin cc($color)
+  color: mix($color, $colour-mix, 97%)
+
+figure.code
+  .line-numbers
+    margin: 0 0 0 0
+    .line-number
+      color: mix($name, $colour-mix, 71%)
+  // builtin » "var", "function"
+  .kd
+    @include cc($var)
+  // var name » "foo"
+  .nx
+    @include cc($name)
+  // operator » "=", ":"
+  .o
+    @include cc($o)
+  // another builtin » "new", "this", "return"
+  .k
+    @include cc($o)
+  // process » "()"
+  .p
+    @include cc($p)
+  // string with one point » " 'foo' "
+  .s1
+    @include cc($str)
+    font-style: italic
+  // string with two points » " "foo" "
+  .s2 
+    @include cc($str)
+    font-style: italic
+  // bool
+  .kc
+    @include cc($bool)
+    font-style: italic
+  // integer
+  .mi
+    @include cc($number)
+    font-weight: bold
+  // float
+  .mf
+    @include cc($number)
+    font-weight: bold
+  // builtin objects » "document"
+  .nb
+    @include cc($builtin)
+  // string in HTML
+  .s
+    @include cc($str)
+    font-style: italic
+  // tag in HTML
+  .nt
+    @include cc($p)
+  // attribute in HTML
+  .na
+    @include cc($na)
