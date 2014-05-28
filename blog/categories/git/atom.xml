@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Kategorie: git | Sebastian Blei & Schnipsel]]></title>
+  <link href="http://blei.in/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://blei.in/"/>
+  <updated>2014-05-28T10:29:46+02:00</updated>
+  <id>http://blei.in/</id>
+  <author>
+    <name><![CDATA[Sebastian Blei]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[git log Filter]]></title>
+    <link href="http://blei.in/blog/2014/03/07/git-log-filter/"/>
+    <updated>2014-03-07T06:50:00+01:00</updated>
+    <id>http://blei.in/blog/2014/03/07/git-log-filter</id>
+    <content type="html"><![CDATA[<p>Nach dem ich bereits über einige Möglichkeiten geschrieben habe, mit der Log um zu gehen, möchte ich noch auf einige weitere Möglichkeiten eingehen, wie man die Ausgabe weiter restriktieren kann.</p>
+
+<!-- more -->
+
+
+<p>Die folgenden Limitierungen, bzw. Filteroptionen, werden angewendet, bevor eine spezifizierte Formatierung statt findet. Das heißt, dass eine Regular Expression auf die gesamte Standardausgabe angewandt wird und nicht nur, auf die, mit <strong>&mdash;format</strong> eingeschränkte, Ausgabe.</p>
+
+<p>Über <strong>&mdash;since=$date</strong> (alternativ <strong>&mdash;after=$date</strong>) hatte ich bereits geschrieben. Dies gibt die Commits aus, die nach dem angegebenen Datum statt fanden. Eine relative Datumsangabe, wie <strong>2d</strong> für zwei Tage, ist hier üblich. Aber natürlich sind auch absolute Datumsangaben möglich. Beispielsweise im Format <strong>YYYY-MM-DD</strong>:</p>
+
+<p>```sh
+$ git log &mdash;skip=18 &mdash;since=2014-03-05</p>
+
+<p>9029665 Additional fixes on SVG stuff. Place some variable gradient stuff in paths
+42ee614 some additional changes in about, style fixes and correction in sass source.
+```</p>
+
+<p>Dies sind die Commits #19 und #20 aus den letzten beiden Tage, respektive vom 5. März 2014 bis 7. März 2014. Passend zu diesem <em>neuer-als-Filter</em>, ist es auch möglich, Commits anzeigen zu lassen, die vor einem bestimmten Datum passiert sind: <em>(alternativ <strong>&mdash;until=$date</strong>)</em></p>
+
+<p>```sh
+$ git log &mdash;date=relative &mdash;before=2014-03-05</p>
+
+<p>bab314d dismissed some script stuff
+0e9295d refactored sass
+2f02101 fixed some scripting issues
+```</p>
+
+<p>Um nur Commits eines bestimmten Autors anzeigen zu lassen, nutze ich <strong>&mdash;author=$name</strong>. Das benutzte Pattern ist eine Regular Expression und die Verkettung des Filters ist möglich &mdash; bei einer Reguluar Expression aber freilich unnötig. Das Äquivalent dazu ist <strong>&mdash;committer=$name</strong>. Hinweis: Wie bei Patterns in GIT üblich, ist auch hier das Matching <em>case-sensitive</em>.</p>
+
+<p>```sh
+$ git log &mdash;since=2d &mdash;author=&lsquo;Blei&rsquo; &mdash;format=&ldquo;%&lt;|(13)%cr %&lt;|(32)%Cblue%s&rdquo;</p>
+
+<p>20 hours ago  Changed post.   <br/>
+21 hours ago  Changed to-read book size and word count
+2 days ago    Fixed jsHint notifications
+```</p>
+
+<p>Ist man in einem Projekt so weit, dass man Versionierung eingeführt hat und das Projekt entsprechend die Maße hat, um eine Versionierung zu begrüßen, kann man alle Einträge ab einem Versionierungssprung wie folgt anzeigen lassen:</p>
+
+<p><code>sh
+$ git log v1.0..
+</code></p>
+
+<p>Immer wieder kommt es zu Merges, deren Ausgabe wenig in einer History zu suchen hat. Sucht man beispielsweise nur Fixes, keine Merges:</p>
+
+<p><code>sh
+$ git log --no-merges
+</code></p>
+
+<!-- colöurs: black    blink    blue     bold     cyan     dim      green    magenta  red      reverse  ul       white    yellow -->
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[git log formatieren]]></title>
+    <link href="http://blei.in/blog/2014/03/06/git-log-formatieren/"/>
+    <updated>2014-03-06T17:29:00+01:00</updated>
+    <id>http://blei.in/blog/2014/03/06/git-log-formatieren</id>
+    <content type="html"><![CDATA[<p>Anschließend, zum vorherigen Post, ist es natürlich auch möglich, die GIT Log frei selbst zu gestalten. Dafür gibt es Massen an Platzhaltern, die das Verfassen eines eigenen Skriptes &amp; Aliases nicht nur möglich, sondern auch sinnvoll machen.</p>
+
+<!-- more -->
+
+
+<p>Für den Daily Standup erscheint es mir beispielsweise äußerst sinnbehaftet, eine Ausgabe der letzten zwei Tage aus den Logs zu drücken.</p>
+
+<p><code>sh
+git log --since=2d
+</code></p>
+
+<p>Oder eine sehr kurze Zusammenfassung, mit just den letzten drei Commits:</p>
+
+<p><code>sh
+git log -3
+</code></p>
+
+<p>Es ist auch möglich die Ausgabe mit Platzhaltern zu versehen, um einen bessere Übersicht zu gewinnen. Der Platzhalter des <em>Platzhalters</em> &mdash; also im wörtlichen, dimensionalem Sinne &mdash; ist <code>%&lt;|(n)</code>, wobei <strong>n</strong> dabei für die frei zu haltende Länge steht. Die Angabe der Länge erfolgt absolut in Abstand zum Promptbeginn. Beispielsweise ergibt der folgende Aufruf eine Kolumne mit drei Reihen:</p>
+
+<p>```sh
+git log &mdash;format=&ldquo;%&lt;|(13)%cr %&lt;|(32) %cn %s&rdquo;</p>
+
+<p>9 hours ago    Sebastian Blei    fixed IE8 build
+26 hours ago   Sebastian Blei    IE8 &ndash; set as my car &ndash; fix
+27 hours ago   Sebastian Blei    debug build
+```</p>
+
+<p><strong>%cr</strong> ist der Platzhalter für ein relatives Datum zum Zeitpunkt des Commits, <strong>%cn</strong> ist der Platzhalter für den Namen der Person, die das Commitment erstellt hat und <strong>%s</strong> ist für die Ausgabe des Strings zuständig, also für die Commitment Nachricht. Um das ganze noch etwas übersichtlicher zu gestalten, kann man sich auch farblich austoben. <em>git log</em> unterstützt von Haus aus drei Platzhalter für Farben: <strong>%Cred</strong> Rot, <strong>%Cgreen</strong> Grün und <strong>%Cblue</strong> Blau. Eine Marke, also eine Art Tabbing, stellt <strong>%m</strong> dar.</p>
+
+<p>Meine <em>Shortlog</em> (ohne Zuhilfenahme von weiteren Shell Befehlen) sieht wie folgt aus:</p>
+
+<p>```sh
+$ git log &mdash;since=2d &mdash;format=&ldquo;%&lt;|(13)%cr %&lt;|(32)%Cred%cn %Cblue%s&rdquo;</p>
+
+<p>9 hours ago   Sebastian Blei     fixed IE8 build
+27 hours ago  Sebastian Blei     IE8 &ndash; set as my car &ndash; fix
+27 hours ago  Sebastian Blei     debug build
+27 hours ago  Sebastian Blei     timeline competitor fix
+2 days ago    Sebastian Blei     reconstructed &amp; finished timeline
+```</p>
+
+<p>Im nächsten Post habe ich vielleicht noch kurz Gelegenheit, darauf ein zu gehen, wie man die Log weiter spezifiziert. Beispielsweise, lässt man nur Commits aus der Log ausgeben, die man selber verfasst hat, oder spart <em>merges</em> aus.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[git log Ausgaben]]></title>
+    <link href="http://blei.in/blog/2014/03/06/git-log/"/>
+    <updated>2014-03-06T07:18:00+01:00</updated>
+    <id>http://blei.in/blog/2014/03/06/git-log</id>
+    <content type="html"><![CDATA[<p>Ob für den Daily Standup, zum Auffinden eines Versionierungs-Tags oder zum Suchen einer Commit-Message, <strong>git log</strong> erweist sich in vielen Situationen als nützliches Tool, um dem GIT Repository Informationen zu entnehmen, ohne eine GUI starten zu müssen. Per default, wird die Log invertiert chronologisch ausgegeben &mdash; also mit dem neuesten Eintrag zuerst.</p>
+
+<!-- more -->
+
+
+<p>```sh
+$ git log</p>
+
+<p>commit 3ad984ddd5eb3f341b328c30c66e565b49a1b024
+Author: Sebastian Blei <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#x3a;&#x73;&#x2e;&#x62;&#x6c;&#x65;&#105;&#x40;&#112;&#108;&#97;&#x7a;&#122;&#45;&#101;&#110;&#116;&#x65;&#x72;&#116;&#x61;&#x69;&#x6e;&#x6d;&#x65;&#x6e;&#x74;&#46;&#99;&#111;&#x6d;">&#x73;&#x2e;&#x62;&#x6c;&#101;&#105;&#x40;&#x70;&#108;&#x61;&#122;&#122;&#x2d;&#101;&#110;&#x74;&#101;&#x72;&#x74;&#x61;&#105;&#110;&#109;&#101;&#x6e;&#x74;&#x2e;&#x63;&#111;&#x6d;</a>
+Date:   Thu Mar 6 09:04:35 2014 +0100</p>
+
+<pre><code>fixed IE8 build
+</code></pre>
+
+<p>commit 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+Author: Sebastian Blei <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x73;&#46;&#98;&#108;&#101;&#105;&#x40;&#x70;&#108;&#x61;&#x7a;&#x7a;&#45;&#101;&#110;&#116;&#101;&#114;&#x74;&#97;&#x69;&#110;&#109;&#x65;&#110;&#x74;&#x2e;&#99;&#111;&#109;">&#115;&#x2e;&#x62;&#108;&#101;&#x69;&#x40;&#x70;&#108;&#x61;&#122;&#122;&#x2d;&#101;&#110;&#x74;&#101;&#x72;&#x74;&#x61;&#x69;&#110;&#x6d;&#x65;&#x6e;&#116;&#46;&#x63;&#111;&#109;</a>
+Date:   Wed Mar 5 15:34:23 2014 +0100</p>
+
+<pre><code>IE8 - set as my car - fix
+</code></pre>
+
+<p>```</p>
+
+<p>Diese, in vielen Situationen zu informationsreiche Ansicht, lässt sich kürzen mit <strong>&mdash;oneline</strong>:</p>
+
+<p>```sh
+$ git log &mdash;oneline</p>
+
+<p>3ad984d fixed IE8 build
+7bdd789 IE8 &ndash; set as my car &ndash; fix
+```</p>
+
+<p>Dies ist eine Kombination aus <strong>&mdash;pretty=oneline</strong> und <strong>&mdash;abbrev-commit</strong>. Wie man erkennen kann, hat der <em>Einzeiler</em> auch einen verkürzten Commit Hash. Gegenteilig gibt es natürlich auch eine detailliertere Ansicht:</p>
+
+<p>```sh
+$ git log &mdash;pretty=fuller</p>
+
+<p>commit 3ad984ddd5eb3f341b328c30c66e565b49a1b024
+Author:     Sebastian Blei <a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x73;&#x2e;&#98;&#x6c;&#101;&#105;&#64;&#112;&#x6c;&#x61;&#x7a;&#122;&#45;&#101;&#x6e;&#116;&#101;&#114;&#116;&#97;&#105;&#x6e;&#109;&#x65;&#110;&#116;&#x2e;&#x63;&#111;&#x6d;">&#x73;&#46;&#98;&#x6c;&#x65;&#105;&#64;&#x70;&#x6c;&#x61;&#122;&#122;&#x2d;&#101;&#110;&#116;&#101;&#114;&#116;&#97;&#105;&#110;&#x6d;&#101;&#x6e;&#116;&#46;&#99;&#x6f;&#x6d;</a>
+AuthorDate: Thu Mar 6 09:04:35 2014 +0100
+Commit:     Sebastian Blei <a href="&#x6d;&#97;&#x69;&#108;&#x74;&#111;&#58;&#x73;&#x2e;&#x62;&#108;&#x65;&#x69;&#x40;&#x70;&#108;&#x61;&#x7a;&#122;&#x2d;&#101;&#x6e;&#116;&#x65;&#x72;&#x74;&#x61;&#105;&#110;&#109;&#x65;&#x6e;&#116;&#46;&#x63;&#111;&#109;">&#115;&#x2e;&#x62;&#x6c;&#101;&#105;&#x40;&#x70;&#x6c;&#x61;&#x7a;&#122;&#x2d;&#101;&#110;&#116;&#101;&#114;&#116;&#97;&#x69;&#110;&#109;&#101;&#x6e;&#x74;&#46;&#x63;&#x6f;&#109;</a>
+CommitDate: Thu Mar 6 09:04:35 2014 +0100</p>
+
+<pre><code>fixed IE8 build
+</code></pre>
+
+<p>commit 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+Author:     Sebastian Blei <a href="&#x6d;&#x61;&#105;&#108;&#116;&#111;&#58;&#x73;&#x2e;&#x62;&#108;&#101;&#x69;&#64;&#x70;&#108;&#97;&#x7a;&#122;&#45;&#x65;&#x6e;&#116;&#x65;&#x72;&#x74;&#x61;&#105;&#110;&#109;&#101;&#x6e;&#x74;&#46;&#x63;&#x6f;&#109;">&#x73;&#x2e;&#98;&#108;&#x65;&#105;&#64;&#x70;&#x6c;&#97;&#122;&#x7a;&#45;&#101;&#110;&#x74;&#x65;&#114;&#x74;&#97;&#x69;&#x6e;&#x6d;&#x65;&#x6e;&#116;&#46;&#99;&#111;&#x6d;</a>
+AuthorDate: Wed Mar 5 15:34:23 2014 +0100
+Commit:     Sebastian Blei <a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#115;&#x2e;&#98;&#108;&#x65;&#x69;&#64;&#112;&#108;&#x61;&#x7a;&#122;&#45;&#x65;&#x6e;&#x74;&#101;&#114;&#x74;&#x61;&#105;&#x6e;&#x6d;&#x65;&#x6e;&#116;&#46;&#99;&#111;&#109;">&#x73;&#46;&#x62;&#x6c;&#101;&#x69;&#x40;&#112;&#x6c;&#x61;&#122;&#122;&#x2d;&#101;&#x6e;&#116;&#101;&#114;&#116;&#x61;&#x69;&#110;&#109;&#101;&#x6e;&#x74;&#46;&#x63;&#x6f;&#x6d;</a>
+CommitDate: Wed Mar 5 15:34:23 2014 +0100</p>
+
+<pre><code>IE8 - set as my car - fix
+</code></pre>
+
+<p>```</p>
+
+<p>&hellip; sowie eine RAW Ausgabe:</p>
+
+<p>```sh
+$ git log &mdash;pretty=raw</p>
+
+<p>commit 3ad984ddd5eb3f341b328c30c66e565b49a1b024
+tree 2838fefc9ceda9b0e8ea70af3a026c3477c1d31f
+parent 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+author Sebastian Blei <a href="&#x6d;&#97;&#x69;&#x6c;&#116;&#111;&#58;&#x73;&#46;&#x62;&#108;&#101;&#x69;&#x40;&#x70;&#108;&#x61;&#x7a;&#122;&#x2d;&#101;&#x6e;&#x74;&#101;&#x72;&#116;&#x61;&#105;&#110;&#x6d;&#x65;&#x6e;&#x74;&#46;&#99;&#x6f;&#109;">&#115;&#46;&#x62;&#x6c;&#101;&#x69;&#64;&#x70;&#108;&#x61;&#122;&#x7a;&#x2d;&#x65;&#x6e;&#x74;&#101;&#x72;&#116;&#x61;&#x69;&#110;&#x6d;&#101;&#x6e;&#116;&#x2e;&#99;&#x6f;&#x6d;</a> 1394093075 +0100
+committer Sebastian Blei <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#x73;&#x2e;&#x62;&#108;&#101;&#x69;&#64;&#x70;&#108;&#x61;&#122;&#122;&#x2d;&#x65;&#x6e;&#116;&#101;&#x72;&#x74;&#97;&#105;&#x6e;&#x6d;&#x65;&#110;&#x74;&#x2e;&#x63;&#111;&#x6d;">&#115;&#x2e;&#98;&#108;&#101;&#105;&#x40;&#112;&#108;&#x61;&#x7a;&#122;&#x2d;&#101;&#x6e;&#116;&#101;&#x72;&#x74;&#97;&#x69;&#110;&#x6d;&#x65;&#x6e;&#x74;&#46;&#99;&#x6f;&#109;</a> 1394093075 +0100</p>
+
+<pre><code>fixed IE8 build
+</code></pre>
+
+<p>commit 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+tree d3df538d896745f3892eb294759d66555fc3a030
+parent 82ee082013fb5b1529c1669dff054ade65679f97
+author Sebastian Blei <a href="&#x6d;&#x61;&#x69;&#108;&#x74;&#x6f;&#58;&#115;&#x2e;&#98;&#108;&#101;&#105;&#x40;&#x70;&#x6c;&#97;&#x7a;&#122;&#x2d;&#x65;&#110;&#x74;&#x65;&#x72;&#x74;&#97;&#x69;&#x6e;&#x6d;&#x65;&#x6e;&#x74;&#46;&#x63;&#111;&#109;">&#x73;&#x2e;&#x62;&#108;&#x65;&#105;&#64;&#112;&#x6c;&#97;&#122;&#122;&#45;&#101;&#110;&#116;&#x65;&#x72;&#x74;&#97;&#x69;&#110;&#109;&#x65;&#x6e;&#x74;&#46;&#99;&#111;&#109;</a> 1394030063 +0100
+committer Sebastian Blei <a href="&#109;&#x61;&#x69;&#x6c;&#x74;&#111;&#x3a;&#115;&#x2e;&#98;&#108;&#x65;&#x69;&#64;&#x70;&#x6c;&#x61;&#x7a;&#122;&#45;&#x65;&#x6e;&#x74;&#x65;&#114;&#116;&#97;&#105;&#110;&#109;&#x65;&#110;&#116;&#46;&#99;&#x6f;&#x6d;">&#x73;&#x2e;&#98;&#108;&#x65;&#x69;&#x40;&#112;&#x6c;&#97;&#x7a;&#122;&#45;&#x65;&#x6e;&#x74;&#101;&#x72;&#116;&#x61;&#x69;&#110;&#x6d;&#101;&#x6e;&#116;&#46;&#99;&#111;&#x6d;</a> 1394030063 +0100</p>
+
+<pre><code>IE8 - set as my car - fix
+</code></pre>
+
+<p>```</p>
+
+<p>Eine Anzeige mit Tags:</p>
+
+<p>```sh
+$ git log &mdash;decorate</p>
+
+<p>commit 3ad984ddd5eb3f341b328c30c66e565b49a1b024 (HEAD, tag: v.1.0, origin/master, origin/dev, origin/HEAD, master, dev)
+Author: Sebastian Blei <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#111;&#58;&#115;&#46;&#x62;&#108;&#x65;&#x69;&#64;&#x70;&#x6c;&#97;&#x7a;&#122;&#45;&#101;&#x6e;&#116;&#101;&#x72;&#116;&#97;&#x69;&#110;&#109;&#x65;&#x6e;&#x74;&#46;&#99;&#x6f;&#109;">&#115;&#x2e;&#x62;&#108;&#101;&#105;&#x40;&#112;&#x6c;&#97;&#122;&#x7a;&#45;&#101;&#x6e;&#116;&#x65;&#x72;&#x74;&#x61;&#x69;&#x6e;&#x6d;&#x65;&#110;&#116;&#x2e;&#99;&#111;&#109;</a>
+Date:   Thu Mar 6 09:04:35 2014 +0100</p>
+
+<pre><code>fixed IE8 build
+</code></pre>
+
+<p>commit 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+Author: Sebastian Blei <a href="&#109;&#97;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#46;&#x62;&#108;&#101;&#105;&#x40;&#x70;&#108;&#x61;&#122;&#x7a;&#45;&#x65;&#x6e;&#x74;&#101;&#114;&#x74;&#97;&#x69;&#x6e;&#109;&#x65;&#110;&#116;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#x2e;&#98;&#x6c;&#x65;&#x69;&#x40;&#112;&#108;&#x61;&#x7a;&#122;&#x2d;&#101;&#x6e;&#116;&#x65;&#x72;&#116;&#x61;&#x69;&#110;&#109;&#x65;&#x6e;&#116;&#x2e;&#99;&#111;&#109;</a>
+Date:   Wed Mar 5 15:34:23 2014 +0100</p>
+
+<pre><code>IE8 - set as my car - fix
+</code></pre>
+
+<p>```</p>
+
+<p>Möchte man einen ASCII-Art-Graphen hinzufügen, der die Ausgabe etwas strukturierter für das menschliche Hirn darstellt:</p>
+
+<p>```sh
+$ git log &mdash;graph</p>
+
+<ul>
+<li>commit 3ad984ddd5eb3f341b328c30c66e565b49a1b024
+| Author: Sebastian Blei <a href="&#x6d;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#x2e;&#98;&#x6c;&#x65;&#105;&#64;&#x70;&#x6c;&#97;&#122;&#122;&#x2d;&#x65;&#x6e;&#x74;&#101;&#114;&#116;&#97;&#105;&#x6e;&#109;&#101;&#110;&#116;&#46;&#x63;&#111;&#x6d;">&#115;&#46;&#98;&#108;&#101;&#x69;&#x40;&#112;&#108;&#97;&#x7a;&#x7a;&#x2d;&#101;&#110;&#116;&#x65;&#114;&#x74;&#x61;&#x69;&#x6e;&#109;&#x65;&#x6e;&#116;&#x2e;&#x63;&#111;&#109;</a>
+| Date:   Thu Mar 6 09:04:35 2014 +0100
+|
+|     fixed IE8 build
+|</li>
+<li>commit 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+| Author: Sebastian Blei <a href="&#109;&#97;&#105;&#x6c;&#116;&#111;&#58;&#x73;&#x2e;&#x62;&#108;&#101;&#105;&#x40;&#112;&#108;&#x61;&#x7a;&#x7a;&#45;&#101;&#110;&#x74;&#x65;&#x72;&#x74;&#x61;&#x69;&#110;&#x6d;&#x65;&#x6e;&#x74;&#x2e;&#99;&#111;&#109;">&#115;&#x2e;&#x62;&#x6c;&#x65;&#x69;&#x40;&#112;&#x6c;&#97;&#122;&#122;&#x2d;&#101;&#110;&#x74;&#101;&#x72;&#116;&#x61;&#x69;&#x6e;&#x6d;&#101;&#110;&#116;&#46;&#99;&#111;&#109;</a>
+| Date:   Wed Mar 5 15:34:23 2014 +0100
+|
+|     IE8 &ndash; set as my car &ndash; fix
+```</li>
+</ul>
+
+
+<p>Den Commit Hash kürzen:</p>
+
+<p>```sh
+$ git log &mdash;abbrev-commit</p>
+
+<p>commit 3ad984d
+Author: Sebastian Blei <a href="&#109;&#x61;&#x69;&#x6c;&#116;&#x6f;&#58;&#115;&#x2e;&#x62;&#108;&#x65;&#x69;&#x40;&#112;&#x6c;&#97;&#122;&#x7a;&#45;&#x65;&#110;&#116;&#101;&#114;&#116;&#x61;&#105;&#110;&#x6d;&#101;&#110;&#116;&#46;&#x63;&#x6f;&#x6d;">&#x73;&#x2e;&#98;&#108;&#x65;&#105;&#x40;&#112;&#108;&#x61;&#122;&#122;&#45;&#101;&#x6e;&#116;&#101;&#x72;&#116;&#x61;&#105;&#x6e;&#x6d;&#101;&#x6e;&#116;&#46;&#x63;&#x6f;&#x6d;</a>
+Date:   Thu Mar 6 09:04:35 2014 +0100</p>
+
+<pre><code>fixed IE8 build
+</code></pre>
+
+<p>commit 7bdd789
+Author: Sebastian Blei <a href="&#109;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x73;&#x2e;&#x62;&#108;&#x65;&#x69;&#64;&#112;&#108;&#97;&#122;&#x7a;&#45;&#x65;&#110;&#x74;&#x65;&#114;&#x74;&#x61;&#105;&#110;&#109;&#101;&#x6e;&#x74;&#46;&#99;&#x6f;&#109;">&#x73;&#46;&#x62;&#108;&#101;&#x69;&#x40;&#112;&#x6c;&#x61;&#122;&#x7a;&#45;&#101;&#x6e;&#116;&#101;&#114;&#116;&#x61;&#x69;&#x6e;&#x6d;&#x65;&#x6e;&#116;&#x2e;&#x63;&#111;&#109;</a>
+Date:   Wed Mar 5 15:34:23 2014 +0100</p>
+
+<pre><code>IE8 - set as my car - fix
+</code></pre>
+
+<p>```</p>
+
+<p>Eine relative Datumsangabe:</p>
+
+<p>```sh
+$ git log &mdash;relative-date</p>
+
+<p>commit 3ad984ddd5eb3f341b328c30c66e565b49a1b024
+Author: Sebastian Blei <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#115;&#46;&#x62;&#x6c;&#101;&#105;&#64;&#112;&#x6c;&#97;&#122;&#x7a;&#x2d;&#x65;&#110;&#116;&#x65;&#114;&#x74;&#x61;&#x69;&#110;&#109;&#x65;&#110;&#x74;&#x2e;&#x63;&#x6f;&#x6d;">&#x73;&#x2e;&#x62;&#108;&#x65;&#x69;&#64;&#x70;&#x6c;&#97;&#x7a;&#122;&#x2d;&#101;&#x6e;&#116;&#101;&#114;&#116;&#x61;&#105;&#x6e;&#109;&#101;&#110;&#116;&#x2e;&#x63;&#x6f;&#109;</a>
+Date:   8 hours ago</p>
+
+<pre><code>fixed IE8 build
+</code></pre>
+
+<p>commit 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+Author: Sebastian Blei <a href="&#109;&#97;&#105;&#x6c;&#116;&#x6f;&#58;&#115;&#46;&#x62;&#108;&#x65;&#x69;&#64;&#112;&#x6c;&#97;&#122;&#x7a;&#45;&#101;&#x6e;&#x74;&#101;&#x72;&#x74;&#97;&#x69;&#110;&#x6d;&#x65;&#110;&#x74;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#x2e;&#98;&#108;&#101;&#105;&#64;&#112;&#108;&#x61;&#122;&#122;&#45;&#101;&#110;&#116;&#x65;&#114;&#x74;&#97;&#105;&#110;&#109;&#x65;&#110;&#116;&#46;&#x63;&#x6f;&#x6d;</a>
+Date:   26 hours ago</p>
+
+<pre><code>IE8 - set as my car - fix
+</code></pre>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Kategorie: shell | Sebastian Blei & Schnipsel]]></title>
+  <link href="http://blei.in/blog/categories/shell/atom.xml" rel="self"/>
+  <link href="http://blei.in/"/>
+  <updated>2014-05-28T10:29:46+02:00</updated>
+  <id>http://blei.in/</id>
+  <author>
+    <name><![CDATA[Sebastian Blei]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Shell: Pfadgrößen anzeigen]]></title>
+    <link href="http://blei.in/blog/2014/02/07/shell-pfadgrossen-anzeigen/"/>
+    <updated>2014-02-07T17:09:00+01:00</updated>
+    <id>http://blei.in/blog/2014/02/07/shell-pfadgrossen-anzeigen</id>
+    <content type="html"><![CDATA[<p>Freitag, am Morgen. Die Robot Tests sind abgeschlossen, das Projekt wird für&rsquo;s Deployment vorbereitet. Der letzte Durchlauf vom <em>grunt</em> steht an. Der <em>task runner</em> startet &hellip; und bricht ab. Die nagelneue SSD ist voll. <em>Verdammt! Wo ist der freie Platz nur hin?</em> Eine zügige Lokalisierung der Platzverschwendung würde sich jetzt anbieten. Und zwar schleunigst. Mit einem Script.</p>
+
+<!-- more -->
+
+
+<p><code>sh
+$ df -h
+Filesystem      Size   Used   Avail Capacity  iused  ifree %iused  Mounted on
+/dev/disk0s2    120Gi  120Gi  0.0Gi   100% 14734031    975   100%   /
+</code></p>
+
+<p>Ok. Die Platte ist offensichtlich voll. Ins <em>home</em>-Verzeichnis springen und verschiedene Verzeichnisse durchwühlen. Hier und da. Und da. Und da, und da, und da. Hmm. <em>Wo könnte noch was versteckt sein. Ach, da wurde noch was herunter geladen. Oder hier. Ach, wo war das nur?</em> Wir könnten jedes einzelne Verzeichnis durchwühlen. Oder wir haben ein Script. Und einen Alias.</p>
+
+<p><code>sh
+$ fatfiles
+4K      ./music.md
+14,8M   ./tmp
+114,3M  ./Desktop
+312,9M  ./Pictures
+521,2M  ./Documents
+764M    ./Projects
+1003,8M ./GIT
+3,2G    ./Downloads
+5,3G    ./Music
+6,8G    ./Library
+9,2G    ./Movies
+Total: 27,3G
+</code></p>
+
+<p>Yeah! Nette Zusammenfassung. Sie spart eine Menge Zeit. Doch was macht das Script? Fangen wir mit <em>du</em> an:</p>
+
+<p><code>sh
+du -sk ./*
+</code>
+<strong>du</strong> stellt die Plattennutzung dar, <strong>-s</strong> spezifiziert einen einzelnen Eintrag für jedes Element und <strong>-k</strong> setzt die anzuzeigende Blockgröße auf 2<sup>10</sup> Bytes (=== 1 KByte) ein. Als nächstes übermitteln wir den Erguss von <em>du</em> per stdout nach <em>sort</em>:</p>
+
+<p><code>sh
+sort -n
+</code></p>
+
+<p><strong>sort</strong> sortiert Einträge und <strong>-n</strong> ist die Kurzfassung für <strong>&mdash;numeric-sort</strong>, das <em>sort</em> anweist, nach numerischen Werten zu sortieren.</p>
+
+<p>Als letztes nehme man den Output von <em>$ du -sk ./ | sort -n</em> und schicke es per Pipe zu <em>awk</em>. <em>awk</em> ist dafür da, den Output aufzuhübschen. Dies geschieht mit unterschiedlichen Algorithmen, die ähnlich funktionieren wie der Modulo-Operator, um menschenlesbare Größen anzuzeigen. Als abschließende Linie wird dem Eintrag eine Zeile angehangen, die die Gesamtgröße des aktuellen Verzeichnisinhaltes darstellt.</p>
+
+<p>```awk
+awk &lsquo;BEGIN{ pref[1]=&ldquo;K&rdquo;; pref[2]=&ldquo;M&rdquo;; pref[3]=&ldquo;G&rdquo;;}
+{ total = total + $1; x = $1; y = 1;
+  while( x > 1024 )
+  { x = (x + 1023)/1024; y++; }
+  printf(&ldquo;%g%s\t%s\n&rdquo;,int(x*10)/10,pref[y],$2); }
+  END { y = 1; while( total > 1024 )</p>
+
+<pre><code>{ total = (total + 1023)/1024; y++; }
+printf("Total: %g%s\n",int(total*10)/10,pref[y]); }'
+</code></pre>
+
+<p>```</p>
+
+<p>Das Script am Ende:</p>
+
+<p>```sh</p>
+
+<h1>!/bin/sh</h1>
+
+<p>du -sk ./<em> | sort -n | awk &lsquo;BEGIN{ pref[1]=&ldquo;K&rdquo;; pref[2]=&ldquo;M&rdquo;; pref[3]=&ldquo;G&rdquo;;} { total = total + $1; x = $1; y = 1; while( x > 1024 ) { x = (x + 1023)/1024; y++; } printf(&ldquo;%g%s\t%s\n&rdquo;,int(x</em>10)/10,pref[y],$2); } END { y = 1; while( total > 1024 ) { total = (total + 1023)/1024; y++; } printf(&ldquo;Total: %g%s\n&rdquo;,int(total*10)/10,pref[y]); }&rsquo;
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

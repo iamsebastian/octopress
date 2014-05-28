@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Sebastian Blei & Schnipsel]]></title>
+  <link href="http://blei.in/atom.xml" rel="self"/>
+  <link href="http://blei.in/"/>
+  <updated>2014-05-28T10:29:46+02:00</updated>
+  <id>http://blei.in/</id>
+  <author>
+    <name><![CDATA[Sebastian Blei]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[git log Filter]]></title>
+    <link href="http://blei.in/blog/2014/03/07/git-log-filter/"/>
+    <updated>2014-03-07T06:50:00+01:00</updated>
+    <id>http://blei.in/blog/2014/03/07/git-log-filter</id>
+    <content type="html"><![CDATA[<p>Nach dem ich bereits über einige Möglichkeiten geschrieben habe, mit der Log um zu gehen, möchte ich noch auf einige weitere Möglichkeiten eingehen, wie man die Ausgabe weiter restriktieren kann.</p>
+
+<!-- more -->
+
+
+<p>Die folgenden Limitierungen, bzw. Filteroptionen, werden angewendet, bevor eine spezifizierte Formatierung statt findet. Das heißt, dass eine Regular Expression auf die gesamte Standardausgabe angewandt wird und nicht nur, auf die, mit <strong>&mdash;format</strong> eingeschränkte, Ausgabe.</p>
+
+<p>Über <strong>&mdash;since=$date</strong> (alternativ <strong>&mdash;after=$date</strong>) hatte ich bereits geschrieben. Dies gibt die Commits aus, die nach dem angegebenen Datum statt fanden. Eine relative Datumsangabe, wie <strong>2d</strong> für zwei Tage, ist hier üblich. Aber natürlich sind auch absolute Datumsangaben möglich. Beispielsweise im Format <strong>YYYY-MM-DD</strong>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log --skip<span class="o">=</span>18 --since<span class="o">=</span>2014-03-05
+</span><span class='line'>
+</span><span class='line'>9029665 Additional fixes on SVG stuff. Place some variable gradient stuff in paths
+</span><span class='line'>42ee614 some additional changes in about, style fixes and correction in sass source.
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dies sind die Commits #19 und #20 aus den letzten beiden Tage, respektive vom 5. März 2014 bis 7. März 2014. Passend zu diesem <em>neuer-als-Filter</em>, ist es auch möglich, Commits anzeigen zu lassen, die vor einem bestimmten Datum passiert sind: <em>(alternativ <strong>&mdash;until=$date</strong>)</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log --date<span class="o">=</span>relative --before<span class="o">=</span>2014-03-05
+</span><span class='line'>
+</span><span class='line'>bab314d dismissed some script stuff
+</span><span class='line'>0e9295d refactored sass
+</span><span class='line'>2f02101 fixed some scripting issues
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Um nur Commits eines bestimmten Autors anzeigen zu lassen, nutze ich <strong>&mdash;author=$name</strong>. Das benutzte Pattern ist eine Regular Expression und die Verkettung des Filters ist möglich &mdash; bei einer Reguluar Expression aber freilich unnötig. Das Äquivalent dazu ist <strong>&mdash;committer=$name</strong>. Hinweis: Wie bei Patterns in GIT üblich, ist auch hier das Matching <em>case-sensitive</em>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log --since<span class="o">=</span>2d --author<span class="o">=</span><span class="s1">&#39;Blei&#39;</span> --format<span class="o">=</span><span class="s2">&quot;%&lt;|(13)%cr %&lt;|(32)%Cblue%s&quot;</span>
+</span><span class='line'>
+</span><span class='line'>20 hours ago  Changed post.
+</span><span class='line'>21 hours ago  Changed to-read book size and word count
+</span><span class='line'>2 days ago    Fixed jsHint notifications
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ist man in einem Projekt so weit, dass man Versionierung eingeführt hat und das Projekt entsprechend die Maße hat, um eine Versionierung zu begrüßen, kann man alle Einträge ab einem Versionierungssprung wie folgt anzeigen lassen:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log v1.0..
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Immer wieder kommt es zu Merges, deren Ausgabe wenig in einer History zu suchen hat. Sucht man beispielsweise nur Fixes, keine Merges:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log --no-merges
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<!-- colöurs: black    blink    blue     bold     cyan     dim      green    magenta  red      reverse  ul       white    yellow -->
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[git log formatieren]]></title>
+    <link href="http://blei.in/blog/2014/03/06/git-log-formatieren/"/>
+    <updated>2014-03-06T17:29:00+01:00</updated>
+    <id>http://blei.in/blog/2014/03/06/git-log-formatieren</id>
+    <content type="html"><![CDATA[<p>Anschließend, zum vorherigen Post, ist es natürlich auch möglich, die GIT Log frei selbst zu gestalten. Dafür gibt es Massen an Platzhaltern, die das Verfassen eines eigenen Skriptes &amp; Aliases nicht nur möglich, sondern auch sinnvoll machen.</p>
+
+<!-- more -->
+
+
+<p>Für den Daily Standup erscheint es mir beispielsweise äußerst sinnbehaftet, eine Ausgabe der letzten zwei Tage aus den Logs zu drücken.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git log --since<span class="o">=</span>2d
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Oder eine sehr kurze Zusammenfassung, mit just den letzten drei Commits:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git log -3
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Es ist auch möglich die Ausgabe mit Platzhaltern zu versehen, um einen bessere Übersicht zu gewinnen. Der Platzhalter des <em>Platzhalters</em> &mdash; also im wörtlichen, dimensionalem Sinne &mdash; ist <code>%&lt;|(n)</code>, wobei <strong>n</strong> dabei für die frei zu haltende Länge steht. Die Angabe der Länge erfolgt absolut in Abstand zum Promptbeginn. Beispielsweise ergibt der folgende Aufruf eine Kolumne mit drei Reihen:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>git log --format<span class="o">=</span><span class="s2">&quot;%&lt;|(13)%cr %&lt;|(32) %cn %s&quot;</span>
+</span><span class='line'>
+</span><span class='line'>9 hours ago    Sebastian Blei    fixed IE8 build
+</span><span class='line'>26 hours ago   Sebastian Blei    IE8 - <span class="nb">set </span>as my car - fix
+</span><span class='line'>27 hours ago   Sebastian Blei    debug build
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>%cr</strong> ist der Platzhalter für ein relatives Datum zum Zeitpunkt des Commits, <strong>%cn</strong> ist der Platzhalter für den Namen der Person, die das Commitment erstellt hat und <strong>%s</strong> ist für die Ausgabe des Strings zuständig, also für die Commitment Nachricht. Um das ganze noch etwas übersichtlicher zu gestalten, kann man sich auch farblich austoben. <em>git log</em> unterstützt von Haus aus drei Platzhalter für Farben: <strong>%Cred</strong> Rot, <strong>%Cgreen</strong> Grün und <strong>%Cblue</strong> Blau. Eine Marke, also eine Art Tabbing, stellt <strong>%m</strong> dar.</p>
+
+<p>Meine <em>Shortlog</em> (ohne Zuhilfenahme von weiteren Shell Befehlen) sieht wie folgt aus:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log --since<span class="o">=</span>2d --format<span class="o">=</span><span class="s2">&quot;%&lt;|(13)%cr %&lt;|(32)%Cred%cn %Cblue%s&quot;</span>
+</span><span class='line'>
+</span><span class='line'>9 hours ago   Sebastian Blei     fixed IE8 build
+</span><span class='line'>27 hours ago  Sebastian Blei     IE8 - <span class="nb">set </span>as my car - fix
+</span><span class='line'>27 hours ago  Sebastian Blei     debug build
+</span><span class='line'>27 hours ago  Sebastian Blei     timeline competitor fix
+</span><span class='line'>2 days ago    Sebastian Blei     reconstructed &amp; finished timeline
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Im nächsten Post habe ich vielleicht noch kurz Gelegenheit, darauf ein zu gehen, wie man die Log weiter spezifiziert. Beispielsweise, lässt man nur Commits aus der Log ausgeben, die man selber verfasst hat, oder spart <em>merges</em> aus.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[git log Ausgaben]]></title>
+    <link href="http://blei.in/blog/2014/03/06/git-log/"/>
+    <updated>2014-03-06T07:18:00+01:00</updated>
+    <id>http://blei.in/blog/2014/03/06/git-log</id>
+    <content type="html"><![CDATA[<p>Ob für den Daily Standup, zum Auffinden eines Versionierungs-Tags oder zum Suchen einer Commit-Message, <strong>git log</strong> erweist sich in vielen Situationen als nützliches Tool, um dem GIT Repository Informationen zu entnehmen, ohne eine GUI starten zu müssen. Per default, wird die Log invertiert chronologisch ausgegeben &mdash; also mit dem neuesten Eintrag zuerst.</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log
+</span><span class='line'>
+</span><span class='line'>commit 3ad984ddd5eb3f341b328c30c66e565b49a1b024
+</span><span class='line'>Author: Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>Date:   Thu Mar 6 09:04:35 2014 +0100
+</span><span class='line'>
+</span><span class='line'>    fixed IE8 build
+</span><span class='line'>
+</span><span class='line'>commit 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+</span><span class='line'>Author: Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>Date:   Wed Mar 5 15:34:23 2014 +0100
+</span><span class='line'>
+</span><span class='line'>    IE8 - <span class="nb">set </span>as my car - fix
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Diese, in vielen Situationen zu informationsreiche Ansicht, lässt sich kürzen mit <strong>&mdash;oneline</strong>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log --oneline
+</span><span class='line'>
+</span><span class='line'>3ad984d fixed IE8 build
+</span><span class='line'>7bdd789 IE8 - <span class="nb">set </span>as my car - fix
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Dies ist eine Kombination aus <strong>&mdash;pretty=oneline</strong> und <strong>&mdash;abbrev-commit</strong>. Wie man erkennen kann, hat der <em>Einzeiler</em> auch einen verkürzten Commit Hash. Gegenteilig gibt es natürlich auch eine detailliertere Ansicht:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log --pretty<span class="o">=</span>fuller
+</span><span class='line'>
+</span><span class='line'>commit 3ad984ddd5eb3f341b328c30c66e565b49a1b024
+</span><span class='line'>Author:     Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>AuthorDate: Thu Mar 6 09:04:35 2014 +0100
+</span><span class='line'>Commit:     Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>CommitDate: Thu Mar 6 09:04:35 2014 +0100
+</span><span class='line'>
+</span><span class='line'>    fixed IE8 build
+</span><span class='line'>
+</span><span class='line'>commit 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+</span><span class='line'>Author:     Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>AuthorDate: Wed Mar 5 15:34:23 2014 +0100
+</span><span class='line'>Commit:     Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>CommitDate: Wed Mar 5 15:34:23 2014 +0100
+</span><span class='line'>
+</span><span class='line'>    IE8 - <span class="nb">set </span>as my car - fix
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>&hellip; sowie eine RAW Ausgabe:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log --pretty<span class="o">=</span>raw
+</span><span class='line'>
+</span><span class='line'>commit 3ad984ddd5eb3f341b328c30c66e565b49a1b024
+</span><span class='line'>tree 2838fefc9ceda9b0e8ea70af3a026c3477c1d31f
+</span><span class='line'>parent 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+</span><span class='line'>author Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt; 1394093075 +0100
+</span><span class='line'>committer Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt; 1394093075 +0100
+</span><span class='line'>
+</span><span class='line'>    fixed IE8 build
+</span><span class='line'>
+</span><span class='line'>commit 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+</span><span class='line'>tree d3df538d896745f3892eb294759d66555fc3a030
+</span><span class='line'>parent 82ee082013fb5b1529c1669dff054ade65679f97
+</span><span class='line'>author Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt; 1394030063 +0100
+</span><span class='line'>committer Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt; 1394030063 +0100
+</span><span class='line'>
+</span><span class='line'>    IE8 - <span class="nb">set </span>as my car - fix
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Eine Anzeige mit Tags:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log --decorate
+</span><span class='line'>
+</span><span class='line'>commit 3ad984ddd5eb3f341b328c30c66e565b49a1b024 <span class="o">(</span>HEAD, tag: v.1.0, origin/master, origin/dev, origin/HEAD, master, dev<span class="o">)</span>
+</span><span class='line'>Author: Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>Date:   Thu Mar 6 09:04:35 2014 +0100
+</span><span class='line'>
+</span><span class='line'>    fixed IE8 build
+</span><span class='line'>
+</span><span class='line'>commit 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+</span><span class='line'>Author: Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>Date:   Wed Mar 5 15:34:23 2014 +0100
+</span><span class='line'>
+</span><span class='line'>    IE8 - <span class="nb">set </span>as my car - fix
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Möchte man einen ASCII-Art-Graphen hinzufügen, der die Ausgabe etwas strukturierter für das menschliche Hirn darstellt:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log --graph
+</span><span class='line'>
+</span><span class='line'>* commit 3ad984ddd5eb3f341b328c30c66e565b49a1b024
+</span><span class='line'>| Author: Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>| Date:   Thu Mar 6 09:04:35 2014 +0100
+</span><span class='line'>|
+</span><span class='line'>|     fixed IE8 build
+</span><span class='line'>|
+</span><span class='line'>* commit 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+</span><span class='line'>| Author: Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>| Date:   Wed Mar 5 15:34:23 2014 +0100
+</span><span class='line'>|
+</span><span class='line'>|     IE8 - <span class="nb">set </span>as my car - fix
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Den Commit Hash kürzen:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log --abbrev-commit
+</span><span class='line'>
+</span><span class='line'>commit 3ad984d
+</span><span class='line'>Author: Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>Date:   Thu Mar 6 09:04:35 2014 +0100
+</span><span class='line'>
+</span><span class='line'>    fixed IE8 build
+</span><span class='line'>
+</span><span class='line'>commit 7bdd789
+</span><span class='line'>Author: Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>Date:   Wed Mar 5 15:34:23 2014 +0100
+</span><span class='line'>
+</span><span class='line'>    IE8 - <span class="nb">set </span>as my car - fix
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Eine relative Datumsangabe:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>git log --relative-date
+</span><span class='line'>
+</span><span class='line'>commit 3ad984ddd5eb3f341b328c30c66e565b49a1b024
+</span><span class='line'>Author: Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>Date:   8 hours ago
+</span><span class='line'>
+</span><span class='line'>    fixed IE8 build
+</span><span class='line'>
+</span><span class='line'>commit 7bdd789e0a0417aa2a3e9bc77dac2aba8571f719
+</span><span class='line'>Author: Sebastian Blei &lt;s.blei@plazz-entertainment.com&gt;
+</span><span class='line'>Date:   26 hours ago
+</span><span class='line'>
+</span><span class='line'>    IE8 - <span class="nb">set </span>as my car - fix
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Dynamische Scrollcontainer]]></title>
+    <link href="http://blei.in/blog/2014/02/12/dynamische-scrollcontainer/"/>
+    <updated>2014-02-12T17:12:00+01:00</updated>
+    <id>http://blei.in/blog/2014/02/12/dynamische-scrollcontainer</id>
+    <content type="html"><![CDATA[<p>In einem aktuellen Projekt häuften sich die Lauf- und Ladezeiten im <em>IE8</em> auf ein unerträgliches Maß. Die ersten Schritte &mdash; in denen es um die Konfiguration der Applikation geht &mdash;, erfuhr man noch erträgliche Ladezeiten, trotz großer Datenmengen. Doch nach Schritt Drei der Konfiguration, wo der eigentliche, interaktive Informationsgehalt dargestellt wird, hatte man durchaus Zeit, Kaffee kochen zu gehen.</p>
+
+<!-- more -->
+
+
+<p>Ein Container, der gezeichnet werden musste, umfasste sechs Views. Die erste View war als Header mit wichtigen Informationen permanent sichtbar; von den verbleibenden fünf Views war jeweils eine sichtbar war. Freilich lädt der <em>IE8</em> alles in einem <em>Schwung</em> <em>&mdash; wobei das zügig klingt, ohne beabsichtigt zu sein &mdash;</em>, während <em>WebKit</em> und <em>Gecko</em> sich erst mit dem Zeichnen der Views aufhalten, wenn diese auch tatsächlich im Sichtfeld sind. Knackpunkt dabei war die letzte View, die eine drei-spaltige Übersicht &mdash; die allesamt separat scrollbar sind &mdash; mit hunderten Modellen darstellt. Ein Modell umfasst dabei etwa acht Knoten im <em>DOM</em>. Mit einem Model-Array von etwa 900 Objekten, kamen wir damit auf eine Ladezeit von etwa 90 Sekunden im <em>IE8</em>. <em>WebKit</em> und <em>Gecko</em> begnügten sich hierbei mit etwa vier Sekunden. Da dies einem Kunden nicht zumutbar ist, habe ich eine dynamische Direktive geschrieben, die die Ladezeit im <em>IE8</em> auf etwa zehn Sekunden runterbricht.</p>
+
+<p>Die Idee, die einzelnen, scrollbaren Spalten dynamisch in der Anzahl der Einträge zu machen, entstand dabei aber nicht erst an dieser Stelle. Bereits an einer vorherigen Stelle, wo man sich durch alle Modelle suchen kann und gleichzeitig alle Treffer in der Suchliste hervorgehoben werden, habe ich eine Direkte verwendet, die mitwächst.</p>
+
+<p>Zu Anfang stehen in den drei Spalten je etwa zehn Einträge &mdash; wobei dies abhängig von den Filterkriterien ist. Zehn Einträge sind also die initiale Obergrenze, die möglich ist. Scrollt man nun in dem Container nach unten, erscheint mit jedem gefeuerten Scroll-Event, ein zusätzlicher Eintrag. Gleich, ob das mit dem Mausrad, per Trackpad oder per Klick am Scrollbalken des Containers geschieht.</p>
+
+<p>Die Scope wird mit der dynamischen Obergrenze initialisiert:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">$scope</span><span class="p">.</span><span class="nx">dynamicLimit</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Die Direktive wird initialisiert:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">filter-scroll=</span><span class="s">&quot;dynamicLimit&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  ...
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>&hellip; und bi-direktional gebunden:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="nx">app</span><span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">&#39;filterScroll&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">restrict</span><span class="o">:</span> <span class="s1">&#39;AE&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">scope</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">limit</span><span class="o">:</span><span class="s1">&#39;=filterScroll&#39;</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">link</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">$scope</span><span class="p">,</span> <span class="nx">element</span><span class="p">,</span> <span class="nx">attrs</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">angular</span><span class="p">.</span><span class="nx">element</span><span class="p">(</span><span class="nx">element</span><span class="p">).</span><span class="nx">bind</span><span class="p">(</span><span class="s1">&#39;scroll&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">$scope</span><span class="p">[</span><span class="nx">attrs</span><span class="p">.</span><span class="nx">scroll</span><span class="p">]</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">$scope</span><span class="p">.</span><span class="nx">limit</span><span class="o">++</span><span class="p">;</span>
+</span><span class='line'>      <span class="p">});</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Die Iteration erfolgt mit <code>ng-repeat</code>, sowie dem instanziierten <code>limitTo</code>-Filter von Angular:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">ng-repeat=</span><span class="s">&quot;foo in bar | limitTo:dynamicLimit&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'> ...
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Shell: Pfadgrößen anzeigen]]></title>
+    <link href="http://blei.in/blog/2014/02/07/shell-pfadgrossen-anzeigen/"/>
+    <updated>2014-02-07T17:09:00+01:00</updated>
+    <id>http://blei.in/blog/2014/02/07/shell-pfadgrossen-anzeigen</id>
+    <content type="html"><![CDATA[<p>Freitag, am Morgen. Die Robot Tests sind abgeschlossen, das Projekt wird für&rsquo;s Deployment vorbereitet. Der letzte Durchlauf vom <em>grunt</em> steht an. Der <em>task runner</em> startet &hellip; und bricht ab. Die nagelneue SSD ist voll. <em>Verdammt! Wo ist der freie Platz nur hin?</em> Eine zügige Lokalisierung der Platzverschwendung würde sich jetzt anbieten. Und zwar schleunigst. Mit einem Script.</p>
+
+<!-- more -->
+
+
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>df -h
+</span><span class='line'>Filesystem      Size   Used   Avail Capacity  iused  ifree %iused  Mounted on
+</span><span class='line'>/dev/disk0s2    120Gi  120Gi  0.0Gi   100% 14734031    975   100%   /
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Ok. Die Platte ist offensichtlich voll. Ins <em>home</em>-Verzeichnis springen und verschiedene Verzeichnisse durchwühlen. Hier und da. Und da. Und da, und da, und da. Hmm. <em>Wo könnte noch was versteckt sein. Ach, da wurde noch was herunter geladen. Oder hier. Ach, wo war das nur?</em> Wir könnten jedes einzelne Verzeichnis durchwühlen. Oder wir haben ein Script. Und einen Alias.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="nv">$ </span>fatfiles
+</span><span class='line'>4K      ./music.md
+</span><span class='line'>14,8M   ./tmp
+</span><span class='line'>114,3M  ./Desktop
+</span><span class='line'>312,9M  ./Pictures
+</span><span class='line'>521,2M  ./Documents
+</span><span class='line'>764M    ./Projects
+</span><span class='line'>1003,8M ./GIT
+</span><span class='line'>3,2G    ./Downloads
+</span><span class='line'>5,3G    ./Music
+</span><span class='line'>6,8G    ./Library
+</span><span class='line'>9,2G    ./Movies
+</span><span class='line'>Total: 27,3G
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Yeah! Nette Zusammenfassung. Sie spart eine Menge Zeit. Doch was macht das Script? Fangen wir mit <em>du</em> an:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>du -sk ./*
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>du</strong> stellt die Plattennutzung dar, <strong>-s</strong> spezifiziert einen einzelnen Eintrag für jedes Element und <strong>-k</strong> setzt die anzuzeigende Blockgröße auf 2<sup>10</sup> Bytes (=== 1 KByte) ein. Als nächstes übermitteln wir den Erguss von <em>du</em> per stdout nach <em>sort</em>:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'>sort -n
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>sort</strong> sortiert Einträge und <strong>-n</strong> ist die Kurzfassung für <strong>&mdash;numeric-sort</strong>, das <em>sort</em> anweist, nach numerischen Werten zu sortieren.</p>
+
+<p>Als letztes nehme man den Output von <em>$ du -sk ./ | sort -n</em> und schicke es per Pipe zu <em>awk</em>. <em>awk</em> ist dafür da, den Output aufzuhübschen. Dies geschieht mit unterschiedlichen Algorithmen, die ähnlich funktionieren wie der Modulo-Operator, um menschenlesbare Größen anzuzeigen. Als abschließende Linie wird dem Eintrag eine Zeile angehangen, die die Gesamtgröße des aktuellen Verzeichnisinhaltes darstellt.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='awk'><span class='line'><span class="nx">awk</span> <span class="s1">&#39;BEGIN{ pref[1]=&quot;K&quot;; pref[2]=&quot;M&quot;; pref[3]=&quot;G&quot;;} </span>
+</span><span class='line'><span class="s1">{ total = total + $1; x = $1; y = 1; </span>
+</span><span class='line'><span class="s1">  while( x &gt; 1024 ) </span>
+</span><span class='line'><span class="s1">  { x = (x + 1023)/1024; y++; } </span>
+</span><span class='line'><span class="s1">  printf(&quot;%g%s\t%s\n&quot;,int(x*10)/10,pref[y],$2); } </span>
+</span><span class='line'><span class="s1">  END { y = 1; while( total &gt; 1024 )</span>
+</span><span class='line'><span class="s1">    { total = (total + 1023)/1024; y++; }</span>
+</span><span class='line'><span class="s1">    printf(&quot;Total: %g%s\n&quot;,int(total*10)/10,pref[y]); }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Das Script am Ende:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='sh'><span class='line'><span class="c">#!/bin/sh</span>
+</span><span class='line'>du -sk ./* | sort -n | awk <span class="s1">&#39;BEGIN{ pref[1]=&quot;K&quot;; pref[2]=&quot;M&quot;; pref[3]=&quot;G&quot;;} { total = total + $1; x = $1; y = 1; while( x &gt; 1024 ) { x = (x + 1023)/1024; y++; } printf(&quot;%g%s\t%s\n&quot;,int(x*10)/10,pref[y],$2); } END { y = 1; while( total &gt; 1024 ) { total = (total + 1023)/1024; y++; } printf(&quot;Total: %g%s\n&quot;,int(total*10)/10,pref[y]); }&#39;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
+  
+</feed>
