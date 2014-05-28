@@ -1,0 +1,119 @@
+$font-size: 19.0px
+
+@mixin transition
+  transition: .284s linear
+
+@mixin speedtransition
+  transition: .141s linear
+
+@mixin font
+  font-family: gandhi, Georgia, serif
+  text-rendering: geometricPrecision
+  
+@mixin footer
+  font-size: 0.8217rem
+  
+@mixin meta
+  font-size: .8rem
+  text-transform: uppercase
+  
+@mixin hover
+  @include transition
+  &:hover
+    color: $lightertint
+  
+@mixin hovershake
+  &:hover
+    @include animation($shakename, .714s, 1)
+
+@mixin a
+  @include hovershake
+  a
+    text-decoration: none
+    color: $darktint
+    @include hover
+
+@mixin a-clean  
+  a
+    text-decoration: none
+    border-bottom: 1px dotted $lightertint
+    color: $colour1
+    padding: 0 .2rem
+    margin: 0 .2rem
+    @include hover
+    &:after
+      content: " \2192"
+
+@mixin a-sidebar
+  a
+    text-decoration: none
+    border-bottom: 1px dotted $lightertint
+    color: $colour1
+    padding: 0
+    margin: 0
+    @include hover
+    &:after
+      content: " \2192"
+      
+@mixin a-clean-nocontent
+  @include a-clean
+  a
+    padding: 0
+    margin: 0
+    &:after
+      content: ""
+  
+@mixin h1
+  font-size: 1.5000rem
+  text-align: center
+  font-weight: normal
+  font-style: italic
+  
+@mixin h1-normal
+  @include h1
+  font-style: normal
+  margin: 0 0 2.9375rem
+  
+@mixin h1-italic
+  @include h1
+  font-style: italic
+  margin: 0 0 2.9375rem
+  
+@mixin h1-page
+  font-size: 0.75rem
+  margin: 12px 0 3.21348rem
+  text-transform: uppercase
+  text-align: center
+  font-weight: normal
+  
+@mixin h1-page-mobile
+  margin: 9px 0 3.21348rem
+  
+@mixin h1-archive
+  font-weight: normal
+  
+h2
+h3
+h4
+h5
+p, a
+  font-size: $font-size
+  line-height: $font-size*1.61
+  @include max-screen(720px)
+    font-size: $font-size
+    line-height: $font-size*1.51
+b
+i
+a
+ul
+  padding: 0
+
+h1, h2, h3, h4, h5, p, b, i, a
+  @include font
+  
+code
+  color: $darktint
+  font-size: 16px
+  
+table
+  // font-size: 14px
