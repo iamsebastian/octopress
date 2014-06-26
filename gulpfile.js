@@ -5,36 +5,35 @@ var dir = 'public',
   paths = {
     dest: dir,
     css: dir + '/stylesheets/screen.css',
-    html: dir + '/index.html'
+    html: dir + '/index.html',
+    js: dir + '/javascripts/github.js'
 };
 
-var gulp = require('gulp'),
-    minifyHTML = require('gulp-minify-html'),
-    inlineCss = require('gulp-inline-css');
+var fs = require('fs'),
+    gulp = require('gulp'),
+    replace = require('gulp-replace');
 
-gulp.task('minify-html', function() {
-  var opts = {
-    comments: false,
-    spare: false
-  };
-
-  gulp.src(paths.html)
-    .pipe(minifyHTML(opts))
-    .pipe(gulp.dest(paths.dest))
-});
-
-gulp.task('inline-css', function() {
+gulp.task('replace-css', function() {
   return gulp.src(paths.html)
-    .pipe(inlineCss({
-      applyStyleTags: true,
-      applyLinkTags: true,
-      removeStyleTags: true,
-      removeLinkTags: true
+    .pipe(replace(/<link(.*)screen.css(.*)>/, function(){
+      var _file = fs.readFileSync(paths.css, 'utf-8');
+      return '<style>\n' + _file + '\n</style>';
     }))
     .pipe(gulp.dest(paths.dest));
 });
 
-// minifyHTML makes svg elements invalid
-gulp.task('default', [/*'minify-html'*/], function() {
-  
+gulp.task('replace-js', function() {
+  return gulp.src(paths.html)
+    .pipe(replace(/<script(.*)github.js(.*)(>.*>)/, function(){
+      var _file = fs.readFileSync(paths.js, 'utf-8');
+      return '<script>\n' + _file + '\n</script>';
+    }))
+    .pipe(gulp.dest(paths.dest));
+});
+
+gulp.task('replace', ['replace-css'], function() {
+  gulp.start('replace-js');
+});
+
+gulp.task('default', ['replace'], function() {  
 });
