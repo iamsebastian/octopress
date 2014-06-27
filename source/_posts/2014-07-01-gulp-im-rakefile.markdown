@@ -42,4 +42,4 @@ gulp.task('default', [], function() {
 });
 ```
 
-Der Task ist nun vollständig im Workflow integriert, macht also keine zusätzliche Arbeit mehr und erspart mir ein, bis zwei HTTP Requests. Bleiben also - voraus gesetzt die Fonts sind schon geladen - nur noch drei Requests übrig: HTML inkl. Stylesheet, GET Request an GitHub und eine JavaScript Datei. Natürlich könnte man auch die Skriptdatei mit dem HTML konkatieren, allerdings wird die View nicht gerendet, so lange das inline *<script>* blockiert.
+Der Task ist nun vollständig im Workflow integriert, macht also keine zusätzliche Arbeit mehr und erspart mir ein, bis zwei HTTP Requests. Bleiben also - voraus gesetzt die Fonts sind schon geladen - nur noch drei Requests übrig: HTML inkl. Stylesheet, GET Request an GitHub und eine JavaScript Datei. Natürlich könnte man auch die Skriptdatei mit dem HTML konkatieren, allerdings wird die View nicht gerendert, so lange das inline *<script>* blockiert.
