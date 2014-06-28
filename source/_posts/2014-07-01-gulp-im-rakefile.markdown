@@ -20,6 +20,17 @@ Leider habe ich keine Möglichkeit gefunden, den GET an die GitHub API weiter zu
 
 So komme ich zu dem Punkt, wo ich weiter an der Performanceschraube drehen kann - nämlich den anderen Requests. In dem Moment, als ich noch nichts weiter gemacht habe, hatte ich bei [*Googles Pagespeed Insights*](http://developers.google.com/speed/pagespeed/insights/) einen Score von 86 / 100.
 
-Was mir spontan vorschwebte, war das Konkatieren von HTML und CSS *- wenn es geht natürlich auch JS*. Da meine Ruby-Kenntnisse zwar auf dem Vormarsch sind, aber noch lange nicht die Reife meiner JS Kenntnisse haben, hatte ich die Wahl zwischen Grunt und Gulp. Grunt hatte ich in einem Anderthalb-Quartals-Projekt zwischen den Jahren 2013 und 2014 verwendet und war keineswegs abgetan. Allerdings verwende ich im Moment in einem aktuellen Projekt Gulp, weswegen die Wahl auf eben diesen Taskrunner fiel.
+Was mir spontan vorschwebte, war das Konkatieren von HTML und CSS *- wenn es geht natürlich auch JS*. Da meine Ruby-Kenntnisse zwar auf dem Vormarsch sind, aber noch lange nicht die Reife meiner JS Kenntnisse haben, hatte ich die Wahl zwischen Grunt und Gulp. Grunt hatte ich in einem Anderthalb-Quartals-Projekt zwischen den Jahren 2013 und 2014 verwendet und war keineswegs abgetan. Allerdings verwende ich im aktuellen Projekt Gulp, weswegen die Wahl auf eben diesen Taskrunner fiel.
 
-Bei Octopress ist das Rakefile so aufgebaut, dass man zum *Generien* des Contents, `rake generate` aufruft und zum Deployen auf GitHub `rake deploy` - voraus gesetzt, alles ist entsprechend konifiguriert. 
+Bei Octopress ist das *Rakefile* so aufgebaut, dass man zum *Generien* des Contents, `rake generate` aufruft und zum Deployen auf GitHub `rake deploy` - voraus gesetzt, alles ist entsprechend konifiguriert. Es würde sich also Anbieten, Gulp entsprechend *zwischen den Zeilen* zu platzieren. Aufgerufen würde das über `system "gulp"` im Rakefile, wenn sich die `gulpfile.js` im selben Verzeichnis befindet, wie das Rakefile. *system* ist eine Implementierung im ruby core, die den Kernel des Systems ansteuert - oder zumindest das, was die Virtual Machine davon übrig lässt. *system* gibt einen Bool *(true)*, entsprechend des exit code des aktuellen Aufrufes, zurück. Ruby, respektive, das Rakefile, wartet mit der Abarbeitung der Aufrufe, bis der jeweilige Prozess abgeschlossen ist. Daher sollte es kein Problem darstellen, *gulp* zwischen *generate* und *deploy* auf zu rufen.
+
+Ich rufe den Prozess am Ende des *:generate* Tasks auf:
+
+``` rb
+task :generate do
+  # ...
+  system "compass compile --css-dir #{source_dir}/stylesheets"
+  system "jekyll"
+  system "gulp"
+end
+```
