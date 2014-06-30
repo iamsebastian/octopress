@@ -34,6 +34,7 @@ gulp.task('inline-css', function() {
     .pipe(gulp.dest(paths.dest));
 });
 
-gulp.task('default', ['minify-html'], function() {
+// minifyHTML makes svg elements invalid
+gulp.task('default', [/*'minify-html'*/], function() {
   
 });

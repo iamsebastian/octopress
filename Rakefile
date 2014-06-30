@@ -54,6 +54,7 @@ task :generate do
   puts "## Generating Site with Jekyll"
   system "compass compile --css-dir #{source_dir}/stylesheets"
   system "jekyll"
+  # minifyHTML makes svg elements invalid
   system "gulp"
 end
 
