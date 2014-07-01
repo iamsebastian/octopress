@@ -25,7 +25,7 @@ var github = (function(){
         if (options.count) { repos.splice(options.count); }
         render(options.target, repos);
       };
-      x.open('GET', 'https://api.github.com/users/iamsebastian/repos?sort=pushed', true);
+      x.open('GET', 'https://api.github.com/users/iamsebastian/repos?sort=pushed&per_page=4', true);
       x.send();
     }
   };
