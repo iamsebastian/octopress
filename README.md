@@ -1,4 +1,4 @@
-octopress
-=========
+blei.in
+=======
 
-Space rocket for some octocats.
+![blei.in](iamsebastian.gif "foo.bar")
