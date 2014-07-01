@@ -64,6 +64,7 @@ default_asides: [asides/recent_posts.html, asides/github.html, asides/delicious.
 
 # Github repositories
 github_user: iamsebastian
+# repo count for api.github.com GET request gets limited in github.js
 github_repo_count: 4
 github_show_profile_link: true
 github_skip_forks: true
