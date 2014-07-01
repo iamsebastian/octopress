@@ -5,11 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Über mich - Sebastian Blei</title>
+  <title>Gulp im Rakefile - Sebastian Blei</title>
   <meta name="author" content="Sebastian Blei">
 
   
-  <meta name="description" content="hline <path d="M5.81577202,15.9934695 C3.05982513,17.7233664 0.999999851,20.2324395 1,23.1311854 C1,23.2203822 1.03486443,23.3093063 1.0922077,23. &hellip;">
+  <meta name="description" content="Da mein Blog nicht ganz so ressourcensparend ist, wie ich das gern möchte, habe ich darüber nachgedacht, einen (node) Taskrunner im Workflow zu &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -34,7 +34,7 @@
   <meta name="msapplication-TileImage" content="/mstile-144x144.png">
 
   
-  <link rel="canonical" href="http://blei.in/about">
+  <link rel="canonical" href="http://blei.in/blog/2014/07/01/gulp-im-rakefile">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Sebastian Blei" type="application/atom+xml">
@@ -230,80 +230,187 @@
 </nav> -->
   <div id="main">
     <div id="content">
-      <div class="page">
-<article role="article">
-  
+      <div class="pre-article">
+  <article class="hentry" role="article">
+    
   <header>
-    <p class="meta">
-      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg id="hline_normal" viewBox="0 0 828 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>hline</title>
-    <defs></defs>
-    <g id="hline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M5.81577202,15.9934695 C3.05982513,17.7233664 0.999999851,20.2324395 1,23.1311854 C1,23.2203822 1.03486443,23.3093063 1.0922077,23.3979431 L1.0922077,23.3979431 C1.03230342,23.5879488 1,23.790202 1,24 C1,25.1045696 1.89543045,26 3,26 C4.10456955,26 5,25.1045696 5,24 C5,22.8954304 4.10456955,22 3,22 C2.84815266,22 2.70025773,22.0169223 2.55809824,22.048984 C3.15622674,19.6198565 4.23133321,17.5553748 6.34505342,16.144082 C8.1370165,14.9476207 10.2691237,13.6618095 12.5655603,13.5140658 C12.7097403,13.5047899 12.854568,13.5 13,13.5 L14,13.5 C11.8001847,13.5 9.29031463,14.1517971 7.06639233,15.28516 C7.81128718,14.4581659 8.65638075,13.24078 10,13.5 C8.70047576,13.7361434 7.86703628,13.032131 7.13979869,12.5100176 C8.65469474,13.1105158 10.3252464,13.4311108 12,13.4311108 C13.8727695,13.4311108 11.905826,13.3833312 11.721323,13.3637881 C11.3212778,13.3214143 10.9270987,13.2593834 10.5397698,13.1786797 C6.56878503,12.3512864 3.89676362,8.91676652 2.65463272,4.97029037 C2.7668227,4.98981946 2.88222245,5 3,5 C4.10456955,5 5,4.10456955 5,3 C5,1.89543045 4.10456955,1 3,1 C1.89543045,1 1,1.89543045 1,3 C1,3.13143749 1.01267898,3.25991365 1.03688059,3.38427213 L1.03688059,3.38427213 C1.013316,3.66969741 1,4.01466666 1,4.43111082 C0.99999985,7.84903485 3.10481495,10.4879497 6.02053229,12.0002144 C6.013696,12.0000718 6.006852,12 6,12 C4.89543045,12 1,12.8954304 1,14 C1,15.0497597 4.51843159,15.9106207 5.81577202,15.9934695 Z M14,13.5 L314,13.5 L14,13.5 Z M14,13.5" 
-          id="Linie-links"
-          stroke="#000000"
-          stroke-linecap="square" 
-          >
-        </path>
-        <path d="M518.815772,15.9934695 C516.059825,17.7233664 514,20.2324395 514,23.1311854 C514,23.2203822 514.034864,23.3093063 514.092208,23.3979431 L514.092208,23.3979431 C514.032303,23.5879488 514,23.790202 514,24 C514,25.1045696 514.89543,26 516,26 C517.10457,26 518,25.1045696 518,24 C518,22.8954304 517.10457,22 516,22 C515.848153,22 515.700258,22.0169223 515.558098,22.048984 C516.156227,19.6198565 517.231333,17.5553748 519.345053,16.144082 C521.137017,14.9476207 523.269124,13.6618095 525.56556,13.5140658 C525.70974,13.5047899 525.854568,13.5 526,13.5 L527,13.5 C524.800185,13.5 522.290315,14.1517971 520.066392,15.28516 C520.811287,14.4581659 521.656381,13.24078 523,13.5 C521.700476,13.7361434 520.867036,13.032131 520.139799,12.5100176 C521.654695,13.1105158 523.325246,13.4311108 525,13.4311108 C526.872769,13.4311108 524.905826,13.3833312 524.721323,13.3637881 C524.321278,13.3214143 523.927099,13.2593834 523.53977,13.1786797 C519.568785,12.3512864 516.896764,8.91676652 515.654633,4.97029037 C515.766823,4.98981946 515.882222,5 516,5 C517.10457,5 518,4.10456955 518,3 C518,1.89543045 517.10457,1 516,1 C514.89543,1 514,1.89543045 514,3 C514,3.13143749 514.012679,3.25991365 514.036881,3.38427213 L514.036881,3.38427213 C514.013316,3.66969741 514,4.01466666 514,4.43111082 C514,7.84903485 516.104815,10.4879497 519.020532,12.0002144 C519.013696,12.0000718 519.006852,12 519,12 C517.89543,12 514,12.8954304 514,14 C514,15.0497597 517.518432,15.9106207 518.815772,15.9934695 Z M527,13.5 L827,13.5 L527,13.5 Z M527,13.5"
-          id="Linie-rechts"
-          stroke="#000000"
-          stroke-linecap="square"
-          transform="translate(670.500000, 13.500000) scale(-1, -1) translate(-670.500000, -13.500000) "></path>
-    </g>
-</svg>
-      <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg id="hline_mobile" viewBox="0 0 828 27" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>hline</title>
-    <defs></defs>
-    <g id="hline" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M5.81577202,15.9934695 C3.05982513,17.7233664 0.999999851,20.2324395 1,23.1311854 C1,23.2203822 1.03486443,23.3093063 1.0922077,23.3979431 L1.0922077,23.3979431 C1.03230342,23.5879488 1,23.790202 1,24 C1,25.1045696 1.89543045,26 3,26 C4.10456955,26 5,25.1045696 5,24 C5,22.8954304 4.10456955,22 3,22 C2.84815266,22 2.70025773,22.0169223 2.55809824,22.048984 C3.15622674,19.6198565 4.23133321,17.5553748 6.34505342,16.144082 C8.1370165,14.9476207 10.2691237,13.6618095 12.5655603,13.5140658 C12.7097403,13.5047899 12.854568,13.5 13,13.5 L14,13.5 C11.8001847,13.5 9.29031463,14.1517971 7.06639233,15.28516 C7.81128718,14.4581659 8.65638075,13.24078 10,13.5 C8.70047576,13.7361434 7.86703628,13.032131 7.13979869,12.5100176 C8.65469474,13.1105158 10.3252464,13.4311108 12,13.4311108 C13.8727695,13.4311108 11.905826,13.3833312 11.721323,13.3637881 C11.3212778,13.3214143 10.9270987,13.2593834 10.5397698,13.1786797 C6.56878503,12.3512864 3.89676362,8.91676652 2.65463272,4.97029037 C2.7668227,4.98981946 2.88222245,5 3,5 C4.10456955,5 5,4.10456955 5,3 C5,1.89543045 4.10456955,1 3,1 C1.89543045,1 1,1.89543045 1,3 C1,3.13143749 1.01267898,3.25991365 1.03688059,3.38427213 L1.03688059,3.38427213 C1.013316,3.66969741 1,4.01466666 1,4.43111082 C0.99999985,7.84903485 3.10481495,10.4879497 6.02053229,12.0002144 C6.013696,12.0000718 6.006852,12 6,12 C4.89543045,12 1,12.8954304 1,14 C1,15.0497597 4.51843159,15.9106207 5.81577202,15.9934695 Z M14,13.5 L164,13.5 L14,13.5 Z M14,13.5" 
-          id="Linie-links"
-          stroke="#000000"
-          stroke-linecap="square" 
-          >
-        </path>
-        <path d="M518.815772,15.9934695 C516.059825,17.7233664 514,20.2324395 514,23.1311854 C514,23.2203822 514.034864,23.3093063 514.092208,23.3979431 L514.092208,23.3979431 C514.032303,23.5879488 514,23.790202 514,24 C514,25.1045696 514.89543,26 516,26 C517.10457,26 518,25.1045696 518,24 C518,22.8954304 517.10457,22 516,22 C515.848153,22 515.700258,22.0169223 515.558098,22.048984 C516.156227,19.6198565 517.231333,17.5553748 519.345053,16.144082 C521.137017,14.9476207 523.269124,13.6618095 525.56556,13.5140658 C525.70974,13.5047899 525.854568,13.5 526,13.5 L527,13.5 C524.800185,13.5 522.290315,14.1517971 520.066392,15.28516 C520.811287,14.4581659 521.656381,13.24078 523,13.5 C521.700476,13.7361434 520.867036,13.032131 520.139799,12.5100176 C521.654695,13.1105158 523.325246,13.4311108 525,13.4311108 C526.872769,13.4311108 524.905826,13.3833312 524.721323,13.3637881 C524.321278,13.3214143 523.927099,13.2593834 523.53977,13.1786797 C519.568785,12.3512864 516.896764,8.91676652 515.654633,4.97029037 C515.766823,4.98981946 515.882222,5 516,5 C517.10457,5 518,4.10456955 518,3 C518,1.89543045 517.10457,1 516,1 C514.89543,1 514,1.89543045 514,3 C514,3.13143749 514.012679,3.25991365 514.036881,3.38427213 L514.036881,3.38427213 C514.013316,3.66969741 514,4.01466666 514,4.43111082 C514,7.84903485 516.104815,10.4879497 519.020532,12.0002144 C519.013696,12.0000718 519.006852,12 519,12 C517.89543,12 514,12.8954304 514,14 C514,15.0497597 517.518432,15.9106207 518.815772,15.9934695 Z M527,13.5 L677,13.5 L527,13.5 Z M527,13.5"
-          id="Linie-rechts"
-          stroke="#000000"
-          stroke-linecap="square"
-          transform="translate(670.500000, 13.500000) scale(-1, -1) translate(-670.500000, -13.500000) "></path>
-    </g>
-</svg>
-    </p>
-    <h1 class="entry-title">Über Mich</h1>
+    
+      <h1 class="entry-title">Gulp Im Rakefile</h1>
+    
+    
     
   </header>
-  
-  <p>Hallo,</p>
 
-<p>Ich bin Sebastian, stehe hinter diesem <em>Konvolut</em> an Schnipseln und beschäftige mich ganztägig mit Web-Technologien. Dabei setze ich mich hauptsächlich mit Frontend-Lösungen auseinander. Man findet mich auf folgenden Plattformen:</p>
 
-<p><img src="/images/twitter.svg" title="Twitter" alt="Twitter" /></p>
+<div class="entry-content"><p>Da mein Blog nicht ganz so ressourcensparend ist, wie ich das gern möchte, habe ich darüber nachgedacht, einen <em>(<a href="http://nodejs.org/">node</a>)</em> Taskrunner im Workflow zu integrieren.</p>
 
-<blockquote><p><a href="http://www.twitter.com/iamblei">@iamblei</a></p></blockquote>
+<!-- more -->
 
-<p><img src="/images/github.svg" title="GitHub" alt="GitHub" /></p>
 
-<blockquote><p><a href="http://www.github.com/iamsebastian">iamsebastian</a></p></blockquote>
+<p>Wie man ja sieht, ist mein Blog statisch. Den ganzen Rahmen setzt <a href="http://octopress.org/">Octopress</a>, das <a href="https://github.com/iamsebastian/Octopress-Theme-Colerif">Theme</a> hatte ich als <a href="https://github.com/Shopify/liquid">Liquid</a>-Template-Grundgerüst zusammen gesetzt und dann so lange modifziert, bis die Inhalte gepasst haben. Anschließend habe ich eine große Portion <a href="http://sass-lang.org">SASS</a> <em>darauf geworfen</em> und nun sieht der Blog seit einer Weile aus, wie er eben aussieht. Um möglichst wenig Requests zu haben, schickte ich mich bereits damals an, das Template komplett um zu biegen. Die ganzen unnötigen Bibliotheken, wie jQuery, flogen raus und das <a href="https://github.com/iamsebastian/iamsebastian.github.io/blob/master/javascripts/github.js">GitHub-Plugin</a> habe ich so weit runter gebrochen, dass es nicht viel mehr macht, als einen async. Call und das ankommende JSON in den DOM zu parsen.</p>
 
-<p><img src="/images/xing.svg" title="Xing" alt="Xing" /></p>
+<p>Leider habe ich keine Möglichkeit gefunden, den GET an die GitHub <a href="https://developer.github.com/v3/">API</a> weiter zu restriktieren, so, dass weniger Daten ankommen würden. Einzig die Anzahl der übermittelten Repository-Informationen lässt sich begrenzen. Im Moment sind das bei mir vier. Die größe des Requests <em>(rein der Body)</em> ließ sich so von ~ 55KB auf ~ 24KB runter brechen, was immerhin eine Ersparnis von ~ 55% ist. Lieber würde ich allerdings das JSON der API-Antwort auf Name, URL und Beschreibung einschränken, was dann nicht viel mehr als 15% Restverkehr bedeuten würde.</p>
 
-<blockquote><p><a href="https://www.xing.com/profile/Sebastian_Blei">Sebastian Blei</a></p></blockquote>
+<p>So komme ich zu dem Punkt, wo ich weiter an der Performanceschraube drehen kann &ndash; nämlich den anderen Requests. In dem Moment, als ich noch nichts weiter gemacht habe, hatte ich bei <a href="http://developers.google.com/speed/pagespeed/insights/"><em>Googles Pagespeed Insights</em></a> einen Score von 86 / 100.</p>
 
-<p>Diese Seite ist statisch und wird mit Zuhilfenahme von <a href="http://www.octopress.com">Octopress</a>, <a href="http://daringfireball.net/projects/markdown/">Markdown</a>, <a href="http://www.sass-lang.org">SASS</a>, <em>&hellip;</em>, entwickelt.</p>
+<p>Was mir spontan vorschwebte, war das Konkatieren von HTML und CSS <em>&ndash; wenn es geht natürlich auch JS</em>. Da meine Ruby-Kenntnisse zwar auf dem Vormarsch sind, aber noch lange nicht die Reife meiner JS Kenntnisse haben, hatte ich die Wahl zwischen Grunt und Gulp. Grunt hatte ich in einem Anderthalb-Quartals-Projekt zwischen den Jahren 2013 und 2014 verwendet und war keineswegs abgetan. Allerdings verwende ich im aktuellen Projekt Gulp, weswegen die Wahl auf eben diesen Taskrunner fiel.</p>
 
-<p>Tagsüber baue ich in Erfurt bei der <a href="http://www.plazz-entertainment.com">plazz Entertainment AG</a> als Frontend Engineer.</p>
+<p>Bei Octopress ist das <em>Rakefile</em> so aufgebaut, dass man zum <em>Generien</em> des Contents, <code>rake generate</code> aufruft und zum Deployen auf GitHub <code>rake deploy</code> &ndash; voraus gesetzt, alles ist entsprechend konifiguriert. Es würde sich also Anbieten, Gulp entsprechend <em>zwischen den Zeilen</em> zu platzieren. Aufgerufen würde das über <code>system "gulp"</code> im Rakefile, wenn sich die <code>gulpfile.js</code> im selben Verzeichnis befindet, wie das Rakefile. <em>system</em> ist <a href="http://ruby-doc.org/core-2.1.2/Kernel.html#method-i-system">eine Implementierung</a> im ruby core, die den Kernel des Systems ansteuert &ndash; oder zumindest das, was die Virtual Machine davon übrig lässt. <em>system</em> gibt einen Bool <em>(true)</em>, entsprechend des exit code des aktuellen Aufrufes, zurück. Ruby, respektive, das Rakefile, wartet mit der Abarbeitung der Aufrufe, bis der jeweilige Prozess abgeschlossen ist. Daher sollte es kein Problem darstellen, <em>gulp</em> zwischen <em>generate</em> und <em>deploy</em> auf zu rufen.</p>
 
-  
+<p>Ich rufe den Prozess am Ende des <em>:generate</em> Tasks auf:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="n">task</span> <span class="ss">:generate</span> <span class="k">do</span>
+</span><span class='line'>  <span class="c1"># ...</span>
+</span><span class='line'>  <span class="nb">system</span> <span class="s2">&quot;compass compile --css-dir </span><span class="si">#{</span><span class="n">source_dir</span><span class="si">}</span><span class="s2">/stylesheets&quot;</span>
+</span><span class='line'>  <span class="nb">system</span> <span class="s2">&quot;jekyll&quot;</span>
+</span><span class='line'>  <span class="nb">system</span> <span class="s2">&quot;gulp&quot;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>gulpfile.js</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="cm">/* global require */</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">dir</span> <span class="o">=</span> <span class="s1">&#39;public&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">paths</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="nx">dir</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">css</span><span class="o">:</span> <span class="nx">dir</span> <span class="o">+</span> <span class="s1">&#39;/stylesheets/screen.css&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">html</span><span class="o">:</span> <span class="nx">dir</span> <span class="o">+</span> <span class="s1">&#39;/index.html&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">js</span><span class="o">:</span> <span class="nx">dir</span> <span class="o">+</span> <span class="s1">&#39;/javascripts/github.js&#39;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">replace</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp-replace&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;replace-css&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">html</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&lt;link(.*)screen.css(.*)&gt;/</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">_file</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">css</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">return</span> <span class="s1">&#39;&lt;style&gt;\n&#39;</span> <span class="o">+</span> <span class="nx">_file</span> <span class="o">+</span> <span class="s1">&#39;\n&lt;/style&gt;&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}))</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">dest</span><span class="p">));</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;replace-js&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">html</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&lt;script(.*)github.js(.*)(&gt;.*&gt;)/</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">_file</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">js</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">return</span> <span class="s1">&#39;&lt;script&gt;\n&#39;</span> <span class="o">+</span> <span class="nx">_file</span> <span class="o">+</span> <span class="s1">&#39;\n&lt;/script&gt;&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}))</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">dest</span><span class="p">));</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;replace-css&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">gulp</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s1">&#39;replace-js&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;replace&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Der Task ist nun vollständig im Workflow integriert, macht also keine zusätzliche Arbeit mehr und erspart mir zwei HTTP Requests. Bleiben also &ndash; voraus gesetzt die Fonts sind schon geladen &ndash; nur noch zwei Requests übrig: HTML inkl. Stylesheet und der GET Request an GitHub. Das <em>Inlinen</em> der Javascript-Datei sollte man allerdings nur vornehmen, wenn sie nicht blockiert, sie also nur eine kurze Rechenzeit braucht oder asynchron arbeitet.</p>
+</div>
+
+
     <footer>
-      
-      
-    </footer>
+      <p class="meta">
+        
   
-</article>
 
+<p><span class="byline author vcard">von <span class="fn">Sebastian Blei</span></span></p>
+
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-07-01T17:09:00+02:00" pubdate data-updated="true"> 1 July 2014</time>
+        
+
+<p>
+  <span class="categories">
+    
+      in <a class='category' href='/blog/categories/gulp/'>gulp</a>, <a class='category' href='/blog/categories/rake/'>rake</a>, <a class='category' href='/blog/categories/ruby/'>ruby</a>, <a class='category' href='/blog/categories/taskrunner/'>taskrunner</a>
+    
+  </span>
+</p>
+
+
+      </p>
+      
+        <div class="sharing">
+  
+  
+  
+</div>
+
+      
+      <p class="meta">
+        
+          Vorheriger Artikel: <a class="basic-alignment left" href="/blog/2014/03/07/git-log-filter/" title="Previous Post: git log Filter">&laquo; git log Filter</a>
+        
+        
+        
+      </p>
+    </footer>
+  </article>
+  
 </div>
 
 <aside class="sidebar">

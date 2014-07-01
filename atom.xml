@@ -4,7 +4,7 @@
   <title><![CDATA[Sebastian Blei]]></title>
   <link href="http://blei.in/atom.xml" rel="self"/>
   <link href="http://blei.in/"/>
-  <updated>2014-07-01T16:12:26+02:00</updated>
+  <updated>2014-07-01T20:36:19+02:00</updated>
   <id>http://blei.in/</id>
   <author>
     <name><![CDATA[Sebastian Blei]]></name>
@@ -12,6 +12,130 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Gulp im Rakefile]]></title>
+    <link href="http://blei.in/blog/2014/07/01/gulp-im-rakefile/"/>
+    <updated>2014-07-01T17:09:00+02:00</updated>
+    <id>http://blei.in/blog/2014/07/01/gulp-im-rakefile</id>
+    <content type="html"><![CDATA[<p>Da mein Blog nicht ganz so ressourcensparend ist, wie ich das gern möchte, habe ich darüber nachgedacht, einen <em>(<a href="http://nodejs.org/">node</a>)</em> Taskrunner im Workflow zu integrieren.</p>
+
+<!-- more -->
+
+
+<p>Wie man ja sieht, ist mein Blog statisch. Den ganzen Rahmen setzt <a href="http://octopress.org/">Octopress</a>, das <a href="https://github.com/iamsebastian/Octopress-Theme-Colerif">Theme</a> hatte ich als <a href="https://github.com/Shopify/liquid">Liquid</a>-Template-Grundgerüst zusammen gesetzt und dann so lange modifziert, bis die Inhalte gepasst haben. Anschließend habe ich eine große Portion <a href="http://sass-lang.org">SASS</a> <em>darauf geworfen</em> und nun sieht der Blog seit einer Weile aus, wie er eben aussieht. Um möglichst wenig Requests zu haben, schickte ich mich bereits damals an, das Template komplett um zu biegen. Die ganzen unnötigen Bibliotheken, wie jQuery, flogen raus und das <a href="https://github.com/iamsebastian/iamsebastian.github.io/blob/master/javascripts/github.js">GitHub-Plugin</a> habe ich so weit runter gebrochen, dass es nicht viel mehr macht, als einen async. Call und das ankommende JSON in den DOM zu parsen.</p>
+
+<p>Leider habe ich keine Möglichkeit gefunden, den GET an die GitHub <a href="https://developer.github.com/v3/">API</a> weiter zu restriktieren, so, dass weniger Daten ankommen würden. Einzig die Anzahl der übermittelten Repository-Informationen lässt sich begrenzen. Im Moment sind das bei mir vier. Die größe des Requests <em>(rein der Body)</em> ließ sich so von ~ 55KB auf ~ 24KB runter brechen, was immerhin eine Ersparnis von ~ 55% ist. Lieber würde ich allerdings das JSON der API-Antwort auf Name, URL und Beschreibung einschränken, was dann nicht viel mehr als 15% Restverkehr bedeuten würde.</p>
+
+<p>So komme ich zu dem Punkt, wo ich weiter an der Performanceschraube drehen kann &ndash; nämlich den anderen Requests. In dem Moment, als ich noch nichts weiter gemacht habe, hatte ich bei <a href="http://developers.google.com/speed/pagespeed/insights/"><em>Googles Pagespeed Insights</em></a> einen Score von 86 / 100.</p>
+
+<p>Was mir spontan vorschwebte, war das Konkatieren von HTML und CSS <em>&ndash; wenn es geht natürlich auch JS</em>. Da meine Ruby-Kenntnisse zwar auf dem Vormarsch sind, aber noch lange nicht die Reife meiner JS Kenntnisse haben, hatte ich die Wahl zwischen Grunt und Gulp. Grunt hatte ich in einem Anderthalb-Quartals-Projekt zwischen den Jahren 2013 und 2014 verwendet und war keineswegs abgetan. Allerdings verwende ich im aktuellen Projekt Gulp, weswegen die Wahl auf eben diesen Taskrunner fiel.</p>
+
+<p>Bei Octopress ist das <em>Rakefile</em> so aufgebaut, dass man zum <em>Generien</em> des Contents, <code>rake generate</code> aufruft und zum Deployen auf GitHub <code>rake deploy</code> &ndash; voraus gesetzt, alles ist entsprechend konifiguriert. Es würde sich also Anbieten, Gulp entsprechend <em>zwischen den Zeilen</em> zu platzieren. Aufgerufen würde das über <code>system "gulp"</code> im Rakefile, wenn sich die <code>gulpfile.js</code> im selben Verzeichnis befindet, wie das Rakefile. <em>system</em> ist <a href="http://ruby-doc.org/core-2.1.2/Kernel.html#method-i-system">eine Implementierung</a> im ruby core, die den Kernel des Systems ansteuert &ndash; oder zumindest das, was die Virtual Machine davon übrig lässt. <em>system</em> gibt einen Bool <em>(true)</em>, entsprechend des exit code des aktuellen Aufrufes, zurück. Ruby, respektive, das Rakefile, wartet mit der Abarbeitung der Aufrufe, bis der jeweilige Prozess abgeschlossen ist. Daher sollte es kein Problem darstellen, <em>gulp</em> zwischen <em>generate</em> und <em>deploy</em> auf zu rufen.</p>
+
+<p>Ich rufe den Prozess am Ende des <em>:generate</em> Tasks auf:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="n">task</span> <span class="ss">:generate</span> <span class="k">do</span>
+</span><span class='line'>  <span class="c1"># ...</span>
+</span><span class='line'>  <span class="nb">system</span> <span class="s2">&quot;compass compile --css-dir </span><span class="si">#{</span><span class="n">source_dir</span><span class="si">}</span><span class="s2">/stylesheets&quot;</span>
+</span><span class='line'>  <span class="nb">system</span> <span class="s2">&quot;jekyll&quot;</span>
+</span><span class='line'>  <span class="nb">system</span> <span class="s2">&quot;gulp&quot;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><em>gulpfile.js</em></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+</pre></td><td class='code'><pre><code class='js'><span class='line'><span class="s1">&#39;use strict&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="cm">/* global require */</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">dir</span> <span class="o">=</span> <span class="s1">&#39;public&#39;</span><span class="p">,</span>
+</span><span class='line'>  <span class="nx">paths</span> <span class="o">=</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="nx">dir</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">css</span><span class="o">:</span> <span class="nx">dir</span> <span class="o">+</span> <span class="s1">&#39;/stylesheets/screen.css&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">html</span><span class="o">:</span> <span class="nx">dir</span> <span class="o">+</span> <span class="s1">&#39;/index.html&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="nx">js</span><span class="o">:</span> <span class="nx">dir</span> <span class="o">+</span> <span class="s1">&#39;/javascripts/github.js&#39;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">gulp</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="nx">replace</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;gulp-replace&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;replace-css&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">html</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&lt;link(.*)screen.css(.*)&gt;/</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">_file</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">css</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">return</span> <span class="s1">&#39;&lt;style&gt;\n&#39;</span> <span class="o">+</span> <span class="nx">_file</span> <span class="o">+</span> <span class="s1">&#39;\n&lt;/style&gt;&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}))</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">dest</span><span class="p">));</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;replace-js&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">gulp</span><span class="p">.</span><span class="nx">src</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">html</span><span class="p">)</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">replace</span><span class="p">(</span><span class="sr">/&lt;script(.*)github.js(.*)(&gt;.*&gt;)/</span><span class="p">,</span> <span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>      <span class="kd">var</span> <span class="nx">_file</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">js</span><span class="p">,</span> <span class="s1">&#39;utf-8&#39;</span><span class="p">);</span>
+</span><span class='line'>      <span class="k">return</span> <span class="s1">&#39;&lt;script&gt;\n&#39;</span> <span class="o">+</span> <span class="nx">_file</span> <span class="o">+</span> <span class="s1">&#39;\n&lt;/script&gt;&#39;</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">}))</span>
+</span><span class='line'>    <span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">gulp</span><span class="p">.</span><span class="nx">dest</span><span class="p">(</span><span class="nx">paths</span><span class="p">.</span><span class="nx">dest</span><span class="p">));</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;replace&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;replace-css&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">gulp</span><span class="p">.</span><span class="nx">start</span><span class="p">(</span><span class="s1">&#39;replace-js&#39;</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">gulp</span><span class="p">.</span><span class="nx">task</span><span class="p">(</span><span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;replace&#39;</span><span class="p">],</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Der Task ist nun vollständig im Workflow integriert, macht also keine zusätzliche Arbeit mehr und erspart mir zwei HTTP Requests. Bleiben also &ndash; voraus gesetzt die Fonts sind schon geladen &ndash; nur noch zwei Requests übrig: HTML inkl. Stylesheet und der GET Request an GitHub. Das <em>Inlinen</em> der Javascript-Datei sollte man allerdings nur vornehmen, wenn sie nicht blockiert, sie also nur eine kurze Rechenzeit braucht oder asynchron arbeitet.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[git log Filter]]></title>
