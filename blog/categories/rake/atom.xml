@@ -4,7 +4,7 @@
   <title><![CDATA[Kategorie: rake | Sebastian Blei]]></title>
   <link href="http://blei.in/blog/categories/rake/atom.xml" rel="self"/>
   <link href="http://blei.in/"/>
-  <updated>2014-07-01T20:36:19+02:00</updated>
+  <updated>2014-07-01T20:37:50+02:00</updated>
   <id>http://blei.in/</id>
   <author>
     <name><![CDATA[Sebastian Blei]]></name>
@@ -23,7 +23,7 @@
 <!-- more -->
 
 
-<p>Wie man ja sieht, ist mein Blog statisch. Den ganzen Rahmen setzt <a href="http://octopress.org/">Octopress</a>, das <a href="https://github.com/iamsebastian/Octopress-Theme-Colerif">Theme</a> hatte ich als <a href="https://github.com/Shopify/liquid">Liquid</a>-Template-Grundgerüst zusammen gesetzt und dann so lange modifziert, bis die Inhalte gepasst haben. Anschließend habe ich eine große Portion <a href="http://sass-lang.org">SASS</a> <em>darauf geworfen</em> und nun sieht der Blog seit einer Weile aus, wie er eben aussieht. Um möglichst wenig Requests zu haben, schickte ich mich bereits damals an, das Template komplett um zu biegen. Die ganzen unnötigen Bibliotheken, wie jQuery, flogen raus und das <a href="https://github.com/iamsebastian/iamsebastian.github.io/blob/master/javascripts/github.js">GitHub-Plugin</a> habe ich so weit runter gebrochen, dass es nicht viel mehr macht, als einen async. Call und das ankommende JSON in den DOM zu parsen.</p>
+<p>Wie man ja sieht, ist mein Blog statisch. Den ganzen Rahmen setzt <a href="http://octopress.org/">Octopress</a>, das <a href="https://github.com/iamsebastian/Octopress-Theme-Colerif">Theme</a> hatte ich als <a href="https://github.com/Shopify/liquid">Liquid</a>-Template-Grundgerüst zusammen gesetzt und dann so lange modifziert, bis die Inhalte gepasst haben. Anschließend habe ich eine große Portion <a href="http://sass-lang.com">SASS</a> <em>darauf geworfen</em> und nun sieht der Blog seit einer Weile aus, wie er eben aussieht. Um möglichst wenig Requests zu haben, schickte ich mich bereits damals an, das Template komplett um zu biegen. Die ganzen unnötigen Bibliotheken, wie jQuery, flogen raus und das <a href="https://github.com/iamsebastian/iamsebastian.github.io/blob/master/javascripts/github.js">GitHub-Plugin</a> habe ich so weit runter gebrochen, dass es nicht viel mehr macht, als einen async. Call und das ankommende JSON in den DOM zu parsen.</p>
 
 <p>Leider habe ich keine Möglichkeit gefunden, den GET an die GitHub <a href="https://developer.github.com/v3/">API</a> weiter zu restriktieren, so, dass weniger Daten ankommen würden. Einzig die Anzahl der übermittelten Repository-Informationen lässt sich begrenzen. Im Moment sind das bei mir vier. Die größe des Requests <em>(rein der Body)</em> ließ sich so von ~ 55KB auf ~ 24KB runter brechen, was immerhin eine Ersparnis von ~ 55% ist. Lieber würde ich allerdings das JSON der API-Antwort auf Name, URL und Beschreibung einschränken, was dann nicht viel mehr als 15% Restverkehr bedeuten würde.</p>
 
