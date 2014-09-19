@@ -23,4 +23,4 @@ Ich bin Sebastian Blei, stehe hinter diesem *Konvolut* an Schnipseln und beschä
 
 Diese Seite ist statisch und wird mit Zuhilfenahme von [Octopress](http://www.octopress.com), [Markdown](http://daringfireball.net/projects/markdown/), [SASS](http://www.sass-lang.com), *...*, entwickelt.
 
-Tagsüber baue ich in Erfurt bei der [plazz Entertainment AG](http://www.plazz.ag) als Frontend Engineer.
+Tagsüber baue ich in Erfurt bei der [Crowd Architects](http://www.crowdradio.de/) als nodeJS Engineer.
